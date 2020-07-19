@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-FileOperations</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e7ae066a-6983-48af-9463-e2c2430fedab</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>295020a0-90c1-43b3-b6b1-8be5bdf98484</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ToRename_ListView.txt'</defaultValue>
+      <description></description>
+      <id>d7386246-6246-4cc7-b688-3ceed1d43158</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission File Operations'</defaultValue>
+      <description></description>
+      <id>eaebe514-d89a-4eb9-9d9f-8d87bb9fbb58</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Rename'</defaultValue>
+      <description></description>
+      <id>62f61e34-294a-4077-afd6-a99d73244bdb</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+   <variable>
+      <defaultValue>'Renamefile_LV.txt'</defaultValue>
+      <description></description>
+      <id>2452730a-fb63-4365-92a2-2ba74197dafc</id>
+      <masked>false</masked>
+      <name>renameFile</name>
+   </variable>
+</TestCaseEntity>

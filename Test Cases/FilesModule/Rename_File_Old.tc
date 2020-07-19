@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Rename_File_Old</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e28052bc-ecbc-4527-9e51-749c77023773</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.G_FileToRename</defaultValue>
+      <description></description>
+      <id>43541ba9-e540-49a6-bb6a-d0593c793b53</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RenameFile.txt'</defaultValue>
+      <description></description>
+      <id>ffcb9fc3-f4be-4ad0-8e85-396f12d20480</id>
+      <masked>false</masked>
+      <name>renameFileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test case to rename file'</defaultValue>
+      <description></description>
+      <id>9d834d87-7d20-488b-8b62-dc7053677728</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

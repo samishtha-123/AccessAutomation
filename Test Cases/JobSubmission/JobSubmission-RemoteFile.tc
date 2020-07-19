@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-RemoteFile</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>1baf3fcb-5dfa-4389-b808-e438933c1120</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>c10be82a-b40f-404a-83b4-abfcc921b0b8</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'SC.sh'</defaultValue>
+      <description></description>
+      <id>4c49bce1-31f5-4dd5-8bb6-92e7546a5d3d</id>
+      <masked>false</masked>
+      <name>RemoteFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Create ShortCut Files for Job Submissions '</defaultValue>
+      <description></description>
+      <id>acf0b403-9642-4a91-85ce-558f871307f6</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>e660dd13-a8b1-4ed8-82dd-14fbcdd58192</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+   <variable>
+      <defaultValue>'Version'</defaultValue>
+      <description></description>
+      <id>a471e90e-810a-4afe-b6df-837e0ca91cba</id>
+      <masked>false</masked>
+      <name>ToChange</name>
+   </variable>
+   <variable>
+      <defaultValue>'compute'</defaultValue>
+      <description></description>
+      <id>403e2fc2-6f31-4cb9-b753-1c1ce814304e</id>
+      <masked>false</masked>
+      <name>ChangeValue</name>
+   </variable>
+</TestCaseEntity>

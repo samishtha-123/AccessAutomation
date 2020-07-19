@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobActions_ForJobStates_Topmenu_Icon_NotJobOwner</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>22f192b3-b008-4fc3-887e-06e73986bc4a</testCaseGuid>
+   <variable>
+      <defaultValue>'Queued'</defaultValue>
+      <description></description>
+      <id>eebf0263-f70f-401d-8ede-31b5d0e1c904</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'terminate_icon'</defaultValue>
+      <description></description>
+      <id>3a33fa3e-5fca-4f4e-8849-51fba2ae93af</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Action for Completed Job - Terminate'</defaultValue>
+      <description></description>
+      <id>4040756d-7905-420e-9245-19d8969a9a44</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'rohini'</defaultValue>
+      <description></description>
+      <id>13a08161-d189-465b-950e-263fc1cae465</id>
+      <masked>false</masked>
+      <name>AllJobsUser</name>
+   </variable>
+</TestCaseEntity>

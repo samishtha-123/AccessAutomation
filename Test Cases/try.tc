@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>try</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>daca3a98-bb96-4387-a25e-24503dd6a1b4</testCaseGuid>
+   <variable>
+      <defaultValue>'Edit'</defaultValue>
+      <description></description>
+      <id>4cea5904-1d6e-484d-87a8-cc2e25f3cf20</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+   <variable>
+      <defaultValue>'one.txt'</defaultValue>
+      <description></description>
+      <id>9fd539af-5984-46a8-a766-089d32bf9f84</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'try'</defaultValue>
+      <description></description>
+      <id>4affdbd7-af13-43c4-916b-c49b379cd3f6</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

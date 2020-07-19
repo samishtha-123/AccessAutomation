@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ContextMenu_CreateFile</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7077a082-073f-42f6-8746-4b04b8cd5615</testCaseGuid>
+   <variable>
+      <defaultValue>'context.txt'</defaultValue>
+      <description></description>
+      <id>a3756e78-bbe4-48a0-a4d5-6ec6bd47bc77</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Context menu file creation'</defaultValue>
+      <description></description>
+      <id>2e498ee0-1e20-4b3b-9d60-6205daa1c0bb</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

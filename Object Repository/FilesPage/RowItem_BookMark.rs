@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>RowItem_BookMark</name>
+   <tag></tag>
+   <elementGuidId>5b0f4d5e-73bd-4bff-9fe4-7e0e1e133061</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@col-id = 'path' and (text() = '/stage/B1' or . = '/stage/B1')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@col-id = 'path' and (text() = '/stage/BookMark' or . = '/stage/BookMark')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>col-id</name>
+      <type>Main</type>
+      <value>path</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>/stage/B1</value>
+   </webElementProperties>
+</WebElementEntity>

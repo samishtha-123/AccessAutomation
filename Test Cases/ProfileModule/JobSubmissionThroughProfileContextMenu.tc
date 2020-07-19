@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmissionThroughProfileContextMenu</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>be566fea-65f6-45da-a47e-327517a5da4f</testCaseGuid>
+   <variable>
+      <defaultValue>'shell Incompelete tile view'</defaultValue>
+      <description></description>
+      <id>040fb4f4-5c49-4dd6-b866-604e5fdfc063</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellPro-Incompelete'</defaultValue>
+      <description></description>
+      <id>d792b765-1aff-44fe-bdbd-48a024d6695c</id>
+      <masked>false</masked>
+      <name>proName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>b2a0a489-c108-4daa-8c8b-21fef957092e</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>4f005134-2a3d-4193-9493-cbe7dc342ffd</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobActions_ForJobStates_NotJobOwner</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>19ebeb6f-f0ff-4d80-a374-568da327154a</testCaseGuid>
+   <variable>
+      <defaultValue>'Queued'</defaultValue>
+      <description></description>
+      <id>d7a2ecc7-ebf5-4783-9b5e-6805b37f0434</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'Delete'</defaultValue>
+      <description></description>
+      <id>12ea1024-c146-40d0-be6d-0bbe4b2960b3</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Action for Completed Job - Terminate '</defaultValue>
+      <description></description>
+      <id>524ca636-a06a-4f07-a113-6bb14cbef71a</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'rohini'</defaultValue>
+      <description></description>
+      <id>b15eadb7-f09d-46da-9556-dc419126fbc8</id>
+      <masked>false</masked>
+      <name>AllJobsUser</name>
+   </variable>
+</TestCaseEntity>

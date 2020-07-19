@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>aaa</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>df2f7b21-d12c-46ce-9b55-5041d6b7e289</testCaseGuid>
+   <variable>
+      <defaultValue>'Job Filters - my Job'</defaultValue>
+      <description></description>
+      <id>375e68bf-96d5-4c3a-9ccd-c9cbf90990e5</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'job_state_filters'</defaultValue>
+      <description></description>
+      <id>86712f08-a8a1-4667-b473-22c5e421599b</id>
+      <masked>false</masked>
+      <name>FilterCategory</name>
+   </variable>
+   <variable>
+      <defaultValue>'Failed'</defaultValue>
+      <description></description>
+      <id>1ed7dd87-4c09-437f-8545-76d744912060</id>
+      <masked>false</masked>
+      <name>FilterValue</name>
+   </variable>
+   <variable>
+      <defaultValue>'Status'</defaultValue>
+      <description></description>
+      <id>fdb40bc9-204c-4e35-96d7-78c928f6d017</id>
+      <masked>false</masked>
+      <name>FilterTitle</name>
+   </variable>
+   <variable>
+      <defaultValue>'jobState'</defaultValue>
+      <description></description>
+      <id>74ea9f7c-a0d6-4ece-b68f-d47ea3e3fc75</id>
+      <masked>false</masked>
+      <name>dataAttribute</name>
+   </variable>
+</TestCaseEntity>

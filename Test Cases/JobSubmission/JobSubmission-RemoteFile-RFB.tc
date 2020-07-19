@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-RemoteFile-RFB</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c995504f-48f1-4c25-b69a-d15c6028426c</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>50871651-4438-4afa-a3d1-e015def75e60</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>fa016057-1646-44eb-aca6-ca256affe5b9</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>66f583dd-0003-4edf-b994-00dbc3b28059</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test to Switch Appliaction from LastSubmitted to Generic Profile through left navigation in JS form'</defaultValue>
+      <description></description>
+      <id>449134c1-4ff3-4836-9e8f-ac89476b1ec7</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>c20ffa81-ef5c-405a-b281-7d065b6fbd73</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+</TestCaseEntity>

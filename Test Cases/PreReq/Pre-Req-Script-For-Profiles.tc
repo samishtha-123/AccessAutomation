@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Pre-Req-Script-For-Profiles</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0a26af3b-96c4-4961-97a4-61d63a5a23c4</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>5e91b7d7-7df2-4077-95ee-936d61d69f6f</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'JS.sh'</defaultValue>
+      <description></description>
+      <id>21d284ab-4779-401a-af91-2c9c796d8744</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission For FileOps'</defaultValue>
+      <description></description>
+      <id>abed14a1-632c-4271-83a5-40182be8ea2a</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>aa6db84f-eac4-4a1e-8437-ddfb1a7454c9</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>0e35f4df-c494-49c6-8777-66810b0b1f04</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+</TestCaseEntity>

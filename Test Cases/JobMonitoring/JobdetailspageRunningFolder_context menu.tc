@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobdetailspageRunningFolder_context menu</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ec91aeb4-b9e3-4fd6-8cc2-da9732df994c</testCaseGuid>
+   <variable>
+      <defaultValue>'Running'</defaultValue>
+      <description></description>
+      <id>f7f3a0dd-c33e-474c-9cfd-c656475b6ab7</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'Terminate'</defaultValue>
+      <description></description>
+      <id>437cb97b-3b60-4495-927a-0aa4c0408342</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'terminate'</defaultValue>
+      <description></description>
+      <id>48b9bd50-04a9-4559-8fb3-7326f4c38ba4</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

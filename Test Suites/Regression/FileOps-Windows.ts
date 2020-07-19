@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>FileOps-Windows</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>0e35f6d8-a2b8-45e1-a9b8-9cc580e7154f</testSuiteGuid>
+   <testCaseLink>
+      <guid>8df0a255-ba4e-42a7-b57f-d67da724dcb4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/PreReq/Pre-Req-Script-FileOps</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>ee8c6b5b-4cd6-4f2f-a3ea-9d5457cde594</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>9e02443f-7bc7-4a60-a9ca-7dea0ebfdc7e</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>82d0195a-5855-4229-baf9-84c883208628</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/FilesModule/FileOperations-Win</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>93f799af-084e-4b67-b40f-41a82816c616</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/TestDataForFileOperations</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>93f799af-084e-4b67-b40f-41a82816c616</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>FileName</value>
+         <variableId>9db2c348-847f-41f0-800b-d8b322772339</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>93f799af-084e-4b67-b40f-41a82816c616</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>TestCaseName</value>
+         <variableId>1d7255ee-2b97-45de-860a-6d4dff97674d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>93f799af-084e-4b67-b40f-41a82816c616</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>Operation</value>
+         <variableId>7b950ced-8cb3-43ce-a472-81090d4db7f5</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

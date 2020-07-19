@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FileSearch</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>136c0313-bf8e-4766-977f-dce65aeec605</testCaseGuid>
+   <variable>
+      <defaultValue>'list view'</defaultValue>
+      <description></description>
+      <id>29cdbf47-45c7-4d0b-95d9-f5cd1632331a</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'copy'</defaultValue>
+      <description></description>
+      <id>29a7293e-b88a-4df7-bb4e-e7589471e5b7</id>
+      <masked>false</masked>
+      <name>searchStr</name>
+   </variable>
+</TestCaseEntity>

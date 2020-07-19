@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CleanUp_Files</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3ec809f3-28d4-4435-aef2-bc0ea61e5c80</testCaseGuid>
+   <variable>
+      <defaultValue>'Test Case to delete all created files and folders'</defaultValue>
+      <description></description>
+      <id>ef604309-27f1-4a6c-8f10-4fb28c6cabdb</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

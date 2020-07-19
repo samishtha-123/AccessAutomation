@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-FolderOpearations</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9c31c782-b94e-4ec1-b9eb-1ba27b332a0d</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>6f506960-4f5e-4b84-bed7-671f2d49a683</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'MyFolderRename_LV'</defaultValue>
+      <description></description>
+      <id>beba9736-9fee-4ef0-a2a2-27db57f47b16</id>
+      <masked>false</masked>
+      <name>FolderName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission File Operations'</defaultValue>
+      <description></description>
+      <id>eb71c3c9-130e-4abc-8556-4951c50f08d4</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Rename'</defaultValue>
+      <description></description>
+      <id>ca7dce17-ea75-48b5-a618-53771420831e</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+   <variable>
+      <defaultValue>'Renamefile_LV.txt'</defaultValue>
+      <description></description>
+      <id>45359e71-21c9-42bc-9d9a-ea2558c293ec</id>
+      <masked>false</masked>
+      <name>renameFolder</name>
+   </variable>
+</TestCaseEntity>

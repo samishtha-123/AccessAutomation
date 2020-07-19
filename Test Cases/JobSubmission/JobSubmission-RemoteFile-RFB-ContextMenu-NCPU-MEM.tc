@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-RemoteFile-RFB-ContextMenu-NCPU-MEM</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bc933b11-17f2-49ed-81f9-c423a8ce64ff</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>12fbd89e-6fc8-4db4-8726-6ef7d080ebc3</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>3c2cdfaa-f679-4c1b-8a6a-57add95cc8fa</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>f05315b6-348a-4631-9e0f-626234afb457</id>
+      <masked>false</masked>
+      <name>AppVersion</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test to Switch Appliaction from LastSubmitted to Generic Profile through left navigation in JS form'</defaultValue>
+      <description></description>
+      <id>037b402a-f47d-4371-90c4-0a2a68cbf143</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>bba36029-d531-4453-9b4c-48903b2e8eed</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+   <variable>
+      <defaultValue>'3'</defaultValue>
+      <description></description>
+      <id>3ac299bb-00cb-4668-a786-b068d9b2becd</id>
+      <masked>false</masked>
+      <name>toChange</name>
+   </variable>
+</TestCaseEntity>

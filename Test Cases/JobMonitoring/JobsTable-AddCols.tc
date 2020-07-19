@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobsTable-AddCols</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7cbf7080-49c7-4274-86f7-f04ad7d98c22</testCaseGuid>
+   <variable>
+      <defaultValue>'cb_job_col_filter_queueName'</defaultValue>
+      <description></description>
+      <id>906d93d7-9edf-49da-91fb-d3eb163252e1</id>
+      <masked>false</masked>
+      <name>ColCheckBx</name>
+   </variable>
+   <variable>
+      <defaultValue>'job_col_filter_queueName'</defaultValue>
+      <description></description>
+      <id>3696c598-c23c-4fb6-acad-afcb3fbca84d</id>
+      <masked>false</masked>
+      <name>ColLable</name>
+   </variable>
+   <variable>
+      <defaultValue>'Add JM cols'</defaultValue>
+      <description></description>
+      <id>fb7b17c6-f07a-44db-95a6-014c8974af45</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

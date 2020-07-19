@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Pre-Req-Script-JObSubmission</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e6f1b3ae-ef4a-4613-8f7a-7dbba88930eb</testCaseGuid>
+   <variable>
+      <defaultValue>'Job Submission For FileOps'</defaultValue>
+      <description></description>
+      <id>a77238d6-95dd-4d45-a885-f2c3fbb097d0</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'JobsModule.zip'</defaultValue>
+      <description></description>
+      <id>ddf28354-bcd5-40b0-b7a7-b731ff0fae86</id>
+      <masked>false</masked>
+      <name>ToUpload</name>
+   </variable>
+</TestCaseEntity>

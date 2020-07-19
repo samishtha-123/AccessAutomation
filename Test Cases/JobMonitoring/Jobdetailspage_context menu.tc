@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Jobdetailspage_context menu</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>46528f60-6f7f-4c2c-be59-3ffb0f9b167f</testCaseGuid>
+   <variable>
+      <defaultValue>'Failed'</defaultValue>
+      <description></description>
+      <id>4a636c84-6f6f-4327-bc88-0f06ed57c48e</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'New File'</defaultValue>
+      <description></description>
+      <id>b07c6840-6124-403c-88c8-73fd685aac37</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Action for Completed Job - Resubmit'</defaultValue>
+      <description></description>
+      <id>95be6fc3-cb4f-4e7e-aee7-4913d254fd84</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

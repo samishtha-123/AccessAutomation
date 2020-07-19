@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UnzipOnUpload</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ffe12e97-beeb-45c9-b1ec-46fcc75e97e2</testCaseGuid>
+   <variable>
+      <defaultValue>'Test to verify Unzip zip file on Upload in FilesTab'</defaultValue>
+      <description></description>
+      <id>c7b3a5f8-e7bd-4b89-9a5f-948e44f860e9</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobFilters-SaveFilters</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>760065c9-3792-4432-adca-06c84943428c</testCaseGuid>
+   <variable>
+      <defaultValue>'Job Filters'</defaultValue>
+      <description></description>
+      <id>cb8b7af0-b33a-4579-bb88-cb75a300f49f</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'job_queue_filters'</defaultValue>
+      <description></description>
+      <id>b6437064-d5b7-4b74-b7bf-f2b2707f54df</id>
+      <masked>false</masked>
+      <name>FilterCategory</name>
+   </variable>
+   <variable>
+      <defaultValue>'compute'</defaultValue>
+      <description></description>
+      <id>68835494-617e-4570-b656-d448266da96d</id>
+      <masked>false</masked>
+      <name>FilterValue</name>
+   </variable>
+   <variable>
+      <defaultValue>'Queues'</defaultValue>
+      <description></description>
+      <id>bf9c44e2-408c-4f9f-8870-f7f68adfce91</id>
+      <masked>false</masked>
+      <name>FilterTitle</name>
+   </variable>
+   <variable>
+      <defaultValue>'queueName'</defaultValue>
+      <description></description>
+      <id>48734636-1105-4bfe-bf68-14111bfc8441</id>
+      <masked>false</masked>
+      <name>dataAttribute</name>
+   </variable>
+   <variable>
+      <defaultValue>'bhuvana'</defaultValue>
+      <description></description>
+      <id>784c0350-028b-4992-8787-35beba88226b</id>
+      <masked>false</masked>
+      <name>AllJobsUser</name>
+   </variable>
+   <variable>
+      <defaultValue>'ComputeQueue'</defaultValue>
+      <description></description>
+      <id>7aa31cb2-ccae-42a2-abe1-247e8e2d98bb</id>
+      <masked>false</masked>
+      <name>FilterName</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-FolderOperations-Topmenuicons</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>337f96a8-28d4-48f8-868b-bc393511781e</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>282533ac-7186-412e-b328-346236da8b00</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'MyFolderDownload'</defaultValue>
+      <description></description>
+      <id>5ea127d8-b300-4e17-810d-e61fa8333209</id>
+      <masked>false</masked>
+      <name>FolderName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission File Operations'</defaultValue>
+      <description></description>
+      <id>4de6a06a-99da-4e29-b4a7-02d6fbe53d76</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Download_icon'</defaultValue>
+      <description></description>
+      <id>19c30876-5316-4840-9428-1ba360cec6de</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+   <variable>
+      <defaultValue>'Renamefile_LV.txt'</defaultValue>
+      <description></description>
+      <id>76a40af3-e743-477e-b0f5-fc543856d43c</id>
+      <masked>false</masked>
+      <name>renameFile</name>
+   </variable>
+</TestCaseEntity>

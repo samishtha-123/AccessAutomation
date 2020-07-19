@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobFilters-SaveFilters-MaxCount</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5cf3daf8-0b68-4c33-9c4c-dd3b568424c4</testCaseGuid>
+   <variable>
+      <defaultValue>'Job Filters'</defaultValue>
+      <description></description>
+      <id>8fe97f86-abc2-4212-92cd-9dba59c37e44</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'job_state_filters'</defaultValue>
+      <description></description>
+      <id>e85ec3a7-aa32-45f1-9349-99cee8d1a041</id>
+      <masked>false</masked>
+      <name>FilterCategory</name>
+   </variable>
+   <variable>
+      <defaultValue>'Completed'</defaultValue>
+      <description></description>
+      <id>d56b7ca3-04cf-4d28-bd31-098ee71abbcc</id>
+      <masked>false</masked>
+      <name>FilterValue</name>
+   </variable>
+   <variable>
+      <defaultValue>'Status'</defaultValue>
+      <description></description>
+      <id>c2ff0dd6-55d2-4806-a97c-f47e8385d0eb</id>
+      <masked>false</masked>
+      <name>FilterTitle</name>
+   </variable>
+   <variable>
+      <defaultValue>'jobState'</defaultValue>
+      <description></description>
+      <id>e4825c27-e583-4def-8018-dfd922551744</id>
+      <masked>false</masked>
+      <name>dataAttribute</name>
+   </variable>
+   <variable>
+      <defaultValue>'rohini'</defaultValue>
+      <description></description>
+      <id>266c33c0-f3d2-4b8e-8eae-571715039ba7</id>
+      <masked>false</masked>
+      <name>AllJobsUser</name>
+   </variable>
+   <variable>
+      <defaultValue>'MyNewFilter'</defaultValue>
+      <description></description>
+      <id>02b4f6a9-2244-4eaa-895d-cab9c1667543</id>
+      <masked>false</masked>
+      <name>FilterName</name>
+   </variable>
+</TestCaseEntity>

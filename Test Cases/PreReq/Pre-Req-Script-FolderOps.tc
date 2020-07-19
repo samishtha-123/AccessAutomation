@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Pre-Req-Script-FolderOps</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f5ae9ce0-a758-4674-ab32-32ef35c89fa0</testCaseGuid>
+   <variable>
+      <defaultValue>'Job Submission For FileOps'</defaultValue>
+      <description></description>
+      <id>97df21b5-186f-4009-8bba-9433f9ed2dd4</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'FoldersModule.zip'</defaultValue>
+      <description></description>
+      <id>a67f2e1f-7e28-4689-b63e-465081eec7b0</id>
+      <masked>false</masked>
+      <name>ToUpload</name>
+   </variable>
+</TestCaseEntity>

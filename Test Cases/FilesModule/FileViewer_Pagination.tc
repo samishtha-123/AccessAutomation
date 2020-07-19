@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FileViewer_Pagination</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3f5e0b15-6b99-416c-bc06-b450300c1d96</testCaseGuid>
+   <variable>
+      <defaultValue>'ToDownload.txt'</defaultValue>
+      <description></description>
+      <id>7ced184e-e7e2-4a76-9827-c09853b112b1</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Check for no of lines'</defaultValue>
+      <description></description>
+      <id>cdd0dc3f-7beb-4670-a479-b6056ce7cae6</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Open With'</defaultValue>
+      <description></description>
+      <id>6ed1ec45-25c9-47d9-8002-f0a0038a476a</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+</TestCaseEntity>

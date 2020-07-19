@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-LocalFile</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e4ae94c3-8580-40a4-a8f8-92a4cc5cbf14</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>c0e00e77-2e30-4ab6-bc45-41d8bbda7cf5</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'SC.sh'</defaultValue>
+      <description></description>
+      <id>75329fac-7ea5-40fc-b431-aa90ea397a2d</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Create test data for Shortut files Submissions'</defaultValue>
+      <description></description>
+      <id>35c7aefd-dd64-4838-885f-042cd15ce777</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>ebeb91af-0057-4d95-9227-7de3a1528b75</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>46cec43c-9ef7-4d65-9267-9aa8ff4307f7</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+</TestCaseEntity>

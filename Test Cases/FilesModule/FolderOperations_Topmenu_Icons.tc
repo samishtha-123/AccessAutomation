@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FolderOperations_Topmenu_Icons</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d39ed77d-a193-4d5b-9269-5802b6a69462</testCaseGuid>
+   <variable>
+      <defaultValue>'MyFolderCompress_LV'</defaultValue>
+      <description></description>
+      <id>37bb42fb-bb25-4415-b65d-f62436826b25</id>
+      <masked>false</masked>
+      <name>folderName</name>
+   </variable>
+   <variable>
+      <defaultValue>'MyFolderRename'</defaultValue>
+      <description></description>
+      <id>d1a6d2f5-7fea-401c-879c-96e515d0904e</id>
+      <masked>false</masked>
+      <name>renameFolderName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test case to copy folder '</defaultValue>
+      <description></description>
+      <id>e5b7f64a-03e6-4210-bba9-f79611e3c08b</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Compress'</defaultValue>
+      <description></description>
+      <id>3da23bfd-8e4f-4249-9c91-343235062b08</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+</TestCaseEntity>

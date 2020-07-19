@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Upload_File</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9c39584e-3d50-4468-8a42-0db4fe3393cb</testCaseGuid>
+   <variable>
+      <defaultValue>'Test Case to upload file'</defaultValue>
+      <description></description>
+      <id>73b1dff5-5fa5-43b3-b326-fe0e8c63794c</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'FileToUpload.txt'</defaultValue>
+      <description></description>
+      <id>529d6558-2b32-4da5-b46b-5f2e735e983e</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+</TestCaseEntity>

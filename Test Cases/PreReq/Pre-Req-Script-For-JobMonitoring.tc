@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Pre-Req-Script-For-JobMonitoring</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>906bea5e-44d7-4103-8cbc-f470e10f88d6</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>07e6f513-a04f-4fe3-b70a-198f3f69be18</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'FileOps.sh'</defaultValue>
+      <description></description>
+      <id>64007784-bca4-488a-8a51-9d250067468a</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Submitting Jobs for Jom Monitoring Module'</defaultValue>
+      <description></description>
+      <id>1c87bd78-81b1-402b-ae17-375332c5d79c</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>9e1d0a01-35b1-4e4d-b5c8-bb176ad9c1bc</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>8f94f9b9-3a18-4eca-b080-5ff2e6edd9b9</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+</TestCaseEntity>

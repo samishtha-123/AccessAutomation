@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobActions_ForJobStates</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5a8b6d6d-6f19-47eb-a7d4-7acea1da80ca</testCaseGuid>
+   <variable>
+      <defaultValue>'Failed'</defaultValue>
+      <description></description>
+      <id>fa14e12e-5a6a-419f-8a7f-e37415e0594a</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'View Details'</defaultValue>
+      <description></description>
+      <id>733a2509-5f57-4bf7-83e2-b170d379821f</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Action for Completed Job - Resubmit - AllJobs - Not Job Owner'</defaultValue>
+      <description></description>
+      <id>deeba42e-d802-4544-b79c-5f155f26e90d</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'rohini'</defaultValue>
+      <description></description>
+      <id>51c69940-dfa5-4d99-bd37-77add7158785</id>
+      <masked>false</masked>
+      <name>AllJobsUser</name>
+   </variable>
+</TestCaseEntity>

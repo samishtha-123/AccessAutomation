@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CreateProfile</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>83724f77-6b35-4a54-a205-03a556309b54</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellPro'</defaultValue>
+      <description></description>
+      <id>9d2bae20-a478-4749-8ac6-272295f8a53c</id>
+      <masked>false</masked>
+      <name>proName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>50871651-4438-4afa-a3d1-e015def75e60</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test to create - No'</defaultValue>
+      <description></description>
+      <id>449134c1-4ff3-4836-9e8f-ac89476b1ec7</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>796b0670-b2f1-427e-a522-2cb840506286</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>3e8a665b-3dc0-4e3d-8db8-1309dd903104</id>
+      <masked>false</masked>
+      <name>RemoteFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>e06a756c-3750-4d42-9a5b-69da9cc7d2bd</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+   <variable>
+      <defaultValue>'Remote'</defaultValue>
+      <description></description>
+      <id>b4c0253a-b76c-4b00-b4c9-d3db25c231c4</id>
+      <masked>false</masked>
+      <name>ProfileType</name>
+   </variable>
+</TestCaseEntity>

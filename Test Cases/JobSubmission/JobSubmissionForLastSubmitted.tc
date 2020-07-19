@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmissionForLastSubmitted</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f6e59338-ddcf-40ba-acba-a36af01962fa</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>2165b182-636d-4b7f-ade2-161fca571166</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>dc34a078-3b76-4c35-9aca-e5bdde596154</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Last Submitted Wala - Details'</defaultValue>
+      <description></description>
+      <id>8593a4b9-9f88-428e-ba17-b836e798acf9</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>1e5d3486-4f6d-4c60-b9f7-f852e8083cf1</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+   <variable>
+      <defaultValue>'Remote'</defaultValue>
+      <description></description>
+      <id>d6ecc3a3-627b-4125-86fb-cb2431021897</id>
+      <masked>false</masked>
+      <name>ExecMode</name>
+   </variable>
+   <variable>
+      <defaultValue>'NCPU'</defaultValue>
+      <description></description>
+      <id>3d935056-a60a-4f76-a4d1-527bbd6f770d</id>
+      <masked>false</masked>
+      <name>ToChange</name>
+   </variable>
+   <variable>
+      <defaultValue>'2'</defaultValue>
+      <description></description>
+      <id>a3c1226f-d56d-4cdf-ab0d-cd98ce0d3fa2</id>
+      <masked>false</masked>
+      <name>ChangeValue</name>
+   </variable>
+</TestCaseEntity>

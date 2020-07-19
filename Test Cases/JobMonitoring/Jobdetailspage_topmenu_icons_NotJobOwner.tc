@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Jobdetailspage_topmenu_icons_NotJobOwner</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ebae5489-8338-440f-8fe1-1502ecdc279e</testCaseGuid>
+   <variable>
+      <defaultValue>'Queued'</defaultValue>
+      <description></description>
+      <id>cc30bca9-79a1-4ac7-a68b-b4bf1a4a1384</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'job_detail_download_btn'</defaultValue>
+      <description></description>
+      <id>beed715a-b583-4e89-ac0f-9c1d77035807</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Action for Completed Job - Terminate -AllJobs '</defaultValue>
+      <description></description>
+      <id>c9ea2c77-a55a-448a-bbb4-a718786c3716</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'rohini'</defaultValue>
+      <description></description>
+      <id>a941ed3c-b952-4d7d-b22e-65b3502d4e13</id>
+      <masked>false</masked>
+      <name>AllJobsUser</name>
+   </variable>
+   <variable>
+      <defaultValue>'Output'</defaultValue>
+      <description></description>
+      <id>e5b83e59-7381-49c6-84cb-5809820e4103</id>
+      <masked>false</masked>
+      <name>folder</name>
+   </variable>
+</TestCaseEntity>

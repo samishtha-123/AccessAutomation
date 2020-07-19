@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FileViewerOperations</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5b38b335-5ea2-48e1-8a6f-22a0ccc7600f</testCaseGuid>
+   <variable>
+      <defaultValue>'ForFileViewer.txt'</defaultValue>
+      <description></description>
+      <id>9fa70e0e-ddc5-443f-82cf-74e6dc308317</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'VD'</defaultValue>
+      <description></description>
+      <id>17636c94-acfa-452d-9ca9-44c1c14edb87</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Download'</defaultValue>
+      <description></description>
+      <id>6ea28048-2fa4-4154-aa63-89368e7a9aae</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+</TestCaseEntity>

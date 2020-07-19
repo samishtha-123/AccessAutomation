@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DownloadFile</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a696a906-468f-4ff7-a5ee-8b8abfc47816</testCaseGuid>
+   <variable>
+      <defaultValue>'Test Case to verify download'</defaultValue>
+      <description></description>
+      <id>991b8001-84ba-41d6-8c98-db7bcd5aaf74</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

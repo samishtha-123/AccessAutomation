@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobActions_ForOutPutFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8e769b17-5aed-46e2-8a97-51f0ab0c18c2</testCaseGuid>
+   <variable>
+      <defaultValue>'Completed'</defaultValue>
+      <description></description>
+      <id>cb57c91a-4b22-427c-a213-f65a42880aab</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'View Details'</defaultValue>
+      <description></description>
+      <id>a4f893c0-c2e1-4022-becf-3cecb1968125</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Action for Completed Job - Resubmit'</defaultValue>
+      <description></description>
+      <id>ee2968a0-5228-4fd6-b646-0d6e8327fba5</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

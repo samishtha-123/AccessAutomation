@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FolderOperations-Win</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e0e1822b-6005-4504-bea7-fb5e78abefdc</testCaseGuid>
+   <variable>
+      <defaultValue>'MyFolderCut_TV'</defaultValue>
+      <description></description>
+      <id>383fda8f-7884-49c1-9aa7-efb4d431dcd4</id>
+      <masked>false</masked>
+      <name>folderName</name>
+   </variable>
+   <variable>
+      <defaultValue>'MyFolderRename'</defaultValue>
+      <description></description>
+      <id>da0ffbe9-4bc9-4fb2-9cc2-6b4d246a65e8</id>
+      <masked>false</masked>
+      <name>renameFolderName</name>
+   </variable>
+   <variable>
+      <defaultValue>'CUT tile view'</defaultValue>
+      <description></description>
+      <id>944f4635-4d1b-4180-87d5-bca7d9de007b</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Cut'</defaultValue>
+      <description></description>
+      <id>94df1ab4-a204-484a-9a26-a55a09152faa</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+</TestCaseEntity>

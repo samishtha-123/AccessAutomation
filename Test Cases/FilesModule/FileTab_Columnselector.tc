@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FileTab_Columnselector</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>58eeb34f-3b2a-470d-8742-ba85f523a493</testCaseGuid>
+   <variable>
+      <defaultValue>'ToCopy_LV.txt'</defaultValue>
+      <description></description>
+      <id>b605638d-397a-4f58-8977-778eb6c82902</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'add column selector ascending order'</defaultValue>
+      <description></description>
+      <id>7c87de63-cd9e-412b-b093-6181394ef98c</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Open With'</defaultValue>
+      <description></description>
+      <id>6bdd7fb9-b2bd-4c7a-bc4b-1a8c2aae8a01</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+   <variable>
+      <defaultValue>'Type'</defaultValue>
+      <description></description>
+      <id>6c7f524c-1861-4220-928d-e463ac88f900</id>
+      <masked>false</masked>
+      <name>column</name>
+   </variable>
+   <variable>
+      <defaultValue>'file_col_filter_type'</defaultValue>
+      <description></description>
+      <id>028dd9b4-42fe-43c0-9cad-68f3cb335200</id>
+      <masked>false</masked>
+      <name>colName</name>
+   </variable>
+</TestCaseEntity>

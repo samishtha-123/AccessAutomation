@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-FileOperations-Topmenuicons</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f27c35fc-ba54-469a-b301-6cee30ac9425</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>120ba62f-cb20-420f-b9ed-bc964b7eaab5</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ToCompress_LV.txt'</defaultValue>
+      <description></description>
+      <id>69e965b4-ec08-4e83-a907-9aa3bb51eb9d</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission File Operations'</defaultValue>
+      <description></description>
+      <id>01885c6a-c4fa-47e2-b0ef-08c44571cc02</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Compress'</defaultValue>
+      <description></description>
+      <id>22302168-4dbd-4a3c-81bd-627834fe4f4c</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+   <variable>
+      <defaultValue>'Renamefile_LV.txt'</defaultValue>
+      <description></description>
+      <id>3294d234-7ac9-4e40-9586-bb788fe78fb8</id>
+      <masked>false</masked>
+      <name>renameFile</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Rename_File</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2cdc7227-e47d-4fa0-b7e4-a5aa1fc99822</testCaseGuid>
+   <variable>
+      <defaultValue>'ToRename_TileView.txt'</defaultValue>
+      <description></description>
+      <id>183a5f3f-7bf0-4205-ad81-ca8faf69d196</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RenameFile.txt'</defaultValue>
+      <description></description>
+      <id>bb63e9b7-a003-4bd5-819e-1f856f3e6c27</id>
+      <masked>false</masked>
+      <name>renameFileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test case to rename file - tile view'</defaultValue>
+      <description></description>
+      <id>97d206c8-90ce-4720-b7cd-049d06125afc</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

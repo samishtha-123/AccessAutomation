@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Access_management</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9f2f266b-2ef9-4021-91be-4e574fc27be8</testCaseGuid>
+   <variable>
+      <defaultValue>'Add user'</defaultValue>
+      <description></description>
+      <id>bebb1369-76cb-4dd7-b801-95005bd8c662</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'sami'</defaultValue>
+      <description></description>
+      <id>97b65ffa-b5d0-429d-9799-4d154bc186bb</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>'samishtha'</defaultValue>
+      <description></description>
+      <id>153e9f4e-32e6-47ed-ad96-eb08e4d70bd2</id>
+      <masked>false</masked>
+      <name>firstname</name>
+   </variable>
+   <variable>
+      <defaultValue>'taneja'</defaultValue>
+      <description></description>
+      <id>f2755deb-09f2-4ef6-a318-116719a31ed7</id>
+      <masked>false</masked>
+      <name>lastname</name>
+   </variable>
+   <variable>
+      <defaultValue>'Delete role manager'</defaultValue>
+      <description></description>
+      <id>eebf5735-c5bc-4d89-a41b-13abf7812f2c</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+   <variable>
+      <defaultValue>'demo2'</defaultValue>
+      <description></description>
+      <id>6a6999c4-2652-4212-bee1-ea6d888e1150</id>
+      <masked>false</masked>
+      <name>roleid</name>
+   </variable>
+</TestCaseEntity>

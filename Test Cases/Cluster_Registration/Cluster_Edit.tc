@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Cluster_Edit</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5abe2c70-f55a-42e9-8687-661aa840f540</testCaseGuid>
+   <variable>
+      <defaultValue>'Edit'</defaultValue>
+      <description></description>
+      <id>1644a65e-7d84-4197-8c91-fa08a8692551</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'pbsworks'</defaultValue>
+      <description></description>
+      <id>40487acb-0e66-49e7-a8e6-c238803bcf44</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>'pbsworks'</defaultValue>
+      <description></description>
+      <id>a3939071-337b-4468-abb2-148c81ebd537</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+   <variable>
+      <defaultValue>'/stage'</defaultValue>
+      <description></description>
+      <id>30348805-67ff-4709-b0be-20d83a738b07</id>
+      <masked>false</masked>
+      <name>rootdir</name>
+   </variable>
+   <variable>
+      <defaultValue>'name'</defaultValue>
+      <description></description>
+      <id>96df2072-f7d3-405e-b23d-ef0993d4fd7d</id>
+      <masked>false</masked>
+      <name>colid</name>
+   </variable>
+   <variable>
+      <defaultValue>'/home'</defaultValue>
+      <description></description>
+      <id>02e1ac0c-6198-45b9-bc41-d35eb124ead6</id>
+      <masked>false</masked>
+      <name>rootdir1</name>
+   </variable>
+   <variable>
+      <defaultValue>'cancel Edit'</defaultValue>
+      <description></description>
+      <id>9dbe4533-fee0-490d-b2b5-17ab22a0ffa9</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+</TestCaseEntity>

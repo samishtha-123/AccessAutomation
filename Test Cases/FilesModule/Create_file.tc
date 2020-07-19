@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create_file</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7daf2b88-1375-4586-a13e-ba576b867906</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.G_FileToCreate</defaultValue>
+      <description></description>
+      <id>fbbf9b51-72f4-495f-9cbf-a8e08f06ebf3</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Create File - Valid'</defaultValue>
+      <description></description>
+      <id>02884025-536f-4943-85bd-c1e5dc201c49</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

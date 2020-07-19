@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>BookMark-FilesTab</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>07d3e101-38ce-415c-962a-ba5371173080</testCaseGuid>
+   <variable>
+      <defaultValue>'Test to verify BookMark in Files Tab'</defaultValue>
+      <description></description>
+      <id>b42dc282-7cab-4a76-89c4-3051156f6d6c</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

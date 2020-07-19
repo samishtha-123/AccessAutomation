@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Pre-Req-Script-For-FileOps</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>119ce438-7354-448e-835e-07ed34d30399</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>18e5855e-a232-4016-9b62-a42bc4ed92d2</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'CreateFilesDocker.sh'</defaultValue>
+      <description></description>
+      <id>d1866245-a8d8-4227-adfb-19dbefaaafb8</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission For FileOps'</defaultValue>
+      <description></description>
+      <id>9aaa38c1-3487-44bf-89d0-85ef1f31bf98</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>cca7cadf-8761-4f59-8947-8c4e626de057</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>e855541e-7d9c-4a91-bbe7-8934ae2d4128</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+</TestCaseEntity>

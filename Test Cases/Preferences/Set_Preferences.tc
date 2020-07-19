@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set_Preferences</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c36b8e40-281a-40ed-b08a-95d0eee79d29</testCaseGuid>
+   <variable>
+      <defaultValue>'Job Submission'</defaultValue>
+      <description></description>
+      <id>20e66ddf-642f-491a-b46e-0d3dc565bf8c</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Diagnosis'</defaultValue>
+      <description></description>
+      <id>4611fa3d-9817-4318-9699-09323a3d16ae</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+   <variable>
+      <defaultValue>'Diagnosis'</defaultValue>
+      <description></description>
+      <id>8c467d1f-9c4c-493c-a375-d9145f840bda</id>
+      <masked>false</masked>
+      <name>preference</name>
+   </variable>
+   <variable>
+      <defaultValue>' new1.txt'</defaultValue>
+      <description></description>
+      <id>71b6bb43-2854-4a87-80e8-e8a6cc55b8f7</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>4a94cf29-3aca-457a-8b05-cbec1a213170</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>003edf9a-5cd2-49e7-b7ef-cf2adf5857a1</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+   <variable>
+      <defaultValue>'Remote'</defaultValue>
+      <description></description>
+      <id>630400d7-1a60-442c-afcd-0566c0a50cbe</id>
+      <masked>false</masked>
+      <name>ExecMode</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>80fb4bcc-6ac6-46ae-b1f3-d80a3cca2ee6</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+</TestCaseEntity>

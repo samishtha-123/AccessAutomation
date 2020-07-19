@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobDetailsPage_LayOutVerifications</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>285e2148-010e-409a-ab69-4f2af017c9cc</testCaseGuid>
+   <variable>
+      <defaultValue>'Completed'</defaultValue>
+      <description></description>
+      <id>b95a9fac-0595-4142-958e-7ec79e23ea6c</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'New File'</defaultValue>
+      <description></description>
+      <id>e355021e-cb77-4652-bf65-137a4779e533</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Action for Completed Job - Resubmit'</defaultValue>
+      <description></description>
+      <id>ee8f4c65-18f4-4728-905c-411aacdb30ac</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

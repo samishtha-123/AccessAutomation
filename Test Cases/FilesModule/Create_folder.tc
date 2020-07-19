@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create_folder</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2150d03e-3e0b-471b-9fbb-0f011c169c21</testCaseGuid>
+   <variable>
+      <defaultValue>'MyFolder99'</defaultValue>
+      <description></description>
+      <id>ee5dd06b-fe53-4cd7-b0ae-9d5aa0e1949d</id>
+      <masked>false</masked>
+      <name>FolderName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test case to create folder'</defaultValue>
+      <description></description>
+      <id>7d839b7d-abd5-48a9-9050-61b7d5242a7c</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

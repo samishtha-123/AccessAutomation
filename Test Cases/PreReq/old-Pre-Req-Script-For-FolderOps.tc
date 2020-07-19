@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>old-Pre-Req-Script-For-FolderOps</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d8fd547c-9c48-47cb-b200-7834d50ff74f</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>8e3e7690-65ca-4925-90cb-6e879f330b54</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'CreateFoldersDocker.sh'</defaultValue>
+      <description></description>
+      <id>6880c36e-506e-48f8-b2c2-94a06e4f4998</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission For FileOps'</defaultValue>
+      <description></description>
+      <id>da8d6343-6509-4322-8e34-b6ba793c24fe</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>333e1ebe-df87-4e15-b618-aa5b9dd6d0dc</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>11f0524e-4616-4edb-a899-16031097033c</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+</TestCaseEntity>
