@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-RemoteFile</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>718d1609-6354-495d-a278-44fc95f8ff29</testCaseGuid>
+   <variable>
+      <defaultValue>'Optistruct'</defaultValue>
+      <description></description>
+      <id>4224b6a3-c1ed-4252-b3f8-249322a83015</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'bar.fem'</defaultValue>
+      <description></description>
+      <id>42ef5d09-32a2-4d68-ae85-934dff039724</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'2018'</defaultValue>
+      <description></description>
+      <id>95cf6f32-961f-4d11-8ee1-1935848a44c2</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission using remote file'</defaultValue>
+      <description></description>
+      <id>2a978db3-c3fe-407f-bee2-4baca9fc836b</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

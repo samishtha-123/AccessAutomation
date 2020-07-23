@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyOutputFiles</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>86b33a24-7d82-42fa-a239-6ac32177fae2</testCaseGuid>
+   <variable>
+      <defaultValue>'Test case to verify output files'</defaultValue>
+      <description></description>
+      <id>c86e2962-3831-4ae0-97c5-b785b07dca8c</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

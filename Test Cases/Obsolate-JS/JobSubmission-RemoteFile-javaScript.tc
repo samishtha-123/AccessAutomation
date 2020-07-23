@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-RemoteFile-javaScript</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7ae82cf0-38fb-4244-a3bb-92ee5298ff4f</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>6796f606-60a4-43aa-bc85-79f3fb2c5204</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>703301eb-9af2-48a5-bf99-3032595a4230</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'JobSubmissionForm/File_RunJob_FF'</defaultValue>
+      <description></description>
+      <id>9ff6bc77-84df-4ab1-8446-b6e5f695b85d</id>
+      <masked>false</masked>
+      <name>FileElement</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>14713477-aa8a-41f1-be2b-c29960745b07</id>
+      <masked>false</masked>
+      <name>AppVersion</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission using remote file Edit path'</defaultValue>
+      <description></description>
+      <id>37ea4d92-81b4-48c3-a5e3-7a2aa6660dfd</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobFilters-forK6</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dd1b958a-7d08-4f24-a573-65cbc61e8ec0</testCaseGuid>
+   <variable>
+      <defaultValue>'Job Filters - my Job'</defaultValue>
+      <description></description>
+      <id>7653b46d-9efb-406a-b997-b806d404e0fc</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'job_state_filters'</defaultValue>
+      <description></description>
+      <id>50e76ac2-7a2f-42d1-8e17-c5fbc3984081</id>
+      <masked>false</masked>
+      <name>FilterCategory</name>
+   </variable>
+   <variable>
+      <defaultValue>'Queued'</defaultValue>
+      <description></description>
+      <id>9f614a88-ea43-4c50-a822-c9ffa179260d</id>
+      <masked>false</masked>
+      <name>FilterValue</name>
+   </variable>
+   <variable>
+      <defaultValue>'Status'</defaultValue>
+      <description></description>
+      <id>18f24f6f-5469-4e16-9fa5-bd8f849c61c3</id>
+      <masked>false</masked>
+      <name>FilterTitle</name>
+   </variable>
+   <variable>
+      <defaultValue>'jobState'</defaultValue>
+      <description></description>
+      <id>a5d2be00-fce5-48c3-a795-40f91c307490</id>
+      <masked>false</masked>
+      <name>dataAttribute</name>
+   </variable>
+</TestCaseEntity>

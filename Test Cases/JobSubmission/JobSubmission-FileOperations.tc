@@ -40,4 +40,11 @@
       <masked>false</masked>
       <name>renameFile</name>
    </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>41182b7c-f622-409d-a4c4-167e9b7b9853</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
 </TestCaseEntity>

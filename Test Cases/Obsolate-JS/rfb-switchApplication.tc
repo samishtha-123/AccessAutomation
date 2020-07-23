@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>rfb-switchApplication</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f281f9fd-10ad-4807-a7e9-115959cbe6a8</testCaseGuid>
+   <variable>
+      <defaultValue>'Optistruct'</defaultValue>
+      <description></description>
+      <id>f5fc2ade-2b0d-4f8c-9c81-250fff92cae5</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>a6413bb5-8219-4755-a651-79cc0c9b129f</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test to Switch Appliaction from OptiStruct to ShellScript through left navigation in JS form'</defaultValue>
+      <description></description>
+      <id>d136fd6a-f3fa-44c6-bfda-d4211751b61f</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>11230f5d-2647-4379-8eb7-5ddb6672c072</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>e50dac30-7a76-48be-b01d-426bbf80bc96</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>622ae497-c74e-472f-972d-2996e7120e60</id>
+      <masked>false</masked>
+      <name>NewApp</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-NavigatingPreviousFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>084fe1ea-89a1-4864-983a-0717b4583576</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>91eeea77-0135-448f-8089-ed42cb63d23d</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ToRename_ListView.txt'</defaultValue>
+      <description></description>
+      <id>49b64022-8afd-42b1-95c6-b05be9bece94</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission File Operations'</defaultValue>
+      <description></description>
+      <id>a4159cb7-03c4-41d9-b199-73357b3822db</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'new.txt'</defaultValue>
+      <description></description>
+      <id>bd968dd8-ccc8-4734-bfaa-6318ad834c85</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+</TestCaseEntity>

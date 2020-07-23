@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission -Add_jobscriptoption</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a32cacda-d96c-4321-a7db-3d32ffc39574</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>64ee1de1-1828-4d77-becb-8baf24e6e6ed</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>1dd6665d-d333-4782-aad2-e1ca7324e28b</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Verify Output Folder'</defaultValue>
+      <description></description>
+      <id>81884a8a-59c5-4af6-bb63-42db2be49040</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>9d6db54c-3469-4145-9d4e-a9761c738769</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+   <variable>
+      <defaultValue>'Remote'</defaultValue>
+      <description></description>
+      <id>4597ada2-27be-4cf2-95ed-09cd1aa0ac96</id>
+      <masked>false</masked>
+      <name>ExecMode</name>
+   </variable>
+   <variable>
+      <defaultValue>'SetOutPutDir'</defaultValue>
+      <description></description>
+      <id>4501daa1-5d8a-4a59-b977-3109d0847ebe</id>
+      <masked>false</masked>
+      <name>ToChange</name>
+   </variable>
+   <variable>
+      <defaultValue>'newOutPutDir'</defaultValue>
+      <description></description>
+      <id>f0a7aec1-e16f-470f-b0f2-8b6360f0599c</id>
+      <masked>false</masked>
+      <name>ChangeValue</name>
+   </variable>
+   <variable>
+      <defaultValue>'bar.fem'</defaultValue>
+      <description></description>
+      <id>7cbcb672-983b-43b0-bd2b-c56870a757ed</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+</TestCaseEntity>

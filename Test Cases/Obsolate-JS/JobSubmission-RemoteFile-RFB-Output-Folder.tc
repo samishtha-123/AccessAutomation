@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-RemoteFile-RFB-Output-Folder</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f7a93794-83ce-4748-abaa-b6df4c936e19</testCaseGuid>
+   <variable>
+      <defaultValue>'Optistruct'</defaultValue>
+      <description></description>
+      <id>ecd0a139-c46a-4f26-a71c-1d6563db730d</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'bar.fem'</defaultValue>
+      <description></description>
+      <id>9a89c9e8-bea8-407b-af02-819a6c910222</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'2018'</defaultValue>
+      <description></description>
+      <id>91ae0513-ffbb-4d4d-9c3c-2d6ff7aa720d</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'JobSubmission - Edit Output Folder'</defaultValue>
+      <description></description>
+      <id>561222b9-a604-4d74-9d28-b193bf04c8b0</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Input File'</defaultValue>
+      <description></description>
+      <id>2567c18d-af88-4c16-afe6-fe4065bd8e3c</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+</TestCaseEntity>

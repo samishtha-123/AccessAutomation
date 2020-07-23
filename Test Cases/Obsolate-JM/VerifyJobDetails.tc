@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyJobDetails</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4c71e782-a0e4-4ba1-8ec5-ca3462999eb4</testCaseGuid>
+   <variable>
+      <defaultValue>'Test Case to verify job details'</defaultValue>
+      <description></description>
+      <id>bdbc0920-41ce-4518-ae3d-dcde8b5cecc5</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,4 @@
+Module=Preferences
+csvfile=C:/katalon/AccessWeb/Reports/20200717_164954/Preferences/20200717_164954/20200717_164954.csv
+browser=Chrome
+reportName=Preferences_Chrome_17072020_164958.html

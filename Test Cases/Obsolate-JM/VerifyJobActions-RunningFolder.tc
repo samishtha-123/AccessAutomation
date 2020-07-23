@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyJobActions-RunningFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>629a86ec-7d0f-4ded-a5ed-85afea0196d0</testCaseGuid>
+   <variable>
+      <defaultValue>'Runnig Folder'</defaultValue>
+      <description></description>
+      <id>5785f07d-d802-4332-b725-f53dff1ca7d0</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'FileToUpload.txt'</defaultValue>
+      <description></description>
+      <id>bb853a4e-5063-4feb-a748-5a9455beeb9d</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'VerifyFiles'</defaultValue>
+      <description></description>
+      <id>7a83587b-0a35-402c-91eb-9b37be0af306</id>
+      <masked>false</masked>
+      <name>Action</name>
+   </variable>
+</TestCaseEntity>

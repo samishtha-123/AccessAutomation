@@ -1,0 +1,4 @@
+Module=Generic_Actions
+csvfile=C:/katalon/AccessWeb/Reports/20200717_155314/Generic_Actions/20200717_155314/20200717_155314.csv
+browser=Chrome
+reportName=Generic_Actions_Chrome_17072020_155318.html

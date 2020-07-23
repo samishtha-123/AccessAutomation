@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Delete_folder</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>774b3538-b55a-4933-8449-d79aedc77ed6</testCaseGuid>
+   <variable>
+      <defaultValue>'MyFolder200'</defaultValue>
+      <description></description>
+      <id>f8f16002-bb22-4106-b066-ad8a623656d7</id>
+      <masked>false</masked>
+      <name>folderName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test case to delete folder'</defaultValue>
+      <description></description>
+      <id>53ac70d7-5c50-4333-8424-0e9b5c207b3d</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-LocalFile-Edge</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d374190b-30d5-4601-961a-7d34fd7c4a9d</testCaseGuid>
+   <variable>
+      <defaultValue>'NewJobPage/AppList_ShellScript'</defaultValue>
+      <description></description>
+      <id>2f72487b-ffce-479f-bbc1-dc951721141f</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'c:\\RunJob.sh'</defaultValue>
+      <description></description>
+      <id>8dca7f63-864b-4557-b651-b3482787b13d</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+</TestCaseEntity>

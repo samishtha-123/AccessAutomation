@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-InvalidPath</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>65b02135-bd00-4f6b-9867-e7b51ea24a5e</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>5b852c29-2a95-473d-955d-ed3bbe631419</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ToRename_ListView.txt'</defaultValue>
+      <description></description>
+      <id>94f63a41-04d8-46ce-a37b-ae2b3074fd43</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission File Operations'</defaultValue>
+      <description></description>
+      <id>dfa17c7d-5dd5-4bf7-9c99-aed96fe86e0d</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'new.txt'</defaultValue>
+      <description></description>
+      <id>6ee91afc-9df8-4d4f-86a7-9c1144499de1</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+</TestCaseEntity>

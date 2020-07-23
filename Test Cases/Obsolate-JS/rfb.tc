@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>rfb</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>34ab4e74-4627-43e4-aac7-e2d0f99b831b</testCaseGuid>
+   <variable>
+      <defaultValue>'Optistruct'</defaultValue>
+      <description></description>
+      <id>d7f0724d-fbe5-4d75-9fa8-78925c9e1304</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'2018'</defaultValue>
+      <description></description>
+      <id>a5c7b455-cf63-4b0e-9c54-7b5b16d587e6</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'RFB'</defaultValue>
+      <description></description>
+      <id>8d18a45e-eb03-4409-a7bb-c963dfd19156</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'bar.fem'</defaultValue>
+      <description></description>
+      <id>f4b82c59-8f9e-4f16-9a33-13fc681fd111</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Input File'</defaultValue>
+      <description></description>
+      <id>2c364c63-2e29-4581-8d47-9e50a431067a</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+   <variable>
+      <defaultValue>'NewPro'</defaultValue>
+      <description></description>
+      <id>ccec17c3-872c-4b79-b42f-2a48db734e5d</id>
+      <masked>false</masked>
+      <name>NewApp</name>
+   </variable>
+</TestCaseEntity>

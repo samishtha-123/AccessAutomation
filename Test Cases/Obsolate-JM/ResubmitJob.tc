@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ResubmitJob</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>21e183c5-3ebb-471f-a0ea-d7b9d868eca3</testCaseGuid>
+   <variable>
+      <defaultValue>'Test case to resubmit job'</defaultValue>
+      <description></description>
+      <id>b7fd3cc8-7705-43fa-a68e-56481aee5747</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

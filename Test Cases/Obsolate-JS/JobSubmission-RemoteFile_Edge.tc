@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-RemoteFile_Edge</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fd23c2de-8c69-4f09-bb1e-7174dc4d230c</testCaseGuid>
+   <variable>
+      <defaultValue>'NewJobPage/AppList_ShellScript'</defaultValue>
+      <description></description>
+      <id>8726543d-6615-4fa6-8f9f-5d228fd3548c</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>0b7d0060-243a-4685-9ad1-752817d150e8</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'JobSubmissionForm/File_RunJob_FF'</defaultValue>
+      <description></description>
+      <id>5266d8e8-bfe1-4178-bd36-f015a044db8b</id>
+      <masked>false</masked>
+      <name>FileElement</name>
+   </variable>
+</TestCaseEntity>

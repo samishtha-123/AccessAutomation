@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-RemoteFile-AllFields</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3403c023-dbb4-43b3-b2ba-629773f8cf5f</testCaseGuid>
+   <variable>
+      <defaultValue>'Optistruct'</defaultValue>
+      <description></description>
+      <id>96f0eafe-1a03-405f-8d46-8dc6d45919db</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'bar.fem'</defaultValue>
+      <description></description>
+      <id>ce6672f5-57e0-47da-ad56-8b556bd57a31</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'13.0'</defaultValue>
+      <description></description>
+      <id>45fd1b29-4ce1-4650-9818-05637e0995b7</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'JobSubmission - Optistruct - All Fields'</defaultValue>
+      <description></description>
+      <id>be8f3725-319d-46ca-8481-a9754af1fb41</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'compute'</defaultValue>
+      <description></description>
+      <id>230eead9-5850-4146-8748-2ef2b43fff46</id>
+      <masked>false</masked>
+      <name>QueueName</name>
+   </variable>
+   <variable>
+      <defaultValue>'2'</defaultValue>
+      <description></description>
+      <id>8b530f99-77f6-48f8-9473-2897c3a8b252</id>
+      <masked>false</masked>
+      <name>NCPUS</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>29d6c916-9c0f-487a-9da1-268c2773bc8d</id>
+      <masked>false</masked>
+      <name>variable</name>
+   </variable>
+</TestCaseEntity>

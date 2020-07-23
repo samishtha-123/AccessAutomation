@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyJobActions-OutPutFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>85e36eac-92f7-473f-93c8-528ea122f080</testCaseGuid>
+   <variable>
+      <defaultValue>'Delete Yes'</defaultValue>
+      <description></description>
+      <id>5cf053f6-db7c-4f31-ac6a-acdce0a15e08</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Download'</defaultValue>
+      <description></description>
+      <id>58915a7e-2e27-4952-9320-d98cf279be13</id>
+      <masked>false</masked>
+      <name>Action</name>
+   </variable>
+</TestCaseEntity>

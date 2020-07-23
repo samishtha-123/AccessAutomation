@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-LocalFile-UploadtoJSForm</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9d6ff887-a844-444f-9ba9-3da1bfdad7ca</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>3d475b50-c6f3-4cba-934c-f305721e7b0c</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'FileOps.sh'</defaultValue>
+      <description></description>
+      <id>919b4ce1-15ad-44b0-b9f9-653e752372d1</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Submission For FileOps'</defaultValue>
+      <description></description>
+      <id>ce8e7dbe-e72a-434c-8586-bec860d7296f</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>e3ab3436-ad52-4467-82fd-b410400756b6</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>81f396ea-b0d3-41bc-8943-5511d84aa730</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+</TestCaseEntity>

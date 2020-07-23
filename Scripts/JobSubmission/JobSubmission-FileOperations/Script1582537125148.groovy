@@ -65,7 +65,24 @@ try {
 			WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
 			extentTest.log(LogStatus.PASS, 'Navigated to /stage/JSUploads in RFB ')
 
-		   WebUI.click(findTestObject('2020.1/Stage_folder'))
+			WebUI.click(findTestObject('FilesPage/FilesSearch_filter'))
+			
+					WebUI.waitForElementVisible(findTestObject('FilesPage/FilesSearch_filter'), 2)
+					
+			
+					println(fileName)
+			
+					WebUI.setText(findTestObject('FilesPage/FilesSearch_filter'), fileName)
+					extentTest.log(LogStatus.PASS, 'Looking for file to perfrom operation - ' +Operation)
+					
+					WebUI.sendKeys(findTestObject('JobDetailsPage/TextBx_DetailsFilter'), Keys.chord(Keys.ENTER))
+			
+					extentTest.log(LogStatus.PASS, 'Clicked on File  - ' + fileName)
+			
+			
+					
+			
+			
 	
 
 

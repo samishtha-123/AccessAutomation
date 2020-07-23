@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'pbsorks'</initValue>
+      <initValue>'pbsworks'</initValue>
       <name>G_AdminUser</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

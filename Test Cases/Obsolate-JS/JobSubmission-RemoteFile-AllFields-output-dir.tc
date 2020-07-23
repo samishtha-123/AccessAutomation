@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission-RemoteFile-AllFields-output-dir</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d87a20d8-1d74-409a-b488-e208ab27314a</testCaseGuid>
+   <variable>
+      <defaultValue>'NewJobPage/AppList_ShellScript'</defaultValue>
+      <description></description>
+      <id>f38b9d34-28ce-4f51-85eb-25cad802f21a</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>c977e5a1-de73-44e2-ac73-4f898c4de1ba</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'JobSubmissionForm/File_RunJob_FF'</defaultValue>
+      <description></description>
+      <id>6528b8c9-f019-4108-8f3e-718baaf3fb40</id>
+      <masked>false</masked>
+      <name>FileElement</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>c3957a6e-19f6-4eea-872f-8b71acbd2b11</id>
+      <masked>false</masked>
+      <name>Version</name>
+   </variable>
+   <variable>
+      <defaultValue>'JobSubmission- Edit OutPut folder '</defaultValue>
+      <description></description>
+      <id>131ef93f-509f-4f71-848e-264e477a5660</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'accessQueue'</defaultValue>
+      <description></description>
+      <id>b5b483f9-e236-4bb4-87d1-958e0941b85b</id>
+      <masked>false</masked>
+      <name>QueueName</name>
+   </variable>
+   <variable>
+      <defaultValue>'1'</defaultValue>
+      <description></description>
+      <id>a034fbed-92e8-465c-8e64-a31ba4784c97</id>
+      <masked>false</masked>
+      <name>NCPUS</name>
+   </variable>
+</TestCaseEntity>

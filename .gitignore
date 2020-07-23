@@ -3,13 +3,5 @@
 /.settings/
 /.classpath
 .svn/
-
+/Reports/
 /Test Cases/WIP/
-/Test Cases/Obsolate-FM/
-/Test Cases/Obsolate-JM/
-/Test Cases/Obsolate-JS/
-
-/Scripts/WIP/
-/Scripts/Obsolate-FM/
-/Scripts/Obsolate-JM/
-/Scripts/Obsolate-JS/

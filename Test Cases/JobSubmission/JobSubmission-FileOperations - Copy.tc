@@ -4,39 +4,39 @@
    <name>JobSubmission-FileOperations - Copy</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>084fe1ea-89a1-4864-983a-0717b4583576</testCaseGuid>
+   <testCaseGuid>15bede29-4f2e-4124-9d0d-41ebf899dac6</testCaseGuid>
    <variable>
       <defaultValue>'ShellScript'</defaultValue>
       <description></description>
-      <id>91eeea77-0135-448f-8089-ed42cb63d23d</id>
+      <id>e8dcd24f-8ea1-4fcb-961b-af1ce26c86d7</id>
       <masked>false</masked>
       <name>AppName</name>
    </variable>
    <variable>
       <defaultValue>'ToRename_ListView.txt'</defaultValue>
       <description></description>
-      <id>49b64022-8afd-42b1-95c6-b05be9bece94</id>
+      <id>b2037c58-7e19-493c-9e41-f0d0bdf13aba</id>
       <masked>false</masked>
       <name>InputFile</name>
    </variable>
    <variable>
       <defaultValue>'Job Submission File Operations'</defaultValue>
       <description></description>
-      <id>a4159cb7-03c4-41d9-b199-73357b3822db</id>
+      <id>e9854a54-6c31-46e7-900c-be4ac897aa18</id>
       <masked>false</masked>
       <name>TestCaseName</name>
    </variable>
    <variable>
       <defaultValue>'Rename'</defaultValue>
       <description></description>
-      <id>79d47037-17f6-4bad-8761-98f418dfdc1e</id>
+      <id>7cd8367e-82a4-490a-8b3e-7d7e2c41fb44</id>
       <masked>false</masked>
       <name>Operation</name>
    </variable>
    <variable>
       <defaultValue>'Renamefile_LV.txt'</defaultValue>
       <description></description>
-      <id>ccf0ce60-fc9a-49e8-8fe9-6fc1e7b45954</id>
+      <id>a4647fdd-7f00-439b-b5c1-101649b50337</id>
       <masked>false</masked>
       <name>renameFile</name>
    </variable>
