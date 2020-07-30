@@ -49,14 +49,14 @@
    <testCaseLink>
       <guid>f3afd7ad-f022-4d5d-829a-6fddb1585535</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/ProfileModule/CreateProfile</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>c034d2bf-5bdc-46c7-ba1e-5868eb464a72</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>1-18</value>
+            <value>9-16</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForProfiles</testDataId>
       </testDataLink>
@@ -112,8 +112,8 @@
          <combinationType>ONE</combinationType>
          <id>22999d50-6791-4d1f-83ff-2ac993125b15</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>RANGE</iterationType>
+            <value>1-16</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForProfiles</testDataId>
       </testDataLink>
@@ -151,14 +151,14 @@
    <testCaseLink>
       <guid>bc5e335a-6c43-411a-8a85-337ad50af56b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/ProfileModule/JobSubmissionThroughProfileContextMenu</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>1d50c6d5-012e-4f57-9521-a13e85bcae39</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>RANGE</iterationType>
+            <value>1-16</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForProfiles</testDataId>
       </testDataLink>
@@ -196,8 +196,8 @@
          <combinationType>ONE</combinationType>
          <id>ab52df86-402c-4014-b91e-44c8e50218fa</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>RANGE</iterationType>
+            <value>1-16</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForProfiles</testDataId>
       </testDataLink>

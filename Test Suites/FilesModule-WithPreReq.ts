@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>70e21082-9fac-4ee7-9533-fa24c74cbddb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/PreReq/old-Pre-Req-Script-For-FileOps</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -49,7 +49,7 @@
    <testCaseLink>
       <guid>f1539952-54e3-4b24-bf3f-3b527355ad56</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/FilesModule/Create_file</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>

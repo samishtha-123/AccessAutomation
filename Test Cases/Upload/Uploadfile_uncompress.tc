@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Uploadfile_uncompress</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d3072f03-17b1-407e-b749-ea295fb04fe2</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.G_FileToCreate</defaultValue>
+      <description></description>
+      <id>23c75d3e-c92d-4605-aea2-cab55897792c</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Create File - Valid'</defaultValue>
+      <description></description>
+      <id>cbf9d73d-969b-4d15-90d6-26b5b76612ad</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

@@ -10,7 +10,6 @@ import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.relevantcodes.extentreports.LogStatus
 
-
 import internal.GlobalVariable as GlobalVariable
 
 'Login into PAW '
@@ -136,7 +135,7 @@ try {
 	{
 		extentTest.log(LogStatus.FAIL,'File Operation - ' + TestCaseName +' failed')
 	}
-	if (GlobalVariable.G_Browser == 'Edge') {
+	if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 }

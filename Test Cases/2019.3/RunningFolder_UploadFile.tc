@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RunningFolder_UploadFile</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>51bd63da-9517-47ef-9563-2beee56a3961</testCaseGuid>
+   <variable>
+      <defaultValue>'Running'</defaultValue>
+      <description></description>
+      <id>04eb5cd4-5982-4990-9331-4a7cd5c4086a</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'Terminate'</defaultValue>
+      <description></description>
+      <id>b45b6c8c-8a07-4e38-8fd1-685dffd2e8f8</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'terminate'</defaultValue>
+      <description></description>
+      <id>2495b9a2-4866-425f-b5d0-edc81a39402a</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,4 @@
+Module=Preferences
+csvfile=C:/katalon/AccessWeb/Reports/20200725_105037/Preferences/20200725_105037/20200725_105037.csv
+browser=IE
+reportName=Preferences_IE_25072020_105041.html

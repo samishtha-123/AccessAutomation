@@ -58,7 +58,7 @@ try
 
 	extentTest.log(LogStatus.PASS, 'Deleted Profile - '+proName )
 	
-	if (GlobalVariable.G_Browser == 'Edge')
+	if (GlobalVariable.G_Browser == 'IE')
 	{
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}

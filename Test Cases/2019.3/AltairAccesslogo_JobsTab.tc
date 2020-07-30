@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AltairAccesslogo_JobsTab</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7bc701b1-9bf9-4609-8eb5-fcf26fc314ae</testCaseGuid>
+   <variable>
+      <defaultValue>'generic'</defaultValue>
+      <description></description>
+      <id>015be0ef-4498-4dcd-9c0f-8644f8b7aebe</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Trace job'</defaultValue>
+      <description></description>
+      <id>ee1669e4-484d-446c-a6cd-6805d5cfa8fd</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+</TestCaseEntity>

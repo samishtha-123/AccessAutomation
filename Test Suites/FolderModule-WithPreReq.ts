@@ -56,7 +56,7 @@
          <id>8bbfccdb-aaba-4f48-9634-b2019a0aa405</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>3-4</value>
+            <value>1-8</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForFolderOperations</testDataId>
       </testDataLink>
@@ -88,14 +88,14 @@
    <testCaseLink>
       <guid>681d10ca-93d0-4430-8f0e-782d59db0273</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/FilesModule/FolderOperations_Topmenu_Icons</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>97b688c3-d6bb-40f7-b798-4b39f3011c36</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>1-10</value>
+            <value>1-6</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForFolderOperations</testDataId>
       </testDataLink>

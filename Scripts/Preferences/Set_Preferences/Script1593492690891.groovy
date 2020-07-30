@@ -86,6 +86,7 @@ try {
 		
 		    WebUI.click(findTestObject('Preferences/Confirm_button'))
 		    extentTest.log(LogStatus.PASS, 'Click on yes button')
+			
 		
 		    WebUI.verifyElementPresent(findTestObject('Preferences/Reset_popup'), 2)
 		
@@ -781,7 +782,7 @@ prefer
 	 
 	
 	
-	if (GlobalVariable.G_Browser == 'Edge') {
+	if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 }

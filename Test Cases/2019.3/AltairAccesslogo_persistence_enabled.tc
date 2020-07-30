@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AltairAccesslogo_persistence_enabled</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>51f30c19-539e-4381-9a88-1846e87640a2</testCaseGuid>
+   <variable>
+      <defaultValue>'Job Submission'</defaultValue>
+      <description></description>
+      <id>1406ec96-79e0-4b8e-9e0a-c6f005913db9</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Diagnosis'</defaultValue>
+      <description></description>
+      <id>b202ae71-0857-44de-9356-b93a0108d5d5</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+   <variable>
+      <defaultValue>'Diagnosis'</defaultValue>
+      <description></description>
+      <id>7ceffe5f-429f-4fad-9a85-dbc97f464ae4</id>
+      <masked>false</masked>
+      <name>preference</name>
+   </variable>
+   <variable>
+      <defaultValue>' new1.txt'</defaultValue>
+      <description></description>
+      <id>f5f834fb-cf76-40db-bca7-dcc837f9a231</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>54155f37-5961-4d10-b956-cb93dea53980</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>28e3def8-c697-42b6-a461-703a3f0203cf</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+   <variable>
+      <defaultValue>'Remote'</defaultValue>
+      <description></description>
+      <id>941caf00-d842-4fa1-8329-849ce930dd1b</id>
+      <masked>false</masked>
+      <name>ExecMode</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>e3adf954-78f5-4ea9-9adf-efc7c79aa326</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+</TestCaseEntity>

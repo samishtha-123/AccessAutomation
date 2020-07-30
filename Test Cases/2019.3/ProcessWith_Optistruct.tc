@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ProcessWith_Optistruct</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>6fc4535b-f011-409a-91df-3950ff9a6276</testCaseGuid>
+   <variable>
+      <defaultValue>'bar.fem'</defaultValue>
+      <description></description>
+      <id>ecebbc7d-c682-48a7-ae90-b89b965c63d4</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Compress'</defaultValue>
+      <description></description>
+      <id>ee159a2f-337e-4f8f-84d6-4c5206a6e4f2</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Compress'</defaultValue>
+      <description></description>
+      <id>13bb1d38-b7f1-4761-8678-46a35eed5c08</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+</TestCaseEntity>

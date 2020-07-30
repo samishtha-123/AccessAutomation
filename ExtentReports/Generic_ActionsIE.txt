@@ -1,0 +1,4 @@
+Module=Generic_Actions
+csvfile=C:/katalon/AccessWeb/Reports/20200725_001251/Generic_Actions/20200725_001251/20200725_001251.csv
+browser=IE
+reportName=Generic_Actions_IE_25072020_001255.html

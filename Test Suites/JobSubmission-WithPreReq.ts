@@ -49,7 +49,7 @@
    <testCaseLink>
       <guid>583c7ef2-a0a6-4d17-83bc-f51830bd475f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/JobSubmission/JobSubmission-RemoteFile-RFB-ContextMenu</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
@@ -94,14 +94,14 @@
    <testCaseLink>
       <guid>601c2b5f-1d03-4cf3-a497-e01956d76a11</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/JobSubmission/JobSubmission-LocalFile</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>c6aabb16-5970-4a57-a016-a3eab8f1be7a</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>1-3</value>
+            <value>15-28</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForJobSubmission</testDataId>
       </testDataLink>

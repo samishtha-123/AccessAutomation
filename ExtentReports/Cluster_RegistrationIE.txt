@@ -1,0 +1,4 @@
+Module=Cluster_Registration
+csvfile=C:/katalon/AccessWeb/Reports/20200724_184715/Cluster_Registration/20200724_184715/20200724_184715.csv
+browser=IE
+reportName=Cluster_Registration_IE_24072020_184719.html

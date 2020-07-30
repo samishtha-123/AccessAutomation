@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Uploadfile_verify_unzipmessage</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>59c6e5e1-e0cf-45f7-a5f5-42cda6a72a7f</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.G_FileToCreate</defaultValue>
+      <description></description>
+      <id>4ea9fce1-f358-4cdd-8ebc-db0f6441f4ca</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Create File - Valid'</defaultValue>
+      <description></description>
+      <id>fb4e129b-d74a-4fc3-805c-55abeb31584a</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

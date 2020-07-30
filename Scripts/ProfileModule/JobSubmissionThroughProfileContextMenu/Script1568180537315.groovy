@@ -163,7 +163,7 @@ try
 
 	extentTest.log(LogStatus.PASS, 'Job ID  - '+toget)
 
-	if (GlobalVariable.G_Browser == 'Edge')
+	if (GlobalVariable.G_Browser == 'IE')
 	{
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}

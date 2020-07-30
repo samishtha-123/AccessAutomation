@@ -72,6 +72,8 @@ try
 		   WebUI.verifyElementPresent(findTestObject('Generic_Actions/Generic_Actions'), 5)
 		   extentTest.log(LogStatus.PASS, 'Verify generic actions button is present')
 		   
+		   
+		   
 		   break
 		   
 		case'Trace job empty job id':
@@ -90,6 +92,10 @@ try
 		   
 		   WebUI.takeScreenshot(screenShot)
 		   extentTest.log(LogStatus.PASS, 'Verify job id is required to trace the job')
+		   
+		   if (GlobalVariable.G_Browser == 'IE') {
+			   WebUI.click(findTestObject('Generic_Actions/Close_button'))
+		   }
 		   
 		   break
 		   

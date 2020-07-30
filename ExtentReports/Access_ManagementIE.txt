@@ -1,0 +1,4 @@
+Module=Access_Management
+csvfile=C:/katalon/AccessWeb/Reports/20200724_230118/Access_Management/20200724_230118/20200724_230118.csv
+browser=IE
+reportName=Access_Management_IE_24072020_230122.html

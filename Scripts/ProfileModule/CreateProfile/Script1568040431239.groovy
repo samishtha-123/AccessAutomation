@@ -44,7 +44,7 @@ try
 
 	extentTest.log(LogStatus.PASS, 'Navigated to Job Submission For for - '+AppName)
 	def errorPanel = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('JobSubmissionForm/JS_ErrorModalPanel'),
-			5)
+			3)
 
 	if (errorPanel) {
 		WebUI.click(findTestObject('Object Repository/JobSubmissionForm/button_Close'))
@@ -88,11 +88,11 @@ try
 			WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), fileLocation)
 			WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
 			extentTest.log(LogStatus.PASS, 'Navigated to /stage/InputDeck in RFB ')
-			WebUI.waitForElementPresent(findTestObject('Object Repository/JobSubmissionForm/textBx_file_filter'), 5)
+			WebUI.waitForElementPresent(findTestObject('Object Repository/JobSubmissionForm/textBx_file_filter'), 7)
 			WebUI.click(findTestObject('Object Repository/JobSubmissionForm/textBx_file_filter'))
 			WebUI.setText(findTestObject('Object Repository/JobSubmissionForm/textBx_file_filter'), RemoteFile)
 			WebUI.sendKeys(findTestObject('JobSubmissionForm/textBx_file_filter'), Keys.chord(Keys.ENTER))
-			WebUI.delay(3)
+			WebUI.delay(5)
 			TestObject newFileObj = WebUI.modifyObjectProperty(findTestObject('JobSubmissionForm/File_InputFile'), 'text', 'equals',
 					RemoteFile, true)
 			WebUI.click(newFileObj)

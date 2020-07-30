@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Bookmark_JobSubmissionForm</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>eda72f1c-00fb-4479-b44d-b6b22ef30bd3</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>342bf84f-d731-46b2-bc09-0598f54f2c06</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Verify Output Folder'</defaultValue>
+      <description></description>
+      <id>6e957165-146e-463b-a224-778888e896fe</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'demo'</defaultValue>
+      <description></description>
+      <id>98ebd070-a82f-4332-81d4-243dafc56d70</id>
+      <masked>false</masked>
+      <name>bookMarkName</name>
+   </variable>
+   <variable>
+      <defaultValue>'create'</defaultValue>
+      <description></description>
+      <id>c0fd68ee-be16-489f-b4f8-96a8f6773260</id>
+      <masked>false</masked>
+      <name>option</name>
+   </variable>
+   <variable>
+      <defaultValue>'/stage/B2'</defaultValue>
+      <description></description>
+      <id>d176fffb-2637-4b0d-99e5-8010ae6b4d00</id>
+      <masked>false</masked>
+      <name>location</name>
+   </variable>
+</TestCaseEntity>

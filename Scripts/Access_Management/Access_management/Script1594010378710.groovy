@@ -137,6 +137,8 @@ try
 		
 		WebUI.takeScreenshot(screenShot)
 		
+		
+		
 		break
 		
 	case'Add new user special characters':
@@ -402,6 +404,10 @@ try
 		 extentTest.log(LogStatus.PASS, 'Click on save')
 		 
 		 WebUI.takeScreenshot(screenShot)
+		 if (GlobalVariable.G_Browser == 'IE') {
+			 
+				   WebUI.click(findTestObject('Access_Management/Cancel'))
+		   }
 		 
 		 break
 		 
@@ -423,6 +429,14 @@ try
 		  extentTest.log(LogStatus.PASS, 'Click on save')
 		  
 		  WebUI.takeScreenshot(screenShot)
+		  
+		  
+		  if (GlobalVariable.G_Browser == 'IE') {
+		
+			  WebUI.click(findTestObject('Access_Management/Cancel'))
+	  }
+		  
+		 
 		  
 		  break
 	 
@@ -448,6 +462,11 @@ try
 		 
 		 WebUI.takeScreenshot(screenShot)
 		 extentTest.log(LogStatus.PASS, 'Verify unable to use special characters')
+		 
+		 if (GlobalVariable.G_Browser == 'IE') {
+			 
+				   WebUI.click(findTestObject('Access_Management/Cancel'))
+		   }
 		 
 		 break
 		 
@@ -628,7 +647,7 @@ try
 	   
 	   WebUI.delay(3)
 	   
-	   WebUI.verifyElementNotPresent(findTestObject('Access_Management/Save_role'), 5)
+	   WebUI.verifyElementPresent(findTestObject('Access_Management/Cancel_Role'), 5)
 	   extentTest.log(LogStatus.PASS, "Verify save role button is diabled" )
 	   
 	   break

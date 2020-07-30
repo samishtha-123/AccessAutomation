@@ -40,6 +40,12 @@ try {
 	WebUI.delay(2)
 
 
+	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
+	def folderPath1='/stage/'+GlobalVariable.G_userName
+	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'),folderPath1)
+	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
+	extentTest.log(LogStatus.PASS, 'Navigated to - '+folderPath1)
+	
 	WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 10)
 
 	WebUI.click(findTestObject('FilesPage/btn_NewFileFolder'))

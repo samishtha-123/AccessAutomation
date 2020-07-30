@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Uploadfile_replace_existingfile</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>17621ceb-1014-41ff-bbc3-889f1b62d5a3</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.G_FileToCreate</defaultValue>
+      <description></description>
+      <id>c2d942e0-ef05-422f-8197-c27d84a551af</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Create File - Valid'</defaultValue>
+      <description></description>
+      <id>2402d5c3-9454-46b4-91d5-4ee0725f4733</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>
