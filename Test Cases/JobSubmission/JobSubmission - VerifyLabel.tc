@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission - VerifyLabel</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>57b2301a-903a-4270-9afa-904113181af1</testCaseGuid>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>a8b4b244-4333-4de5-9a0f-fd535ae77ba6</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Verify Output Folder'</defaultValue>
+      <description></description>
+      <id>599df223-1449-4c1b-9b52-6bcc122ef427</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Required Field'</defaultValue>
+      <description></description>
+      <id>ac8b30c6-a5ee-4ad6-bea9-46a99d790ec3</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+</TestCaseEntity>
