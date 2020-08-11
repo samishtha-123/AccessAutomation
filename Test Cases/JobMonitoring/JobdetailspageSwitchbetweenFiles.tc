@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobdetailspageSwitchbetweenFiles</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2401549c-a1a4-4221-bce1-44d85da7a0d3</testCaseGuid>
+   <variable>
+      <defaultValue>'Failed'</defaultValue>
+      <description></description>
+      <id>26c1e771-46a6-46e4-8824-124327d735cc</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'Open'</defaultValue>
+      <description></description>
+      <id>5e175cb6-a503-44ab-a8f3-7cbd76a13ba4</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Action for Completed Job Input Folder'</defaultValue>
+      <description></description>
+      <id>64930e8d-377b-401e-8b00-54e05dbbd06d</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

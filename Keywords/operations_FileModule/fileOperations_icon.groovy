@@ -248,8 +248,10 @@ public class fileOperations_Icon {
 				return result
 				break
 
-
-
+			case 'Uncompress_icon':
+				TestObject newFileOp=WebUI.modifyObjectProperty(findTestObject('FilesPage/FileOperations_Icon'), 'id', 'equals', Operation, true)
+				WebUI.verifyElementNotPresent(newFileOp,4)
+				break
 
 
 		}

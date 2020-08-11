@@ -83,98 +83,123 @@ try {
 	
 			WebUI.delay(2)
 			
-			WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 10)
+		
+			WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 5)
+		
+			'Click New File Button '
+			WebUI.click(findTestObject('FilesPage/btn_NewFileFolder'))
+			extentTest.log(LogStatus.PASS, "Clicked on New File Button" )
+		
+		
+			WebUI.click(findTestObject('FilesPage/ListItem_File'))
+		
+			WebUI.click(findTestObject('FilesPage/TextBx_CreateFile'))
+		
+			WebUI.waitForElementVisible(findTestObject('FilesPage/TextBx_CreateFile'), 5)
+		
+			WebUI.click(findTestObject('FilesPage/TextBx_CreateFile'))
+		
+		
+			WebUI.setText(findTestObject('FilesPage/TextBx_CreateFile'), fileName)
 			
-				WebUI.click(findTestObject('FilesPage/btn_NewFileFolder'))
-			
-				WebUI.click(findTestObject('FilesPage/ListItem_Folder'))
-			
-				WebUI.waitForElementVisible(findTestObject('FilesPage/TextBxFolder_input'), 5)
-			
-				WebUI.setText(findTestObject('FilesPage/TextBxFolder_input'), FolderName)
-				extentTest.log(LogStatus.PASS, "Entered Folder Name to Create "+FolderName )
-			
-				WebUI.click(findTestObject('FilesPage/btn_Save'))
-				extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
+			extentTest.log(LogStatus.PASS, "Enterted File Name to create "+fileName )
+			'Click save\r\n'
+			WebUI.click(findTestObject('FilesPage/btn_Save'))
+			extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
+		
+		
 				
-				String folder = FolderName.trim()
+				String file = fileName.trim()
 			
-				WebUI.delay(2)
+				WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_FileCreation'), 3)
 				
-					WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
-	
+					println(WebUI.getText(findTestObject('Notificactions/Notification_FileCreation')))
 				
 					WebUI.delay(2)
 				
-					TestObject createFolderNotification=CustomKeywords.'buildTestObj.CreateTestObjFiles.myTestObjFolderCreateNotification'(folder)
+					WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
 				
-					extentTest.log(LogStatus.PASS, 'Created Folder  - ' + FolderName)
+					WebUI.delay(2)
 				
-				     
+					//WebUI.mouseOver(findTestObject('Notificactions/xpath_notification'))
+					TestObject createFileNotification = CustomKeywords.'buildTestObj.CreateTestObjFiles.myTestObjFileCreateNotification'(file)
 				
 					'Verify notification'
-					def notification = WebUI.verifyElementPresent(createFolderNotification, 5)
+					def notification = WebUI.verifyElementPresent(createFileNotification, 5)
 				
 					println(notification)
 				
 					if(notification)
 					{
-					
-						extentTest.log(LogStatus.PASS, FolderName + "- Created Folder and verified notification")
+						
+						extentTest.log(LogStatus.PASS, fileName + "- Created file and verified notification")
 				
 					}
 					else
 					{
-						extentTest.log(LogStatus.PASS, FolderName+" - Not Created" )
+						extentTest.log(LogStatus.PASS, fileName+" - Not Created" )
+						extentTest.log(LogStatus.FAIL)
+					}
+		} else {
+			
+		
+		WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 5)
+		
+			'Click New File Button '
+			WebUI.click(findTestObject('FilesPage/btn_NewFileFolder'))
+			extentTest.log(LogStatus.PASS, "Clicked on New File Button" )
+		
+		
+			WebUI.click(findTestObject('FilesPage/ListItem_File'))
+		
+			WebUI.click(findTestObject('FilesPage/TextBx_CreateFile'))
+		
+			WebUI.waitForElementVisible(findTestObject('FilesPage/TextBx_CreateFile'), 5)
+		
+			WebUI.click(findTestObject('FilesPage/TextBx_CreateFile'))
+		
+		
+			WebUI.setText(findTestObject('FilesPage/TextBx_CreateFile'), fileName)
+			
+			extentTest.log(LogStatus.PASS, "Enterted File Name to create "+fileName )
+			'Click save\r\n'
+			WebUI.click(findTestObject('FilesPage/btn_Save'))
+			extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
+		
+		
+				
+				String file = fileName.trim()
+			
+				WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_FileCreation'), 3)
+				
+					println(WebUI.getText(findTestObject('Notificactions/Notification_FileCreation')))
+				
+					WebUI.delay(2)
+				
+					WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
+				
+					WebUI.delay(2)
+				
+					//WebUI.mouseOver(findTestObject('Notificactions/xpath_notification'))
+					TestObject createFileNotification = CustomKeywords.'buildTestObj.CreateTestObjFiles.myTestObjFileCreateNotification'(file)
+				
+					'Verify notification'
+					def notification = WebUI.verifyElementPresent(createFileNotification, 5)
+				
+					println(notification)
+				
+					if(notification)
+					{
+						
+						extentTest.log(LogStatus.PASS, fileName + "- Created file and verified notification")
+				
+					}
+					else
+					{
+						extentTest.log(LogStatus.PASS, fileName+" - Not Created" )
 						extentTest.log(LogStatus.FAIL)
 					}
 				
-			
-		} else {
-			
-		WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 10)
-		
-			WebUI.click(findTestObject('FilesPage/btn_NewFileFolder'))
-		
-			WebUI.click(findTestObject('FilesPage/ListItem_Folder'))
-		
-			WebUI.waitForElementVisible(findTestObject('FilesPage/TextBxFolder_input'), 5)
-		
-			WebUI.setText(findTestObject('FilesPage/TextBxFolder_input'), FolderName)
-			extentTest.log(LogStatus.PASS, "Entered Folder Name to Create "+FolderName )
-		
-			WebUI.click(findTestObject('FilesPage/btn_Save'))
-			extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
-			
-			WebUI.delay(2)
-			
-				WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
-			
-				WebUI.delay(2)
-			
-				TestObject createFolderNotification=CustomKeywords.'buildTestObj.CreateTestObjFiles.myTestObjFolderCreateNotification'(FolderName)
-			
-				extentTest.log(LogStatus.PASS, 'Created Folder  - ' + FolderName)
-			
-			
-			
-				'Verify notification'
-				def notification = WebUI.verifyElementPresent(createFolderNotification, 5)
-			
-				println(notification)
-			
-				if(notification)
-				{
-				
-					extentTest.log(LogStatus.PASS, FolderName + "- Created Folder and verified notification")
-			
-				}
-				else
-				{
-					extentTest.log(LogStatus.PASS, FolderName+" - Not Created" )
-					extentTest.log(LogStatus.FAIL)
-				}
-			
 			
 		
 		
@@ -190,17 +215,26 @@ try {
 	
 			WebUI.delay(2)
 			
-			WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 10)
+			WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 5)
 			
+				'Click New File Button '
 				WebUI.click(findTestObject('FilesPage/btn_NewFileFolder'))
+				extentTest.log(LogStatus.PASS, "Clicked on New File Button" )
 			
-				WebUI.click(findTestObject('FilesPage/ListItem_Folder'))
 			
-				WebUI.waitForElementVisible(findTestObject('FilesPage/TextBxFolder_input'), 5)
+				WebUI.click(findTestObject('FilesPage/ListItem_File'))
 			
-				WebUI.setText(findTestObject('FilesPage/TextBxFolder_input'), FolderName)
-				extentTest.log(LogStatus.PASS, "Entered Folder Name to Create "+FolderName )
+				WebUI.click(findTestObject('FilesPage/TextBx_CreateFile'))
 			
+				WebUI.waitForElementVisible(findTestObject('FilesPage/TextBx_CreateFile'), 5)
+			
+				WebUI.click(findTestObject('FilesPage/TextBx_CreateFile'))
+			
+			
+				WebUI.setText(findTestObject('FilesPage/TextBx_CreateFile'), fileName)
+				
+				extentTest.log(LogStatus.PASS, "Enterted File Name to create "+fileName )
+				'Click save\r\n'
 				WebUI.click(findTestObject('FilesPage/btn_Save'))
 				extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
 				
@@ -209,21 +243,30 @@ try {
 			
 		} else {
 			
-		WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 10)
+		WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 5)
 		
+			'Click New File Button '
 			WebUI.click(findTestObject('FilesPage/btn_NewFileFolder'))
+			extentTest.log(LogStatus.PASS, "Clicked on New File Button" )
 		
-			WebUI.click(findTestObject('FilesPage/ListItem_Folder'))
 		
-			WebUI.waitForElementVisible(findTestObject('FilesPage/TextBxFolder_input'), 5)
+			WebUI.click(findTestObject('FilesPage/ListItem_File'))
 		
-			WebUI.setText(findTestObject('FilesPage/TextBxFolder_input'), FolderName)
-			extentTest.log(LogStatus.PASS, "Entered Folder Name to Create "+FolderName )
+			WebUI.click(findTestObject('FilesPage/TextBx_CreateFile'))
 		
+			WebUI.waitForElementVisible(findTestObject('FilesPage/TextBx_CreateFile'), 5)
+		
+			WebUI.click(findTestObject('FilesPage/TextBx_CreateFile'))
+		
+		
+			WebUI.setText(findTestObject('FilesPage/TextBx_CreateFile'), fileName)
+			
+			extentTest.log(LogStatus.PASS, "Enterted File Name to create "+fileName )
+			'Click save\r\n'
 			WebUI.click(findTestObject('FilesPage/btn_Save'))
 			extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
 			
-	
+			WebUI.verifyElementPresent(findTestObject('FilesPage/SpecialChar_popup'), 3)
 		}
 		
 	}

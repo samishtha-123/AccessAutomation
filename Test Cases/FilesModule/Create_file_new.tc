@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Create_folder</name>
+   <name>Create_file_new</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>2150d03e-3e0b-471b-9fbb-0f011c169c21</testCaseGuid>
+   <testCaseGuid>664e397b-78ea-49de-a9d9-8c32ca47e672</testCaseGuid>
    <variable>
-      <defaultValue>'    MyFolderDemo'</defaultValue>
+      <defaultValue>'MyFile\\Demo'</defaultValue>
       <description></description>
-      <id>ee5dd06b-fe53-4cd7-b0ae-9d5aa0e1949d</id>
+      <id>6b210356-0698-4723-94df-167cbfb8f16c</id>
       <masked>false</masked>
-      <name>FolderName</name>
+      <name>fileName</name>
    </variable>
    <variable>
       <defaultValue>'Create folder with valid name tile view'</defaultValue>
       <description></description>
-      <id>7d839b7d-abd5-48a9-9050-61b7d5242a7c</id>
+      <id>be66c5a8-7292-4dfd-87f1-b469c891a9df</id>
       <masked>false</masked>
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'Positive flow'</defaultValue>
+      <defaultValue>'Negative flow'</defaultValue>
       <description></description>
-      <id>68735d7c-86f3-4498-b607-5bc786ff5da7</id>
+      <id>da964484-b989-4c94-b16d-09a6899a1dbe</id>
       <masked>false</masked>
       <name>userChoice</name>
    </variable>

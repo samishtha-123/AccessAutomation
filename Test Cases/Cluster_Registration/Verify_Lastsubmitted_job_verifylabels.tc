@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Verify_Lastsubmitted_job_verifylabels</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3fe9186c-bb6b-4413-96f5-698706950e38</testCaseGuid>
+   <variable>
+      <defaultValue>'Edit'</defaultValue>
+      <description></description>
+      <id>b73b1ede-34f8-432f-a042-68398301fd9d</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'pbsworks'</defaultValue>
+      <description></description>
+      <id>9926442e-0db7-4307-81e7-18402f987a91</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>'cancel Edit'</defaultValue>
+      <description></description>
+      <id>fb4436d7-4f6e-407b-8070-51fa66fc256e</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+</TestCaseEntity>

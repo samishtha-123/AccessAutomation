@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FileOperations - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8ed7dd9f-ba9f-4192-9e22-674c530d73d8</testCaseGuid>
+   <variable>
+      <defaultValue>'ToCompress_LV.txt'</defaultValue>
+      <description></description>
+      <id>9ef1bb8b-e4f9-4e63-9882-de6d1e86aadf</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Compress'</defaultValue>
+      <description></description>
+      <id>f6b6d1f2-f6d7-4fa7-84cd-fa438e545de0</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Compress'</defaultValue>
+      <description></description>
+      <id>899ec931-7911-4008-8224-8fab8e21c730</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+</TestCaseEntity>

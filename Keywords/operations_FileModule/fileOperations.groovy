@@ -50,6 +50,16 @@ public class fileOperations {
 				return result
 				break
 
+			case 'Open With':
+
+				WebUI.click(findTestObject('FilesPage/ContextMenu_Openwith'))
+				extentTest.log(LogStatus.PASS, 'Clicked on Context Menu Option for - '+Operation)
+
+				WebUI.click(findTestObject('FilesPage/span_Other Apps'))
+
+				break
+
+
 			case 'Copy':
 				TestObject newFileOp=WebUI.modifyObjectProperty(findTestObject('FilesPage/ContextMenu_FileOperation'), 'id', 'equals', Operation, true)
 				WebUI.click(newFileOp)
@@ -402,8 +412,8 @@ public class fileOperations {
 				return true
 				break
 
-            
-			    
+
+
 
 		}
 	}
