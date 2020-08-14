@@ -86,6 +86,39 @@ try {
 			extentTest.log(LogStatus.PASS, 'To check the created bookmark')
 			break;
 			
+		case'create read only':
+		    WebUI.click(findTestObject('FilesPage/Createbookmark'))
+		    extentTest.log(LogStatus.PASS, 'Click on create new bookmark')
+		    WebUI.delay(2)
+
+		    WebUI.setText(findTestObject('Filespage/Enter Name'),bookMarkName)
+		    extentTest.log(LogStatus.PASS, 'Enter the Name of bookmark')
+
+
+		    WebUI.setText(findTestObject('Object Repository/FilesPage/TxtBx_BookMarkLocation'),location)
+		    extentTest.log(LogStatus.PASS, 'Enter the Path of bookmark')
+
+
+		    WebUI.click(findTestObject('FilesPage/Confirm_button'))
+		    extentTest.log(LogStatus.PASS, 'Click on ok button')
+
+		    WebUI.click(findTestObject('FilesPage/Bookmark'))
+		    extentTest.log(LogStatus.PASS, 'Click on bookmark')
+
+		    WebUI.click(findTestObject('FilesPage/Managebookmark'))
+		    extentTest.log(LogStatus.PASS, 'Click on manage bookmark')
+
+		    TestObject bookmark = WebUI.modifyObjectProperty(findTestObject('FilesPage/Check_Bookmark'), 'text','equals',bookMarkName , true)
+		    WebUI.click(bookmark)
+		    extentTest.log(LogStatus.PASS, 'To check the created bookmark')
+			
+			WebUI.verifyElementPresent(findTestObject('FilesPage/Error_popup'), 2)
+			extentTest.log(LogStatus.PASS, 'Verify error message')
+			
+		    break
+		
+		    
+			
 		case'create empty name':
 		
 		    WebUI.click(findTestObject('FilesPage/Createbookmark'))

@@ -50,7 +50,7 @@ def result
 WebUI.delay(2)
 try
 {
-	    WebUI.verifyElementPresent(findTestObject('Cluster_Registration/No jobs'), 5)
+	    WebUI.verifyElementPresent(findTestObject('Cluster_Registration/Status'), 5)
 		
 		if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)

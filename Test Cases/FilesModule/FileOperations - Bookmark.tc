@@ -20,14 +20,14 @@
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'manage bookmark invalid path'</defaultValue>
+      <defaultValue>'create'</defaultValue>
       <description></description>
       <id>20621fd8-78a3-4263-9aec-8e5f976aee20</id>
       <masked>false</masked>
       <name>option</name>
    </variable>
    <variable>
-      <defaultValue>'/stage/B2'</defaultValue>
+      <defaultValue>'/stage/rohini/BS'</defaultValue>
       <description></description>
       <id>555f7fb9-d8cc-4ef2-9bfe-3a93d5c9060a</id>
       <masked>false</masked>

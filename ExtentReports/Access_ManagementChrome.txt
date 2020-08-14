@@ -1,0 +1,4 @@
+Module=Access_Management
+csvfile=C:/katalon/AccessWeb/Reports/20200814_171628/Access_Management/20200814_171628/20200814_171628.csv
+browser=Chrome
+reportName=Access_Management_Chrome_14082020_171632.html

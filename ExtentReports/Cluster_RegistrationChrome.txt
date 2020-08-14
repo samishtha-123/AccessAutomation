@@ -1,4 +1,4 @@
 Module=Cluster_Registration
-csvfile=C:/katalon/AccessWeb/Reports/20200716_184817/Cluster_Registration/20200716_184817/20200716_184817.csv
+csvfile=C:/katalon/AccessWeb/Reports/20200814_151633/Cluster_Registration/20200814_151633/20200814_151633.csv
 browser=Chrome
-reportName=Cluster_Registration_Chrome_16072020_184821.html
+reportName=Cluster_Registration_Chrome_14082020_151639.html
