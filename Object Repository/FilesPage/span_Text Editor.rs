@@ -4,7 +4,17 @@
    <name>span_Text Editor</name>
    <tag></tag>
    <elementGuidId>3eb7716b-6a27-4530-9d12-937328a4e4a9</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//span[@id='Text Editor']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id = 'Text Editor' and @title = 'Text Editor' and (text() = 'Text Editor' or . = 'Text Editor')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

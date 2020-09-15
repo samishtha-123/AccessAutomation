@@ -48,4 +48,33 @@ public class getRowDetails {
 			}
 		}
 	}
-}
+
+	
+	@Keyword
+	def getFileLine(WebDriver katalonWebDriver,extentTest)
+	
+	{
+		String myText
+		def LogStatus = com.relevantcodes.extentreports.LogStatus
+		def myXpath="//div[@id='brace-editor']//textarea"
+		List<WebElement> listElement = katalonWebDriver.findElements(By.xpath(myXpath))
+		def num=listElement.size()
+		num=num-1
+		println("-------------------------------------")
+		println listElement.size()
+		println("-------------------------------------")
+
+		/*for(int i =0;i<listElement.size();i++) {
+			RemoteWebElement ele = listElement.get(i)
+			myText=ele.getText()
+			println (ele.getText())
+		}*/
+		println("----------------------- "+num+" -----------------------------")
+		RemoteWebElement ele = listElement.get(num)
+		ele.sendKeys("new line added")
+		ele.sendKeys('\n')
+		
+		}
+	
+	
+	}

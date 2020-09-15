@@ -75,7 +75,7 @@ try {
 		extentTest.log(LogStatus.PASS, 'Uploading File to JS Form  - '+InputFile)
 	}
 
-	WebUI.click(findTestObject('WIP/RadioBtn_All Fields'))
+	WebUI.click(findTestObject('JobSubmissionForm/RadioBtn_All Fields'))
 	
 	WebUI.click(findTestObject('Object Repository/JobSubmissionForm/TextBx_OutPut_Folder'))
 	def stageOut='/stage/'+GlobalVariable.G_userName

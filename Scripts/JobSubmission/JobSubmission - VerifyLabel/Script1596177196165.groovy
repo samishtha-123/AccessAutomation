@@ -17,8 +17,8 @@ import com.relevantcodes.extentreports.LogStatus as LogStatus
 import internal.GlobalVariable as GlobalVariable
 
 'Login into PAW '
-WebUI.callTestCase(findTestCase('Generic/Login'), [('username') : GlobalVariable.G_userName, ('password') : GlobalVariable.G_Password], 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Generic/Login'), [('username') : GlobalVariable.G_userName, ('password') : GlobalVariable.G_Password],
+FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
@@ -37,74 +37,86 @@ def extent = CustomKeywords.'generateReports.GenerateReport.create'(ReportFile, 
 def LogStatus = com.relevantcodes.extentreports.LogStatus
 
 def extentTest = extent.startTest(TestCaseName)
-
+def isLabelPresent
 TestObject newFileObj
 
 try {
-    def jobsTab = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('GenericObjects/TitleLink_Jobs'), 
-        10)
+	def jobsTab = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('GenericObjects/TitleLink_Jobs'),
+			10)
 
-    if (jobsTab) {
-        WebUI.click(findTestObject('GenericObjects/TitleLink_Jobs'))
-    }
-    
-    extentTest.log(LogStatus.PASS, 'Navigated Jobs Tab')
-
-    WebUI.delay(2)
-
-    TestObject newAppObj = WebUI.modifyObjectProperty(findTestObject('NewJobPage/AppList_ShellScript'), 'id', 'equals', 
-        AppName, true)
-
-    WebUI.click(newAppObj)
-
-    extentTest.log(LogStatus.PASS, 'Navigated to Job Submission For for - ' + AppName)
-
-    //	WebUI.doubleClick(newAppObj)
-    WebUI.delay(2)
-
-    def errorPanel = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('JobSubmissionForm/JS_ErrorModalPanel'), 
-        5)
-
-    if (errorPanel) {
-        WebUI.click(findTestObject('Object Repository/JobSubmissionForm/button_Close'))
-    }
-    
-	if(userChoice == 'Required Label')
-	{
-    WebUI.verifyElementPresent(findTestObject('JobSubmissionForm/RequiredLabel'), 5)
+	if (jobsTab) {
+		WebUI.click(findTestObject('GenericObjects/TitleLink_Jobs'))
 	}
-	else if(userChoice == 'All Label')
-	{
-		WebUI.click(findTestObject('JobSubmissionForm/Select_AllFields'))
-		
-		WebUI.verifyElementPresent(findTestObject('JobSubmissionForm/AllFieldLabel'), 5)
+
+	extentTest.log(LogStatus.PASS, 'Navigated Jobs Tab')
+
+	WebUI.delay(2)
+
+	TestObject newAppObj = WebUI.modifyObjectProperty(findTestObject('NewJobPage/AppList_ShellScript'), 'id', 'equals',
+			AppName, true)
+
+	WebUI.click(newAppObj)
+
+	extentTest.log(LogStatus.PASS, 'Navigated to Job Submission For for - ' + AppName)
+
+	//	WebUI.doubleClick(newAppObj)
+	WebUI.delay(2)
+
+	def errorPanel = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('JobSubmissionForm/JS_ErrorModalPanel'),
+			5)
+
+	if (errorPanel) {
+		WebUI.click(findTestObject('Object Repository/JobSubmissionForm/button_Close'))
 	}
-    if (GlobalVariable.G_Browser == 'IE') {
-        WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
-    }
+
+	switch(userChoice)
+	{
+		case 'Required':
+			isLabelPresent=WebUI.verifyElementPresent(findTestObject('JobSubmissionForm/RequiredLabel'), 5)
+			if(isLabelPresent)
+			{
+				extentTest.log(LogStatus.PASS, 'Required Label Filed present' )
+
+			}
+			break
+		case  'All':
+			WebUI.click(findTestObject('JobSubmissionForm/Select_AllFields'))
+
+			isLabelPresent=WebUI.verifyElementPresent(findTestObject('JobSubmissionForm/AllFieldLabel'), 5)
+			if(isLabelPresent)
+			{
+				extentTest.log(LogStatus.PASS, 'Optional Label Filed present' )
+
+			}
+			break
+	}
+
+	if (GlobalVariable.G_Browser == 'IE') {
+		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
+	}
 }
 catch (Exception ex) {
-    String screenShotPath = (('ExtentReports/' + TestCaseName) + GlobalVariable.G_Browser) + '.png'
+	String screenShotPath = (('ExtentReports/' + TestCaseName) + GlobalVariable.G_Browser) + '.png'
 
-    WebUI.takeScreenshot(screenShotPath)
+	WebUI.takeScreenshot(screenShotPath)
 
-    extentTest.log(LogStatus.FAIL, ex)
+	extentTest.log(LogStatus.FAIL, ex)
 
-    KeywordUtil.markFailed('ERROR: ' + e)
-} 
+	KeywordUtil.markFailed('ERROR: ' + e)
+}
 catch (StepErrorException e) {
-    String screenShotPath = (('ExtentReports/' + TestCaseName) + GlobalVariable.G_Browser) + '.png'
+	String screenShotPath = (('ExtentReports/' + TestCaseName) + GlobalVariable.G_Browser) + '.png'
 
-    WebUI.takeScreenshot(screenShotPath)
+	WebUI.takeScreenshot(screenShotPath)
 
-    extentTest.log(LogStatus.FAIL, e)
+	extentTest.log(LogStatus.FAIL, e)
 
-    KeywordUtil.markFailed('ERROR: ' + e)
-} 
-finally { 
-    extent.endTest(extentTest)
+	KeywordUtil.markFailed('ERROR: ' + e)
+}
+finally {
+	extent.endTest(extentTest)
 
-    extent.flush()
+	extent.flush()
 }
 
 

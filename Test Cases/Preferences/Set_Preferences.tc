@@ -6,21 +6,21 @@
    <comment></comment>
    <testCaseGuid>c36b8e40-281a-40ed-b08a-95d0eee79d29</testCaseGuid>
    <variable>
-      <defaultValue>'Job Submission'</defaultValue>
+      <defaultValue>'Persistence Off'</defaultValue>
       <description></description>
       <id>20e66ddf-642f-491a-b46e-0d3dc565bf8c</id>
       <masked>false</masked>
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'Diagnosis'</defaultValue>
+      <defaultValue>'Persistence Off'</defaultValue>
       <description></description>
       <id>4611fa3d-9817-4318-9699-09323a3d16ae</id>
       <masked>false</masked>
       <name>userChoice</name>
    </variable>
    <variable>
-      <defaultValue>'Diagnosis'</defaultValue>
+      <defaultValue>'Files'</defaultValue>
       <description></description>
       <id>8c467d1f-9c4c-493c-a375-d9145f840bda</id>
       <masked>false</masked>

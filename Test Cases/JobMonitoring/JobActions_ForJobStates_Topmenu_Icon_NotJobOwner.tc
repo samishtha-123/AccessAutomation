@@ -27,7 +27,7 @@
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'rohini'</defaultValue>
+      <defaultValue>'pbsadmin'</defaultValue>
       <description></description>
       <id>13a08161-d189-465b-950e-263fc1cae465</id>
       <masked>false</masked>

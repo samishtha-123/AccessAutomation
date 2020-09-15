@@ -6,14 +6,28 @@
    <elementGuidId>bdd84c0f-6f8e-4dd2-863c-5ea294b9c671</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//id[contains(@id, 'submission_jobid_field')]</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//input[@id='submission_jobid_field']</value>
       </entry>
-      <entry>
-         <key>BASIC</key>
-         <value></value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>id</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>contains</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>submission_jobid_field</value>
+   </webElementProperties>
 </WebElementEntity>

@@ -57,6 +57,13 @@ try {
 
 	WebUI.delay(2)
 
+	def isFilterPresent= CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('Object Repository/JobMonitoringPage/icon_removeFilter'),5)
+	if(isFilterPresent)
+	{
+		WebUI.click(findTestObject('Object Repository/JobMonitoringPage/icon_removeFilter'))
+		extentTest.log(LogStatus.PASS, 'Clicked on filter delete icon' )
+		WebUI.refresh()
+	}
 	WebUI.click(findTestObject('Object Repository/JobMonitoringPage/a_Reset'))
 
 	TestObject newJobFilterCategoryDown = CustomKeywords.'buildTestObj.CreateTestObjJobs.myTestObjFilterCategoryIdentifierDown'(
@@ -125,10 +132,10 @@ try {
 	WebUI.mouseOver(newFilterItem)
 	WebUI.delay(2)
 	WebUI.click(newFilterItem)
-	      
+
 	println("AllJobsUser -- "+AllJobsUser)
 	println("Test case name -- "+TestCaseName)
-	
+
 	if (TestCaseName.contains('AllJobs')) {
 		WebUI.click(findTestObject('Object Repository/JobMonitoringPage/RadioBtn_AllJobs'))
 		WebUI.delay(1)
@@ -152,9 +159,12 @@ try {
 	} else {
 		extentTest.log(LogStatus.PASS, ('Job  Filtered for ' + FilterValue) + ' Jobs')
 	}
+
+	WebUI.delay(2)
 	WebUI.click(findTestObject('Object Repository/JobMonitoringPage/icon_removeFilter'))
 	extentTest.log(LogStatus.PASS, 'Clicked on filter delete icon' )
-	
+	WebUI.refresh()
+	WebUI.delay(3)
 	if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
@@ -164,7 +174,10 @@ catch (Exception ex) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, ex)
+	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
@@ -173,7 +186,10 @@ catch (StepErrorException e) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }

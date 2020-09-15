@@ -43,8 +43,6 @@ def viewIconTilePresent
 
 def viewIconListPresent
 
-String screenShot='ExtentReports/'+TestCaseName+option+GlobalVariable.G_Browser+'.png'
-
 TestObject newFileObj
 
 WebUI.delay(2)
@@ -85,99 +83,6 @@ try {
 			WebUI.click(bookmark)
 			extentTest.log(LogStatus.PASS, 'To check the created bookmark')
 			break;
-			
-		case'create read only':
-		    WebUI.click(findTestObject('FilesPage/Createbookmark'))
-		    extentTest.log(LogStatus.PASS, 'Click on create new bookmark')
-		    WebUI.delay(2)
-
-		    WebUI.setText(findTestObject('Filespage/Enter Name'),bookMarkName)
-		    extentTest.log(LogStatus.PASS, 'Enter the Name of bookmark')
-
-
-		    WebUI.setText(findTestObject('Object Repository/FilesPage/TxtBx_BookMarkLocation'),location)
-		    extentTest.log(LogStatus.PASS, 'Enter the Path of bookmark')
-
-
-		    WebUI.click(findTestObject('FilesPage/Confirm_button'))
-		    extentTest.log(LogStatus.PASS, 'Click on ok button')
-
-		    WebUI.click(findTestObject('FilesPage/Bookmark'))
-		    extentTest.log(LogStatus.PASS, 'Click on bookmark')
-
-		    WebUI.click(findTestObject('FilesPage/Managebookmark'))
-		    extentTest.log(LogStatus.PASS, 'Click on manage bookmark')
-
-		    TestObject bookmark = WebUI.modifyObjectProperty(findTestObject('FilesPage/Check_Bookmark'), 'text','equals',bookMarkName , true)
-		    WebUI.click(bookmark)
-		    extentTest.log(LogStatus.PASS, 'To check the created bookmark')
-			
-			WebUI.verifyElementPresent(findTestObject('FilesPage/Error_popup'), 2)
-			extentTest.log(LogStatus.PASS, 'Verify error message')
-			
-		    break
-		
-		    
-			
-		case'create empty name':
-		
-		    WebUI.click(findTestObject('FilesPage/Createbookmark'))
-		    extentTest.log(LogStatus.PASS, 'Click on create new bookmark')
-		    WebUI.delay(2)
-
-		    WebUI.setText(findTestObject('Filespage/Enter Name'),bookMarkName)
-		    extentTest.log(LogStatus.PASS, 'Enter the Name of bookmark')
-
-
-		    WebUI.setText(findTestObject('Object Repository/FilesPage/TxtBx_BookMarkLocation'),location)
-		    extentTest.log(LogStatus.PASS, 'Enter the Path of bookmark')
-
-
-		    WebUI.click(findTestObject('FilesPage/Cancel_button'))
-		    extentTest.log(LogStatus.PASS, 'Click on ok button')
-			
-			break
-			
-		case'manage bookmark invalid path':
-		
-		    WebUI.click(findTestObject('FilesPage/Createbookmark'))
-		    extentTest.log(LogStatus.PASS, 'Click on create new bookmark')
-		    WebUI.delay(2)
-
-		    WebUI.setText(findTestObject('Filespage/Enter Name'),bookMarkName)
-		    extentTest.log(LogStatus.PASS, 'Enter the Name of bookmark')
-
-
-		    WebUI.setText(findTestObject('Object Repository/FilesPage/TxtBx_BookMarkLocation'),location)
-		    extentTest.log(LogStatus.PASS, 'Enter the Path of bookmark')
-
-
-		    WebUI.click(findTestObject('FilesPage/Confirm_button'))
-		    extentTest.log(LogStatus.PASS, 'Click on ok button')
-
-		    WebUI.click(findTestObject('FilesPage/Bookmark'))
-		    extentTest.log(LogStatus.PASS, 'Click on bookmark')
-			
-			WebUI.rightClick(findTestObject('FilesPage/DeleteFolder_Bookmark'))
-			WebUI.click(findTestObject('FilesPage/DeleteFolder'))
-			
-			WebUI.click(findTestObject('FilesPage/button_Yes'))
-			extentTest.log(LogStatus.PASS, 'Click on yes button')
-
-		    WebUI.click(findTestObject('FilesPage/Managebookmark'))
-		    extentTest.log(LogStatus.PASS, 'Click on manage bookmark')
-			
-			TestObject bookmark = WebUI.modifyObjectProperty(findTestObject('FilesPage/RowItem_BookMark'), 'text','equals',location , true)
-			WebUI.click(bookmark)
-			extentTest.log(LogStatus.PASS, 'Clicked on created bookmark')
-			
-			WebUI.verifyElementPresent(findTestObject('FilesPage/InvalidPath_popup'), 2)
-			extentTest.log(LogStatus.PASS, 'Verify invalid path given')
-			
-			break
-			
-			
-
 
 		case 'remove':
 
@@ -219,10 +124,6 @@ try {
 		 WebUI.click(findTestObject('FilesPage/No data'))
 		 extentTest.log(LogStatus.PASS, 'Check for no data')
 		 }*/
-			
-			if (GlobalVariable.G_Browser == 'IE') {
-				WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
-			}
 	}
 }
 

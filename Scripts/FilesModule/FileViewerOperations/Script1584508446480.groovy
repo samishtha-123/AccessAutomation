@@ -9,14 +9,16 @@ import org.openqa.selenium.support.events.EventFiringWebDriver as EventFiringWeb
 import com.kms.katalon.core.exception.StepErrorException as StepErrorException
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.relevantcodes.extentreports.LogStatus
 
 import internal.GlobalVariable as GlobalVariable
 
 'Login into PAW '
 WebUI.callTestCase(findTestCase('Generic/Login'), [('username') : GlobalVariable.G_userName, ('password') : GlobalVariable.G_Password],
-	FailureHandling.STOP_ON_FAILURE)
+FailureHandling.STOP_ON_FAILURE)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
@@ -34,7 +36,7 @@ def extent = CustomKeywords.'generateReports.GenerateReport.create'(ReportFile, 
 
 def LogStatus = com.relevantcodes.extentreports.LogStatus
 
-String TCName = TestCaseName 
+String TCName = TestCaseName
 
 def extentTest = extent.startTest(TCName)
 
@@ -54,10 +56,10 @@ try {
 	WebUI.delay(2)
 
 	TestObject viewIconTile = WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/Icon_ViewIcon'), 'title',
-		'equals', 'Tile View', true)
+			'equals', 'Tile View', true)
 
 	TestObject viewIconList = WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/Icon_ViewIcon'), 'title',
-		'equals', 'List View', true)
+			'equals', 'List View', true)
 
 	viewIconTilePresent = WebUI.waitForElementPresent(viewIconTile, 3, FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -74,15 +76,15 @@ try {
 
 		WebUI.delay(2)
 	}
-	
+
 	WebUI.delay(2)
 
 	println(TestCaseName)
 
 	if (TestCaseName.contains('Upload')) {
-		println(Operation) //    WebUI.click(newFileObj)
-	} 
-	else {
+		println(Operation //    WebUI.click(newFileObj)
+				)
+	} else {
 		if (TestCaseName.contains('tile view')) {
 			WebUI.click(viewIconTile)
 
@@ -91,21 +93,24 @@ try {
 			WebUI.delay(2)
 
 			newFileObj = WebUI.modifyObjectProperty(findTestObject('FilesPage/RowItem_File_TileView'), 'title', 'equals',
-				fileName, true)
+					fileName, true)
 		} else {
 			newFileObj = WebUI.modifyObjectProperty(findTestObject('FilesPage/RowItem_File_ListView'), 'title', 'equals',
-				fileName, true)
+					fileName, true)
 		}
-		
+
 		WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
-		
-		
-		def navLocation =CustomKeywords.'generateFilePath.filePath.execLocation'()
-		def location=navLocation+'/FilesModule/FileOps/'
+
+		def navLocation = CustomKeywords.'generateFilePath.filePath.execLocation'()
+
+		def location = navLocation + '/FilesModule/FileOps/'
+
 		println('##################################################################')
-		println (location)
+
+		println(location)
+
 		println('##################################################################')
-	
+
 		WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
 
 		WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
@@ -138,23 +143,28 @@ try {
 			WebUI.rightClick(newFileObj)
 		}
 	}
-	
+
 	WebUI.delay(2)
 
 	WebUI.click(findTestObject('FilesPage/ContextMenu_FileOperation_Open'))
 
 	println('after is else ' + Operation)
+
 	WebUI.delay(3)
 
 	//def result = CustomKeywords.'buildTestObj.CreateObjArray.lines'(katalonWebDriver, extentTest)
+	def result = CustomKeywords.'operations_FileModule.fileViewerOperations.executeFileOperations'(katalonWebDriver,Operation, TestCaseName,
+			extentTest)
 
-	def result=CustomKeywords.'operations_FileModule.fileViewerOperations.executeFileOperations'(Operation, TestCaseName , extentTest)
+
+	CustomKeywords.'operations_FileModule.getRowDetails.getFileLine'(katalonWebDriver, extentTest)
+
 	if (result) {
 		extentTest.log(LogStatus.PASS, ('File Operation - ' + TestCaseName) + ' Performed Sucessfully')
 	} else {
 		extentTest.log(LogStatus.FAIL, ('File Operation - ' + TestCaseName) + ' failed')
 	}
-	
+
 	if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
@@ -164,7 +174,10 @@ catch (Exception ex) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, ex)
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
@@ -173,7 +186,10 @@ catch (StepErrorException e) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
@@ -181,9 +197,6 @@ finally {
 	extent.endTest(extentTest)
 
 	extent.flush()
+
 }
-
-
-
-
 

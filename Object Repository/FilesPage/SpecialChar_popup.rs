@@ -3,7 +3,7 @@
    <description></description>
    <name>SpecialChar_popup</name>
    <tag></tag>
-   <elementGuidId>69634beb-a646-4e66-8bbc-70c811ebb986</elementGuidId>
+   <elementGuidId>acce7b27-71cd-46ff-b5ed-b25c973c310a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>

@@ -24,14 +24,10 @@ WebUI.callTestCase(findTestCase('Generic/Login'), [('username') : GlobalVariable
 FailureHandling.STOP_ON_FAILURE)
 
 /*WebDriver driver = DriverFactory.getWebDriver()
-
-Capabilities caps = ((driver) as RemoteWebDriver).getCapabilities()
-
-String browserName = caps.getBrowserName()
-
-String browserVersion = caps.getVersion()
-
-def Browser = GlobalVariable.G_Browser*/
+ Capabilities caps = ((driver) as RemoteWebDriver).getCapabilities()
+ String browserName = caps.getBrowserName()
+ String browserVersion = caps.getVersion()
+ def Browser = GlobalVariable.G_Browser*/
 
 String ReportFile = GlobalVariable.G_ReportName + '.html'
 
@@ -41,14 +37,28 @@ def LogStatus = com.relevantcodes.extentreports.LogStatus
 
 def extentTest = extent.startTest(TestCaseName)
 
+fileName="CntxMenu"+fileName
 WebUI.delay(2)
+
+def navLocation =CustomKeywords.'generateFilePath.filePath.execLocation'()
+def location=navLocation
+println('##################################################################')
+println (location)
+println('##################################################################')
 
 try
 {
 	'Navigate to Files Tab\r\n'
 	WebUI.click(findTestObject('GenericObjects/TitleLink_Files'))
-	
-	
+
+
+
+	extentTest.log(LogStatus.PASS, "Navigated to Files Tab " )
+	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
+	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
+	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
+	extentTest.log(LogStatus.PASS, 'Navigated to - '+location)
+
 	TestObject viewIconTile=WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/Icon_ViewIcon'), 'title', 'equals',"Tile View", true)
 	TestObject viewIconList=WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/Icon_ViewIcon'), 'title', 'equals',"List View", true)
 
@@ -65,27 +75,8 @@ try
 		extentTest.log(LogStatus.PASS, 'Changing File View to ListView')
 		WebUI.delay(2)
 	}
-	
-	def isFolderEmptyPresent=CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('FilesPage/Label_FolderEmpty'),5)
-	if(isFolderEmptyPresent)
-	{
 
-		extentTest.log(LogStatus.PASS, 'Folder is Empty')
-		extentTest.log(LogStatus.PASS, 'Folder is Empty -Nothing to delete')
 
-	}
-	else
-	{
-	WebUI.click(findTestObject('FilesPage/CheckBox_Select_All'))
-	WebUI.click(findTestObject('FilesPage/FilesDelete_img'))
-	WebUI.click(findTestObject('GenericObjects/btn_Yes'))
-	}
-	WebUI.delay(3)
-	def isElemenetPresent=CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('Object Repository/FilesPage/Label_FolderEmpty'),5)
-	if(isElemenetPresent)
-	{
-		WebUI.rightClick(findTestObject('FilesPage/Label_FolderEmpty'))
-	}
 	WebUI.delay(3)
 	WebUI.click(findTestObject('FilesPage/ContextMenu_CreateNewFile'))
 	extentTest.log(LogStatus.PASS,"Clicked context menu - New file ")
@@ -99,7 +90,6 @@ try
 
 	WebUI.setText(findTestObject('FilesPage/TextBx_CreateFile'), fileName)
 
-	'Click save\r\n'
 	WebUI.click(findTestObject('FilesPage/btn_Save'))
 	extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
 
@@ -140,7 +130,7 @@ try
 
 	def des = TestCaseName.toString()
 
-	
+
 }
 catch (Exception  ex)
 {

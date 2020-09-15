@@ -16,23 +16,8 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'pbsorks'</initValue>
-      <name>G_AdminUser</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'pbsworks'</initValue>
-      <name>G_AdminPasswd</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
       <initValue>''</initValue>
       <name>G_JobID</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
-      <name>G_Description</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -41,22 +26,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'ToRename.txt'</initValue>
-      <name>G_FileToRename</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'ToDelete.txt'</initValue>
-      <name>G_FileToDelete</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
-      <name>G_AppName</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'https://172.16.80.49:4443/pbsworks'</initValue>
+      <initValue>'https://10.75.36.105:4443/pbsworks'</initValue>
       <name>G_BaseUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -76,7 +46,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'/katalonDownloads'</initValue>
+      <initValue>'C:\\KatalonDownloads'</initValue>
       <name>G_DownloadFolder</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -96,12 +66,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'G_HostMachine'</initValue>
-      <name>Windows</name>
+      <initValue>'Windows'</initValue>
+      <name>G_HostMachine</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Linux'</initValue>
       <name>G_Platform</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_PBSHostName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

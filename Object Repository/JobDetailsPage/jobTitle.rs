@@ -6,11 +6,11 @@
    <elementGuidId>cb548994-6f14-475c-88fa-6d295f7aef35</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//span[contains(text(),'.blrvm16vm16')]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//span[contains(text(),'.pbsaccesslnc')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

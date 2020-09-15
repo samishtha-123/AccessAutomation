@@ -1,4 +1,4 @@
 Module=Preferences
-csvfile=C:/katalon/AccessWeb/Reports/20200725_105037/Preferences/20200725_105037/20200725_105037.csv
+csvfile=C:/katalon/AccessWeb 18.08.20/Reports/20200914_114513/Preferences/20200914_114513/20200914_114513.csv
 browser=IE
-reportName=Preferences_IE_25072020_105041.html
+reportName=Preferences_IE_14092020_114517.html

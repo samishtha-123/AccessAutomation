@@ -21,7 +21,9 @@ def extent = CustomKeywords.'generateReports.GenerateReport.create'(ReportFile, 
 
 def LogStatus = com.relevantcodes.extentreports.LogStatus
 
-def extentTest = extent.startTest(TestCaseName)
+def TCName=TestCaseName+' - for Non JobOwner'
+
+def extentTest = extent.startTest(TCName)
 
 def result
 def msgPass
@@ -76,12 +78,12 @@ try {
 
 	}
 
-	if (GlobalVariable.G_Browser == 'IE') {
+	if (GlobalVariable.G_Browser == 'Edge') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 }
 catch (Exception ex) {
-	String screenShotPath = (('ExtentReports/' + TestCaseName) + GlobalVariable.G_Browser) + '.png'
+	String screenShotPath = (('ExtentReports/' + TCName) + GlobalVariable.G_Browser) + '.png'
 
 	WebUI.takeScreenshot(screenShotPath)
 
@@ -90,20 +92,27 @@ catch (Exception ex) {
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
 catch (StepErrorException e) {
-	String screenShotPath = (('ExtentReports/' + TestCaseName) + GlobalVariable.G_Browser) + '.png'
+	String screenShotPath = (('ExtentReports/' + TCName) + GlobalVariable.G_Browser) + '.png'
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
 catch (StepFailedException e) {
-	String screenShotPath = (('ExtentReports/' + TestCaseName) + GlobalVariable.G_Browser) + '.png'
+	String screenShotPath = (('ExtentReports/' + TCName) + GlobalVariable.G_Browser) + '.png'
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
+
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }

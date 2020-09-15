@@ -6,12 +6,11 @@
    <elementGuidId>097ca365-93c9-4be8-a9a5-e13fe316e724</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[@id='job_search_header']//div//div[contains(text(),'Move To Queue')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//nav[@class='react-contextmenu react-contextmenu--visible']//div[@id='job_movetoqueue_menu_item']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

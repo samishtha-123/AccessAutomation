@@ -36,11 +36,6 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'ToDelete.txt'</initValue>
-      <name>G_FileToDelete</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
       <initValue>'https://10.75.32.31:4443/pbsworks'</initValue>
       <name>G_BaseUrl</name>
    </GlobalVariableEntity>
@@ -48,11 +43,6 @@
       <description></description>
       <initValue>'FireFox'</initValue>
       <name>G_ReportName</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'ToFileWala.txt'</initValue>
-      <name>G_FileToCreate</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -66,7 +56,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'/katalonDownloads'</initValue>
+      <initValue>'C:\\KatalonDownloads'</initValue>
       <name>G_DownloadFolder</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

@@ -6,12 +6,12 @@
    <elementGuidId>fa8fd51c-83ec-412f-9f74-150fea965eaf</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//button[@id = 'confirm_modal_cancel_btn' and (text() = 'No' or . = 'No')]</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//button[@id='confirm_modal_cancel_btn']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[@id = 'confirm_modal_cancel_btn' and (text() = 'No' or . = 'No')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>

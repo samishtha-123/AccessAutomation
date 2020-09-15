@@ -64,6 +64,45 @@ public class executeJobAction_Icon {
 				return result
 				break
 
+			case 'move_to_queue':
+				WebUI.click(findTestObject('Object Repository/JobMonitoringPage/Icon_ellipses'))
+				WebUI.delay(3)
+				WebUI.mouseOver(findTestObject('Object Repository/JobMonitoringPage/TopIcon_MoveToQueue'))
+				WebUI.click(findTestObject('Object Repository/JobMonitoringPage/TopIcon_MoveToQueue'))
+				WebUI.delay(3)
+				WebUI.click(findTestObject('Object Repository/JobMonitoringPage/QueueSubMenu_AccessQueue'))
+
+				TestObject newJobRow = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/div_Completed'), 'title', 'equals',	'Queued', true)
+				WebUI.rightClick(newJobRow)
+				WebUI.delay(1)
+				TestObject newJobAction = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/ContextMenu_JobAction'),
+						'id', 'equals', 'View Details', true)
+				WebUI.click(newJobAction)
+				WebUI.delay(2)
+
+				WebUI.click(findTestObject('JobDetailsPage/JobDetailsLink_Details'))
+				extentTest.log(LogStatus.PASS,"Navigated to Details Tab")
+				WebUI.click(findTestObject('JobDetailsPage/TextBx_DetailsFilter'))
+
+				WebUI.setText(findTestObject('JobDetailsPage/TextBx_DetailsFilter'), 'queue name')
+				WebUI.click(findTestObject('JobDetailsPage/Detail_QueueName'))
+				TestObject newQueueObj = WebUI.modifyObjectProperty(findTestObject('JobDetailsPage/Detail_QueueName'), 'text', 'equals',	'accessQueue', true)
+				println("---------- queuename "+WebUI.waitForElementPresent(newQueueObj, 4, FailureHandling.CONTINUE_ON_FAILURE))
+
+
+
+			/*
+			 WebUI.click(findTestObject('GenericObjects/btn_Yes'))
+			 //WebUI.click(findTestObject('FilesPage/Icon_Close'))
+			 WebUI.delay(2)
+			 WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
+			 WebUI.delay(2)
+			 //Verify notification
+			 result = WebUI.verifyElementPresent(findTestObject('Object Repository/Notificactions/Notification_JobDelete'),5)
+			 println("notification status - "+result)*/
+				return result
+				break
+
 		}
 
 	}

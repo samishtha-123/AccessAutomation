@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission_Reset</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5d6f5b31-bbc0-48f0-9556-adb43f515cea</testCaseGuid>
+   <variable>
+      <defaultValue>'Leave '</defaultValue>
+      <description></description>
+      <id>9d060f0b-9277-43e9-8c05-317c9ed897bd</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>d040abb9-7351-4685-b440-05d8801dd4bc</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Close'</defaultValue>
+      <description></description>
+      <id>debc6772-d8e4-4397-a148-25d8cf3db661</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+</TestCaseEntity>

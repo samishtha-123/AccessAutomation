@@ -1,4 +1,3 @@
-
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
@@ -57,19 +56,17 @@ try {
 		extentTest.log(LogStatus.PASS, 'Clicked on filter delete icon' )
 		WebUI.refresh()
 	}
-
     WebUI.click(findTestObject('Object Repository/JobMonitoringPage/a_Reset'))
 
+	
     TestObject newJobFilterCategoryDown = CustomKeywords.'buildTestObj.CreateTestObjJobs.myTestObjFilterCategoryIdentifierDown'(
         FilterCategory)
 
     TestObject newJobFilterCategoryRight = CustomKeywords.'buildTestObj.CreateTestObjJobs.myTestObjFilterCategoryIdentifierRight'(
         FilterCategory)
-	WebUI.delay(2)
 
-    TestObject newJobFilterCategory = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/Title_FilterCategory'), 
+    TestObject newJobFilterTitle = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/Title_FilterCategory'), 
         'text', 'equals', FilterTitle, true)
-	WebUI.delay(2)
 
     TestObject newJobFilterValue = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/Title_FilterCategory'), 
         'text', 'equals', FilterValue, true)
@@ -87,26 +84,31 @@ try {
     println('**************************')
 
     WebUI.delay(4)
-	WebUI.scrollToElement(newJobFilterCategory, 3)
+	WebUI.scrollToElement(newJobFilterTitle, 3)
 
     if (isElementPresentDown) {
         println('down')
 
         WebUI.click(newJobFilterValue)
+		extentTest.log(LogStatus.PASS,'Verification for AD-1418 - Expand and Collapse the left navigation filters')
+		
     }
     
     if (isElementPresentRight) {
         println('right')
 
-        WebUI.click(newJobFilterCategory)
+        WebUI.click(newJobFilterTitle)
 
         extentTest.log(LogStatus.PASS, 'Selected filter category ' + FilterTitle)
-
+		extentTest.log(LogStatus.PASS,'Verification for AD-1418 - Expand and Collapse the left navigation filters')
+		
         WebUI.delay(2)
 
         WebUI.click(newJobFilterValue)
 
         extentTest.log(LogStatus.PASS, 'Selected filter value ' + FilterValue)
+		
+		extentTest.log(LogStatus.PASS,'Verification for AD-1419 - Check an Un-check the left navigation filters')
     }
     
 	println("AllJobsUser -- "+AllJobsUser)
@@ -140,7 +142,7 @@ try {
     } else {
         extentTest.log(LogStatus.PASS, ('Job  Filtered for ' + FilterValue) + ' Jobs')
     }
-    WebUI.delay(2)
+    
     if (GlobalVariable.G_Browser == 'IE') {
         WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
     }
@@ -150,7 +152,10 @@ catch (Exception ex) {
 
     WebUI.takeScreenshot(screenShotPath)
 
-    extentTest.log(LogStatus.FAIL, ex)
+  	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
     KeywordUtil.markFailed('ERROR: ' + e)
 } 
@@ -159,7 +164,10 @@ catch (StepErrorException e) {
 
     WebUI.takeScreenshot(screenShotPath)
 
-    extentTest.log(LogStatus.FAIL, e)
+ 	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
     KeywordUtil.markFailed('ERROR: ' + e)
 } 

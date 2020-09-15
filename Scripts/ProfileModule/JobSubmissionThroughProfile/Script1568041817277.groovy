@@ -30,6 +30,9 @@ def LogStatus = com.relevantcodes.extentreports.LogStatus
 String TCName = TestCaseName+' - '+proName
 def extentTest = extent.startTest(TCName)
 
+def navLocation = new generateFilePath.filePath().execLocation()
+def location = (navLocation + '/ForProfiles/InputDeck/')
+
 WebUI.delay(2)
 
 try {
@@ -45,6 +48,13 @@ try {
 
 	extentTest.log(LogStatus.PASS, 'Navigated to Job Submission For for - '+AppName)
 
+	def errorPanel = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('JobSubmissionForm/JS_ErrorModalPanel'),
+			5)
+
+	if (errorPanel) {
+		WebUI.click(findTestObject('Object Repository/JobSubmissionForm/button_Close'))
+	}
+
 	WebUI.delay(2)
 	extentTest.log(LogStatus.PASS, 'Switched to Generic Profile')
 
@@ -54,44 +64,55 @@ try {
 	TestObject LeftNavAppIdentifier = CustomKeywords.'buildTestObj.CreateTestObjJobs.myLeftNavAppIdentifier'(proName)
 	WebUI.waitForElementPresent(LeftNavAppIdentifier, 5)
 	WebUI.click(LeftNavAppIdentifier)
+	extentTest.log(LogStatus.PASS, 'Switched to Profile - '+proName)
 
 
 
+	TestObject JobFileIdentifier = CustomKeywords.'buildTestObj.CreateJobSubmissionObjs.myJobFile'(fileName)
 
-	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
-	def fileLocation='/stage/'+GlobalVariable.G_userName+'/ForProfiles/InputDeck'
-	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'),fileLocation)
-	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
-	extentTest.log(LogStatus.PASS, 'Navigated to '+fileLocation+' in RFB ')
+	def isFilePresent=WebUI.verifyElementPresent(JobFileIdentifier, 3,FailureHandling.CONTINUE_ON_FAILURE)
 
-	WebUI.delay(3)
+	if (isFilePresent)
+	{
+		extentTest.log(LogStatus.PASS, 'Job file for Profile Present -  '+fileName)
+	}
+	else
+	{
+		extentTest.log(LogStatus.PASS, 'Profiles does not have files added')
+		
+		WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
+		WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'),location)
+		WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
+		extentTest.log(LogStatus.PASS, 'Navigated to '+location+' in RFB ')
 
-	WebUI.waitForElementPresent(findTestObject('Object Repository/JobSubmissionForm/textBx_file_filter'), 5)
+		WebUI.delay(3)
 
-	WebUI.click(findTestObject('Object Repository/JobSubmissionForm/textBx_file_filter'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/JobSubmissionForm/textBx_file_filter'), 5)
 
-	WebUI.setText(findTestObject('Object Repository/JobSubmissionForm/textBx_file_filter'), fileName)
+		WebUI.click(findTestObject('Object Repository/JobSubmissionForm/textBx_file_filter'))
 
-	WebUI.sendKeys(findTestObject('JobSubmissionForm/textBx_file_filter'), Keys.chord(Keys.ENTER))
+		WebUI.setText(findTestObject('Object Repository/JobSubmissionForm/textBx_file_filter'), fileName)
 
-	WebUI.delay(3)
+		WebUI.sendKeys(findTestObject('JobSubmissionForm/textBx_file_filter'), Keys.chord(Keys.ENTER))
 
-	TestObject newFileObj = WebUI.modifyObjectProperty(findTestObject('JobSubmissionForm/File_InputFile'), 'text', 'equals',
-			fileName, true)
+		WebUI.delay(3)
 
-	WebUI.click(newFileObj)
-	WebUI.rightClick(newFileObj)
+		TestObject newFileObj = WebUI.modifyObjectProperty(findTestObject('JobSubmissionForm/File_InputFile'), 'text', 'equals',
+				fileName, true)
 
-	WebUI.delay(2)
+		WebUI.click(newFileObj)
+		WebUI.rightClick(newFileObj)
 
-
-	String idForCntxtMn="Add as "+FileArg
-	TestObject newRFBContextMnOption = WebUI.modifyObjectProperty(findTestObject('Object Repository/NewJobPage/ContextMenu_RFB_FilePicker'),'id' , 'equals' , idForCntxtMn , true)
-	WebUI.click(newRFBContextMnOption)
-
-	extentTest.log(LogStatus.PASS, 'Selected Context Menu option - '+idForCntxtMn)
+		WebUI.delay(2)
 
 
+		String idForCntxtMn="Add as "+FileArg
+		TestObject newRFBContextMnOption = WebUI.modifyObjectProperty(findTestObject('Object Repository/NewJobPage/ContextMenu_RFB_FilePicker'),'id' , 'equals' , idForCntxtMn , true)
+		WebUI.click(newRFBContextMnOption)
+
+		extentTest.log(LogStatus.PASS, 'Selected Context Menu option - '+idForCntxtMn)
+
+	}
 
 	def isElemenetPresent=CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('JobSubmissionForm/button_Submit_Job_Profile'),10)
 
@@ -133,16 +154,26 @@ try {
 
 	String screenShotPath='ExtentReports/'+TestCaseName+'.png'
 	WebUI.takeScreenshot(screenShotPath)
+
+	String p =TCName+GlobalVariable.G_Browser+'.png'
 	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
+
 	KeywordUtil.markFailed('ERROR: '+ e)
 
 }
 catch (StepErrorException  e)
 {
 
-	String screenShotPath='ExtentReports/'+TestCaseName+'.png'
+	String screenShotPath='ExtentReports/'+TCName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
+
+	String p =TCName+GlobalVariable.G_Browser+'.png'
 	extentTest.log(LogStatus.FAIL,e)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
+
 	KeywordUtil.markFailed('ERROR: '+ e)
 
 }

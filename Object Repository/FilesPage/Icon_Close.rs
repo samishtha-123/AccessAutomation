@@ -6,12 +6,11 @@
    <elementGuidId>13709cd5-5645-46a5-b065-0a8c9f294daa</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//span[@class='close-icon showIcon']//img</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

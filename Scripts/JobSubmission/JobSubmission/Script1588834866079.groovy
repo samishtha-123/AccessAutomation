@@ -75,27 +75,17 @@ try {
 
     CustomKeywords.'operations_JobsModule.JobSubmissions.JSAllFileds'(ToChange, ChangeValue, extentTest)
 
-    WebUI.delay(2)
-
-    WebUI.scrollToElement(findTestObject('JobSubmissionForm/Link_Server'), 3)
-
-    WebUI.delay(3)
-
-    if (ExecMode.equals('LocalForm')) {
-        newFileObj = CustomKeywords.'operations_JobsModule.JobSubmissions.selectFile'(ExecMode, InputFile, extentTest)
+    if (ExecMode.equals('Array')) {
+        extentTest.log(LogStatus.PASS, 'No file required for Array Job')
     } else {
-        if (ExecMode.equals('Local')) {
-            newFileObj = CustomKeywords.'operations_JobsModule.JobSubmissions.selectFile'(ExecMode, InputFile, extentTest)
-        } else {
-            if (TestCaseName.contains('ShortCut')) {
-                ExecMode = 'ShortCut'
+        WebUI.delay(2)
 
-                newFileObj = CustomKeywords.'operations_JobsModule.JobSubmissions.selectFile'(ExecMode, InputFile, extentTest)
-            } else {
-                newFileObj = CustomKeywords.'operations_JobsModule.JobSubmissions.selectFile'(ExecMode, InputFile, extentTest)
-            }
-        }
-        
+        WebUI.scrollToElement(findTestObject('JobSubmissionForm/Link_Server'), 3)
+
+        WebUI.delay(3)
+
+        newFileObj = CustomKeywords.'operations_JobsModule.JobSubmissions.selectFile'(ExecMode, InputFile, extentTest)
+
         WebUI.click(newFileObj)
 
         WebUI.rightClick(newFileObj)
@@ -129,29 +119,23 @@ try {
 
     extentTest.log(LogStatus.PASS, 'Notification Generated')
 
-    println('Job Text = ' + jobText)
-
-    String[] splitAddress = jobText.split(' ')
-
-    def len = (splitAddress[2]).length()
-
-    def toget = (splitAddress[2]).substring(1, len - 1)
-
-    GlobalVariable.G_JobID = toget
-
-    println('********************************************')
-
-    println(GlobalVariable.G_JobID)
+    CustomKeywords.'operations_JobsModule.GetJobRowDetails.getJobID'(jobText)
 
     extentTest.log(LogStatus.PASS, 'Job ID - ' + GlobalVariable.G_JobID)
 
     extentTest.log(LogStatus.PASS, 'Job Submission Done for - ' + TestCaseName)
+	
+    def submitBtn1 = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('JobSubmissionForm/button_Submit_Job'), 
+        10)
 
-    println('********************************************')
+    if (submitBtn1) {
+		extentTest.log(LogStatus.PASS, 'Verified Notification')
+		
+    }
 
-    WebUI.click(findTestObject('GenericObjects/TitleLink_Jobs'))
+ //   WebUI.click(findTestObject('GenericObjects/TitleLink_Jobs'))
 
-    if (TestCaseName.contains('Verify Output Folder')) {
+    if (ToChange.equals('SetOutPutDir')) {
         WebUI.click(findTestObject('GenericObjects/TitleLink_Files'))
 
         extentTest.log(LogStatus.PASS, 'Navigated to Files Tab')
@@ -183,8 +167,10 @@ try {
         WebUI.delay(2)
 
         WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
-		def navLocation=(new generateFilePath.filePath()).execLocation()
-        def location = navLocation+ '/JobsModule/'+ChangeValue
+
+        def navLocation = new generateFilePath.filePath().execLocation()
+
+        def location = (navLocation + '/JobsModule/') + ChangeValue
 
         WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
 
@@ -193,7 +179,7 @@ try {
         extentTest.log(LogStatus.PASS, ('Navigated to ' + location) + ' in files tab')
 
         TestObject newFileObjJS = WebUI.modifyObjectProperty(findTestObject('FilesPage/RowItem_File_ListView'), 'title', 
-            'equals', 'jobFile.out', true)
+            'equals', InputFile, true)
 
         def fileItem = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(newFileObjJS, 5)
 
@@ -203,7 +189,7 @@ try {
             extentTest.log(LogStatus.PASS, 'Output file - jobFile.out exists ')
         }
     }
-    
+    /*
     TestObject jobIdEle = CustomKeywords.'buildTestObj.CreateTestObjJobs.myTestObjJobRow'(GlobalVariable.G_JobID)
 
     WebUI.click(findTestObject('GenericObjects/TitleLink_Jobs'))
@@ -211,8 +197,15 @@ try {
     WebUI.delay(2)
 
     String jobState = CustomKeywords.'operations_JobsModule.JobSubmissions.printJobState'(katalonWebDriver, extentTest)
-	
-  
+     */
+    if (ExecMode.equals('Array')) {
+        //call keyword 
+	WebUI.click(findTestObject('Object Repository/JobMonitoringPage/Icon_Close'))
+	WebUI.delay(2)
+		CustomKeywords.'operations_JobsModule.GetJobRowDetails.checkSubJobs'(katalonWebDriver,'JS',extentTest)
+		
+		    }
+    
     if (GlobalVariable.G_Browser == 'IE') {
         WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
     }
@@ -222,7 +215,10 @@ catch (Exception ex) {
 
     WebUI.takeScreenshot(screenShotPath)
 
-    extentTest.log(LogStatus.FAIL, ex)
+  	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
     KeywordUtil.markFailed('ERROR: ' + e)
 } 
@@ -231,7 +227,10 @@ catch (StepErrorException e) {
 
     WebUI.takeScreenshot(screenShotPath)
 
-    extentTest.log(LogStatus.FAIL, e)
+ 	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
     KeywordUtil.markFailed('ERROR: ' + e)
 } 
@@ -240,5 +239,4 @@ finally {
 
     extent.flush()
 }
-
 

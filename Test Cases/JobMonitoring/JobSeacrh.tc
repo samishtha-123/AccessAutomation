@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSeacrh</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>72b0e99c-2973-4863-877c-4f78f1426be5</testCaseGuid>
+   <variable>
+      <defaultValue>'Job Search'</defaultValue>
+      <description></description>
+      <id>afeb7723-7576-4e85-ae6f-ba63281eb589</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job  Name'</defaultValue>
+      <description></description>
+      <id>cf79c37b-4483-4f58-a5c9-c7a7c7d69ade</id>
+      <masked>false</masked>
+      <name>searchWith</name>
+   </variable>
+   <variable>
+      <defaultValue>'asddasdsad'</defaultValue>
+      <description></description>
+      <id>1d788f12-5808-4ac4-9b57-fe14d66bdc2b</id>
+      <masked>false</masked>
+      <name>searchValue</name>
+   </variable>
+   <variable>
+      <defaultValue>'NoJobs'</defaultValue>
+      <description></description>
+      <id>d99dbbb6-3b44-4baf-b6f8-2bbfabfdc987</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+</TestCaseEntity>

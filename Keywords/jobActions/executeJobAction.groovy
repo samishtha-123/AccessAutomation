@@ -32,7 +32,7 @@ public class executeJobAction {
 				String[] splitAddress = jobID.split('\\.')
 				GlobalVariable.G_JobIdFromDetails=splitAddress[0]
 				println GlobalVariable.G_JobIdFromDetails
-				extentTest.log(LogStatus.INFO, 'job id from details page '+ GlobalVariable.G_JobIdFromDetails)
+				extentTest.log(LogStatus.PASS, 'job id from details page '+ GlobalVariable.G_JobIdFromDetails)
 				result=true
 				break
 
@@ -46,17 +46,17 @@ public class executeJobAction {
 				if (TestCaseName.contains("No")) {
 					WebUI.click(findTestObject('GenericObjects/btn_No'))
 					result=true
-					extentTest.log(LogStatus.INFO, 'Not deleting job  ')
+					extentTest.log(LogStatus.PASS, 'Not deleting job  ')
 				}
 				else {
 					WebUI.click(findTestObject('GenericObjects/btn_Yes'))
 					WebUI.delay(2)
-					extentTest.log(LogStatus.INFO, 'deleting job  ')
+					extentTest.log(LogStatus.PASS, 'deleting job  ')
 					WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
 					WebUI.delay(3)
 					isNotoficationPresent=WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_JobDelete'), 5)
 					println("notification status - "+isNotoficationPresent)
-					extentTest.log(LogStatus.INFO, 'Verified notification')
+					extentTest.log(LogStatus.PASS, 'Verified notification')
 					result=isNotoficationPresent
 				}
 				break
@@ -71,18 +71,18 @@ public class executeJobAction {
 					println("No")
 					WebUI.click(findTestObject('GenericObjects/btn_No'))
 					result=true
-					extentTest.log(LogStatus.INFO, 'Not terminating job  ')
+					extentTest.log(LogStatus.PASS, 'Not terminating job  ')
 				}
 				else {
 
 					WebUI.click(findTestObject('GenericObjects/btn_Yes'))
 					WebUI.delay(2)
-					extentTest.log(LogStatus.INFO, 'terminating job  ')
+					extentTest.log(LogStatus.PASS, 'terminating job  ')
 					WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
 					WebUI.delay(2)
 					isNotoficationPresent=WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_JobTerminate'), 5)
 					println("notification status - "+isNotoficationPresent)
-					extentTest.log(LogStatus.INFO, 'Verified notification')
+					extentTest.log(LogStatus.PASS, 'Verified notification')
 					result=isNotoficationPresent
 				}
 				break
@@ -94,7 +94,7 @@ public class executeJobAction {
 				WebUI.delay(2)
 				WebUI.click(newJobAction)
 				WebUI.click(findTestObject('JobSubmissionForm/button_Submit_Job'))
-				extentTest.log(LogStatus.INFO, 'resubmitted job  ')
+				extentTest.log(LogStatus.PASS, 'resubmitted job  ')
 				isNotoficationPresent=WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_JobSubmission'), 5)
 				def jobText = WebUI.getText(findTestObject('Notificactions/Notification_JobSubmission'))
 				String[] splitAddress = jobText.split('\\(')
@@ -102,7 +102,7 @@ public class executeJobAction {
 				String[] jobIdArr = JobID.split('\\)')
 				def toget = (jobIdArr[0])
 				println ("job id from keyword - "+ toget)
-				extentTest.log(LogStatus.INFO, 'Verified notification - new job id '+ toget)
+				extentTest.log(LogStatus.PASS, 'Verified notification - new job id '+ toget)
 				result=isNotoficationPresent
 
 				break
@@ -113,7 +113,7 @@ public class executeJobAction {
 						'id', 'equals', Action, true)
 				WebUI.delay(2)
 				WebUI.click(newJobAction)
-				extentTest.log(LogStatus.INFO, 'Downloading job')
+				extentTest.log(LogStatus.PASS, 'Downloading job')
 				result=true
 				break
 
@@ -132,7 +132,7 @@ public class executeJobAction {
 				WebUI.delay(2)
 
 				WebUI.click(findTestObject('JobDetailsPage/JobDetailsLink_Details'))
-				extentTest.log(LogStatus.INFO,"Navigated to Details Tab")
+				extentTest.log(LogStatus.PASS,"Navigated to Details Tab")
 				WebUI.click(findTestObject('JobDetailsPage/TextBx_DetailsFilter'))
 
 				WebUI.setText(findTestObject('JobDetailsPage/TextBx_DetailsFilter'), 'queue name')
@@ -144,7 +144,7 @@ public class executeJobAction {
 			 String[] splitAddress = jobID.split('\\.')
 			 GlobalVariable.G_JobIdFromDetails=splitAddress[0]
 			 println GlobalVariable.G_JobIdFromDetails
-			 */extentTest.log(LogStatus.INFO, 'job id from details page '+ GlobalVariable.G_JobIdFromDetails)
+			 */extentTest.log(LogStatus.PASS, 'job id from details page '+ GlobalVariable.G_JobIdFromDetails)
 				result=true
 				break
 

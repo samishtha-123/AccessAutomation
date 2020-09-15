@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>4c95e1db-8f64-4982-89f4-33962932d915</testCaseGuid>
    <variable>
-      <defaultValue>'ShellPro'</defaultValue>
+      <defaultValue>'ShellNO'</defaultValue>
       <description></description>
       <id>9d2bae20-a478-4749-8ac6-272295f8a53c</id>
       <masked>false</masked>

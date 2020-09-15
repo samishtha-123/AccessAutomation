@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobActions_ForJobStates_Array</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>eb47d69b-60a3-486d-99f8-98d40cd7913d</testCaseGuid>
+   <variable>
+      <defaultValue>'Queued'</defaultValue>
+      <description></description>
+      <id>5f21218a-be3d-4f07-8b2a-b8fbe9f8cf7e</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'View Subjobs'</defaultValue>
+      <description></description>
+      <id>836314b2-0634-4fb4-bbb5-5210ed94ce82</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'subjobs matching wala'</defaultValue>
+      <description></description>
+      <id>8ec910ce-8052-455d-ae1b-d7028f5068a5</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'rohini'</defaultValue>
+      <description></description>
+      <id>479c4658-61cf-4d0c-87b5-f5cd34174087</id>
+      <masked>false</masked>
+      <name>AllJobsUser</name>
+   </variable>
+</TestCaseEntity>

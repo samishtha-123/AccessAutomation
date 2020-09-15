@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FileOperations-linux</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2d9c4620-8e18-47fe-b1f6-c171f2282c00</testCaseGuid>
+   <variable>
+      <defaultValue>'ToDownload_LV.txt'</defaultValue>
+      <description></description>
+      <id>4ceee8d8-1547-418b-9a0c-23026b27f509</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'CUT'</defaultValue>
+      <description></description>
+      <id>4634b931-4b76-41eb-93fe-79a87fad624d</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Download'</defaultValue>
+      <description></description>
+      <id>f130fa62-9fc6-4dcf-9052-9cc70bcb8fec</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+</TestCaseEntity>

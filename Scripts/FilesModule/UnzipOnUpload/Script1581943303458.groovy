@@ -1,9 +1,12 @@
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
+import org.openqa.selenium.Keys
+
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.exception.StepErrorException as StepErrorException
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.relevantcodes.extentreports.LogStatus
@@ -33,6 +36,10 @@ WebUI.delay(2)
 
 try {
 
+
+	WebUI.click(findTestObject('GenericObjects/TitleLink_Files'))
+	extentTest.log(LogStatus.PASS, 'Naviagted to Files Tab')
+
 	TestObject viewIconTile = WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/Icon_ViewIcon'), 'title',
 			'equals', 'Tile View', true)
 
@@ -56,8 +63,14 @@ try {
 
 	WebUI.delay(2)
 
-	WebUI.click(findTestObject('GenericObjects/TitleLink_Files'))
-	extentTest.log(LogStatus.PASS, 'Naviagted to Files Tab')
+
+	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
+	def location='/stage/'+GlobalVariable.G_userName
+
+	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
+
+	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
+	extentTest.log(LogStatus.PASS, 'Navigated to - '+location)
 
 	WebUI.delay(2)
 	def filePath = (RunConfiguration.getProjectDir() + '/Upload/') + 'ToUpload.zip'
@@ -75,7 +88,7 @@ try {
 
 	extentTest.log(LogStatus.PASS, 'Verified unzipped Folder')
 
-	if (GlobalVariable.G_Browser == 'Edge') {
+	if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 }

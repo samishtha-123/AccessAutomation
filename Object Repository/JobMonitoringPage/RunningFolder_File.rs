@@ -6,11 +6,11 @@
    <elementGuidId>9d8f9a2c-8110-42aa-a96c-d9d1a3377d7f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[contains(text(),'Running.sh')]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//div[contains(text(),'Running.sh')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

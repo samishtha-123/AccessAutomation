@@ -6,15 +6,15 @@
    <elementGuidId>4d0a4137-0ee4-4456-bf44-5892ff1631a1</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//div[@class = 'dialog-title' and (text() = 'Leave Job submission form?')]</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//div[(text() = 'Leave Job submission form?' or . = 'Leave Job submission form?')]</value>
       </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//div[@id='confirmation_dialog']/div/div/div/div/div/div</value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

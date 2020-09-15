@@ -13,17 +13,24 @@
       <name>jobState</name>
    </variable>
    <variable>
-      <defaultValue>'New File'</defaultValue>
+      <defaultValue>'Open'</defaultValue>
       <description></description>
       <id>b07c6840-6124-403c-88c8-73fd685aac37</id>
       <masked>false</masked>
       <name>jobAction</name>
    </variable>
    <variable>
-      <defaultValue>'Job Action for Completed Job - Resubmit'</defaultValue>
+      <defaultValue>'Open'</defaultValue>
       <description></description>
       <id>95be6fc3-cb4f-4e7e-aee7-4913d254fd84</id>
       <masked>false</masked>
       <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Output'</defaultValue>
+      <description></description>
+      <id>aa175b05-32fc-49ca-a330-8cfe38b2837c</id>
+      <masked>false</masked>
+      <name>userChoice</name>
    </variable>
 </TestCaseEntity>

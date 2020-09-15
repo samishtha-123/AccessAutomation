@@ -2,6 +2,8 @@ package operations_JobsModule
 
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
+import org.openqa.selenium.WebDriver
+
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testobject.TestObject
@@ -13,7 +15,7 @@ import internal.GlobalVariable
 public class executeJobAction {
 
 	@Keyword
-	def perfromJobAction(String Action , String TestCaseName , extentTest) {
+	def perfromJobAction(String Action , String TestCaseName ,String userChoice, extentTest) {
 		def isNotoficationPresent
 		boolean result=false
 		def LogStatus = com.relevantcodes.extentreports.LogStatus
@@ -36,6 +38,17 @@ public class executeJobAction {
 				result=true
 				break
 
+
+
+			case 'View Subjobs':
+
+				println ("Form job actions - "+Action)
+				TestObject newJobAction = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/ContextMenu_JobAction'),
+						'id', 'equals', Action, true)
+				WebUI.delay(2)
+				WebUI.click(newJobAction)
+				break
+
 			case 'Delete':
 				println ("Form job actions - "+Action)
 				TestObject newJobAction = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/ContextMenu_JobAction'),
@@ -43,44 +56,69 @@ public class executeJobAction {
 				WebUI.delay(2)
 				WebUI.click(newJobAction)
 				WebUI.delay(3)
-				if (TestCaseName.contains("No")) {
-					WebUI.click(findTestObject('GenericObjects/btn_No'))
-					result=true
-					extentTest.log(LogStatus.PASS, 'Not deleting job  ')
+				switch(userChoice)
+				{
+					case 'No':
+						WebUI.click(findTestObject('GenericObjects/btn_No'))
+						result=true
+						extentTest.log(LogStatus.PASS, 'Not deleting job  ')
+
+						break
+
+					case 'Yes':
+						WebUI.click(findTestObject('GenericObjects/btn_Yes'))
+						WebUI.delay(2)
+						extentTest.log(LogStatus.PASS, 'deleting job  ')
+						WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
+						WebUI.delay(3)
+						isNotoficationPresent=WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_JobDelete'), 5)
+						println("notification status - "+isNotoficationPresent)
+						extentTest.log(LogStatus.PASS, 'Verified notification')
+						result=isNotoficationPresent
+						break
+
+					case 'DeleteFiles':
+						WebUI.click(findTestObject('Object Repository/JobMonitoringPage/Chckbx_DeleteJobFiles'))
+						extentTest.log(LogStatus.PASS, 'Checked the option - deleteJob Files')
+						WebUI.click(findTestObject('GenericObjects/btn_Yes'))
+						WebUI.delay(2)
+						extentTest.log(LogStatus.PASS, 'deleting job  ')
+						WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
+						WebUI.delay(3)
+						isNotoficationPresent=WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_JobDelete'), 5)
+						println("notification status - "+isNotoficationPresent)
+						extentTest.log(LogStatus.PASS, 'Verified notification')
+						result=isNotoficationPresent
+						break
+
+					case 'DontAsk':
+						extentTest.log(LogStatus.PASS, 'Dont Ask')
+						WebUI.click(findTestObject('Object Repository/JobMonitoringPage/CheckBx_DontAsk'))
+						WebUI.click(findTestObject('GenericObjects/btn_Yes'))
+						WebUI.delay(2)
+						extentTest.log(LogStatus.PASS, 'deleting job  ')
+						WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
+						WebUI.delay(3)
+						isNotoficationPresent=WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_JobDelete'), 5)
+						println("notification status - "+isNotoficationPresent)
+						extentTest.log(LogStatus.PASS, 'Verified notification')
+						WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
+
+						break
+
+					case 'CheckDelete':
+						extentTest.log(LogStatus.PASS, 'Check Delete')
+						WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
+						WebUI.delay(3)
+						isNotoficationPresent=WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_JobDelete'), 5)
+						println("notification status - "+isNotoficationPresent)
+						extentTest.log(LogStatus.PASS, 'Verified notification - after check Delte')
+						WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
+						result=isNotoficationPresent
+						break
 				}
-				else {
-					WebUI.click(findTestObject('GenericObjects/btn_Yes'))
-					WebUI.delay(2)
-					extentTest.log(LogStatus.PASS, 'deleting job  ')
-					WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
-					WebUI.delay(3)
-					isNotoficationPresent=WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_JobDelete'), 5)
-					println("notification status - "+isNotoficationPresent)
-					extentTest.log(LogStatus.PASS, 'Verified notification')
-					result=isNotoficationPresent
-				}
-				result=true
-				break
 
 
-			case 'Upload':
-
-				println ("Form job actions - "+Action)
-				TestObject newJobAction = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/ContextMenu_JobAction'),
-						'id', 'equals', Action, true)
-				WebUI.delay(2)
-				WebUI.click(newJobAction)
-				result=true
-				break
-
-			case 'Refresh':
-
-				println ("Form job actions - "+Action)
-				TestObject newJobAction = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/ContextMenu_JobAction'),
-						'id', 'equals', Action, true)
-				WebUI.delay(2)
-				WebUI.click(newJobAction)
-				result=true
 				break
 
 			case 'Rename':
@@ -91,24 +129,43 @@ public class executeJobAction {
 				WebUI.click(newJobAction)
 
 				def Renameto='Renamefile.fem'
-				TestObject renameTextBxObj = WebUI.modifyObjectProperty(findTestObject('FilesPage/NewFile_input'), 'value', 'equals', 'bar.fem', true)
+				TestObject renameTextBxObj = WebUI.modifyObjectProperty(findTestObject('FilesPage/NewFile_input'), 'value', 'equals', 'Running.sh', true)
 				WebUI.setText(renameTextBxObj, Renameto)
 				extentTest.log(LogStatus.PASS, 'Renamed file to  '+Renameto)
 
 				WebUI.click(findTestObject('FilesPage/btn_Save'))
 				WebUI.delay(3)
+
 				extentTest.log(LogStatus.PASS, 'Clicked on Save Button')
+				TestObject newFileObj = WebUI.modifyObjectProperty(findTestObject('FilesPage/RowItem_File_ListView'), 'title', 'equals',
+						Renameto, true)
+				def isElemenetPresent=WebUI.waitForElementVisible(newFileObj, 10,FailureHandling.CONTINUE_ON_FAILURE)
+				if(isElemenetPresent){
+					println ("Filed renamed to "+Renameto + " isElemenetPresent " + isElemenetPresent)
+					result=true
+				}
+				else {
+					println ("Filed not renamed to "+Renameto + " isElemenetPresent " + isElemenetPresent)
+					result=false
+				}
 				WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
 				extentTest.log(LogStatus.PASS, "Opened Notification Panel" )
-
-				result=true
+				return result
 				break
 
 
 
+			case 'Refresh':
+				println ("Form job actions refresh - "+Action)
+				TestObject newJobAction = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/ContextMenu_JobAction'),
+						'id', 'equals', Action, true)
+				WebUI.delay(2)
+				WebUI.click(newJobAction)
+				return true
+				break
+
+
 			case 'New File':
-
-
 				println ("Form job actions - "+Action)
 				TestObject newJobAction = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/ContextMenu_JobAction'),
 						'id', 'equals', Action, true)
@@ -124,9 +181,10 @@ public class executeJobAction {
 				WebUI.delay(3)
 				extentTest.log(LogStatus.PASS, 'Clicked on Save Button')
 				WebUI.click(findTestObject('Landing_Page/Btn_Notifiction'))
+				result=WebUI.verifyElementPresent(findTestObject('Object Repository/Notificactions/Notification_FileCreation'), 5)
 				extentTest.log(LogStatus.PASS, "Opened Notification Panel" )
+				return result
 
-				result=true
 				break
 
 			case 'Terminate':
@@ -182,18 +240,31 @@ public class executeJobAction {
 						'id', 'equals', Action, true)
 				WebUI.delay(2)
 				WebUI.click(newJobAction)
-				WebUI.delay(2)
+				extentTest.log(LogStatus.PASS, 'Clicked on Context Menu Option for - '+Action)
+				WebUI.click(findTestObject('Object Repository/FileEditor/Close_Button_fileEditor'))
+				extentTest.log(LogStatus.PASS, 'Clicked on Close Button ')
 				result=true
+
+
 				break
 
 
 			case 'Open With':
 
 				println ("Form job actions - "+Action)
-				WebUI.click(findTestObject('FilesPage/ContextMenu_Openwith'))
-				WebUI.click(findTestObject('FilesPage/span_Text Editor'))
+				WebUI.mouseOver(findTestObject('Object Repository/FileEditor/ContextMenu_OpenWith'))
+				WebUI.click(findTestObject('Object Repository/FileEditor/ContextMenu_OpenWith'))
 				WebUI.delay(2)
+				WebUI.mouseOver(findTestObject('Object Repository/FilesPage/span_Text Editor'))
+				WebUI.click(findTestObject('Object Repository/FilesPage/span_Text Editor'))
+
+				extentTest.log(LogStatus.PASS, 'Clicked on Context Menu Option for - '+Action)
+
+				WebUI.delay(4)
+				WebUI.click(findTestObject('Object Repository/FileEditor/Close_Button_fileEditor'))
+				extentTest.log(LogStatus.PASS, 'Clicked on Close Button ')
 				result=true
+
 				break
 
 			case 'Download':
@@ -203,6 +274,25 @@ public class executeJobAction {
 				WebUI.delay(2)
 				WebUI.click(newJobAction)
 				extentTest.log(LogStatus.PASS, 'Downloading job')
+
+
+				def downloadLoc=GlobalVariable.G_DownloadFolder
+				File downloadFolder = new File("C://KatalonDownloads")
+
+				List namesOfFiles = Arrays.asList(downloadFolder.list())
+				println(namesOfFiles.size())
+				if (namesOfFiles.contains('ForFileViewer.txt')) {
+					println('success')
+					//extentTest.log(LogStatus.PASS, 'file to downloaded ')
+					result=true
+				} else {
+					println('fail')
+					result=false
+				}
+
+				return true
+
+
 				result=true
 				break
 
@@ -233,8 +323,8 @@ public class executeJobAction {
 			 String[] splitAddress = jobID.split('\\.')
 			 GlobalVariable.G_JobIdFromDetails=splitAddress[0]
 			 println GlobalVariable.G_JobIdFromDetails
-			 */extentTest.log(LogStatus.PASS, 'job id from details page '+ GlobalVariable.G_JobIdFromDetails)
-				result=true
+			 */
+				result=WebUI.waitForElementPresent(newQueueObj, 4, FailureHandling.CONTINUE_ON_FAILURE)
 				break
 
 

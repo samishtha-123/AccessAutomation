@@ -6,14 +6,14 @@
    <comment></comment>
    <testCaseGuid>43ded695-2e89-4e5e-9b3f-792c2912575a</testCaseGuid>
    <variable>
-      <defaultValue>'Test case to delete profile'</defaultValue>
+      <defaultValue>'set as default'</defaultValue>
       <description></description>
       <id>4343b31b-60fa-4ed8-9029-52a057e6f17f</id>
       <masked>false</masked>
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'ShellPro'</defaultValue>
+      <defaultValue>'ShellPro-WithRemoteFile'</defaultValue>
       <description></description>
       <id>0300cf62-3068-4779-b99e-ee7267d531f1</id>
       <masked>false</masked>
@@ -25,5 +25,12 @@
       <id>d45d70d8-f2f8-48b4-94fb-152c1a5ecfc0</id>
       <masked>false</masked>
       <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'SetAsDefault'</defaultValue>
+      <description></description>
+      <id>ae853c82-471f-4e86-b068-78805a469f17</id>
+      <masked>false</masked>
+      <name>myOption</name>
    </variable>
 </TestCaseEntity>

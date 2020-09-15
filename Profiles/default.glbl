@@ -31,12 +31,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'FireFox'</initValue>
+      <initValue>'Edge'</initValue>
       <name>G_Browser</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://172.16.80.92:443/pbsworks'</initValue>
+      <initValue>'https://localhost:32772/pbsworks'</initValue>
       <name>G_BaseUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

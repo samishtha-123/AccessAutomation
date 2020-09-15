@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>7daf2b88-1375-4586-a13e-ba576b867906</testCaseGuid>
    <variable>
-      <defaultValue>GlobalVariable.G_FileToCreate</defaultValue>
+      <defaultValue>'Demofilename.txt'</defaultValue>
       <description></description>
       <id>fbbf9b51-72f4-495f-9cbf-a8e08f06ebf3</id>
       <masked>false</masked>

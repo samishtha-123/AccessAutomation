@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FileOperations-Win</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>28c533b5-e092-4e8a-a05f-2b52d1d40649</testCaseGuid>
+   <variable>
+      <defaultValue>'ToDownload_LV.txt'</defaultValue>
+      <description></description>
+      <id>9db2c348-847f-41f0-800b-d8b322772339</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'CUT'</defaultValue>
+      <description></description>
+      <id>1d7255ee-2b97-45de-860a-6d4dff97674d</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Download'</defaultValue>
+      <description></description>
+      <id>7b950ced-8cb3-43ce-a472-81090d4db7f5</id>
+      <masked>false</masked>
+      <name>Operation</name>
+   </variable>
+</TestCaseEntity>

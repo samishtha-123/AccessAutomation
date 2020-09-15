@@ -9,305 +9,297 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>65909afd-a262-4284-95d9-97ccce2ad382</testSuiteGuid>
    <testCaseLink>
-      <guid>fc23097b-d970-4634-bc85-07c1e0961ff0</guid>
+      <guid>50f1af16-b8bd-489e-b923-dcbaa520f9cc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/PreReq/Pre-Req-Script-For-JobMonitoring</testCaseId>
+      <testCaseId>Test Cases/JobMonitoring/Jobdetailspage_context menu</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>82ff058c-3943-4b6f-9edb-fd2e5c2f2fdd</id>
+         <iterationEntity>
+            <iterationType>RANGE</iterationType>
+            <value>1-15</value>
+         </iterationEntity>
+         <testDataId>Data Files/Regression/TestDataForJobDetails</testDataId>
+      </testDataLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>07e6f513-a04f-4fe3-b70a-198f3f69be18</variableId>
+         <testDataLinkId>82ff058c-3943-4b6f-9edb-fd2e5c2f2fdd</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>JobState</value>
+         <variableId>4a636c84-6f6f-4327-bc88-0f06ed57c48e</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>64007784-bca4-488a-8a51-9d250067468a</variableId>
+         <testDataLinkId>82ff058c-3943-4b6f-9edb-fd2e5c2f2fdd</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>JobAction</value>
+         <variableId>b07c6840-6124-403c-88c8-73fd685aac37</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>1c87bd78-81b1-402b-ae17-375332c5d79c</variableId>
+         <testDataLinkId>82ff058c-3943-4b6f-9edb-fd2e5c2f2fdd</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>TestCaseName</value>
+         <variableId>95be6fc3-cb4f-4e7e-aee7-4913d254fd84</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>9e1d0a01-35b1-4e4d-b5c8-bb176ad9c1bc</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>8f94f9b9-3a18-4eca-b080-5ff2e6edd9b9</variableId>
+         <testDataLinkId>82ff058c-3943-4b6f-9edb-fd2e5c2f2fdd</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>userChoice</value>
+         <variableId>aa175b05-32fc-49ca-a330-8cfe38b2837c</variableId>
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>51137361-3237-4abe-b9f4-e8bbeb236ae1</guid>
+      <guid>e0ba152a-5ad7-4bcb-b62e-65365536f830</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/JobMonitoring/JobFilters</testCaseId>
+      <testCaseId>Test Cases/JobMonitoring/Jobdetailspage_topmenu_icons</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>68fb8451-dc09-4e4d-a503-c97be3cb6a41</id>
+         <id>08785e91-4826-4e8c-82a0-be1530d1a902</id>
+         <iterationEntity>
+            <iterationType>RANGE</iterationType>
+            <value>16-22</value>
+         </iterationEntity>
+         <testDataId>Data Files/Regression/TestDataForJobDetails</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>08785e91-4826-4e8c-82a0-be1530d1a902</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>JobState</value>
+         <variableId>2db3f3fe-0e4e-4a05-b27b-4c5ca2494e27</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>08785e91-4826-4e8c-82a0-be1530d1a902</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>JobAction</value>
+         <variableId>5aaa9923-e80c-4ae0-961d-4d51951fd51f</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>08785e91-4826-4e8c-82a0-be1530d1a902</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>TestCaseName</value>
+         <variableId>ca86eeef-baa8-4163-8371-d8cb9e9455af</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>08785e91-4826-4e8c-82a0-be1530d1a902</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>userChoice</value>
+         <variableId>fb69884b-d493-49b8-9b33-2dcf82799a23</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>76057517-6745-4ed5-b14f-1af9922a860d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/JobMonitoring/JobActions_ForJobStates</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>e57d176d-f02d-4892-bd03-8f8e12bc7c68</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
             <value></value>
          </iterationEntity>
-         <testDataId>Data Files/TestDataJobFilters</testDataId>
+         <testDataId>Data Files/Regression/TestDataForJobActions</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>68fb8451-dc09-4e4d-a503-c97be3cb6a41</testDataLinkId>
+         <testDataLinkId>e57d176d-f02d-4892-bd03-8f8e12bc7c68</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>JobState</value>
+         <variableId>fa14e12e-5a6a-419f-8a7f-e37415e0594a</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>e57d176d-f02d-4892-bd03-8f8e12bc7c68</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>JobAction</value>
+         <variableId>733a2509-5f57-4bf7-83e2-b170d379821f</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>e57d176d-f02d-4892-bd03-8f8e12bc7c68</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>TestCaseName</value>
-         <variableId>ace71100-db45-4bac-9cf7-4e06beb3fcfb</variableId>
+         <variableId>deeba42e-d802-4544-b79c-5f155f26e90d</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>68fb8451-dc09-4e4d-a503-c97be3cb6a41</testDataLinkId>
+         <testDataLinkId>e57d176d-f02d-4892-bd03-8f8e12bc7c68</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>FilterCategory</value>
-         <variableId>da517e3c-6f16-45ad-a631-1f8d0f1e7ad4</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>68fb8451-dc09-4e4d-a503-c97be3cb6a41</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>FilterValue</value>
-         <variableId>85fe5725-d3b0-47ef-8404-aebd0ef7e59e</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>68fb8451-dc09-4e4d-a503-c97be3cb6a41</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>FilterTitle</value>
-         <variableId>6cb8d038-a65f-4a85-95f4-15ca8ef3b50e</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>68fb8451-dc09-4e4d-a503-c97be3cb6a41</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>dataAttribute</value>
-         <variableId>add707ea-162f-4718-9997-8cb889c18040</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>54bc3327-1895-48a0-ab95-3335411c3aba</variableId>
+         <value>userChoice</value>
+         <variableId>b9a88c01-3e4a-42b5-8a6d-68ece165320d</variableId>
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>8614c733-f1ab-4e39-b1e3-5efbcf40fc89</guid>
+      <guid>12d742cc-82af-4bb4-a046-4eb0577621df</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/JobMonitoring/JobActions_ForJobStates -Topmenu_Icon</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>e754406d-6254-4738-8d44-2bc0d147db45</id>
+         <id>8c9bc9a1-0055-4039-a984-b193b7c4f5d7</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
-            <value>3-8</value>
+            <value></value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForJobActionsIcons</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>e754406d-6254-4738-8d44-2bc0d147db45</testDataLinkId>
+         <testDataLinkId>8c9bc9a1-0055-4039-a984-b193b7c4f5d7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>JobState</value>
          <variableId>199c3045-c7fc-450e-974a-df474d42b903</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>e754406d-6254-4738-8d44-2bc0d147db45</testDataLinkId>
+         <testDataLinkId>8c9bc9a1-0055-4039-a984-b193b7c4f5d7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>JobAction</value>
          <variableId>c10574d8-703c-4518-8bef-8cdfdaacda23</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>e754406d-6254-4738-8d44-2bc0d147db45</testDataLinkId>
+         <testDataLinkId>8c9bc9a1-0055-4039-a984-b193b7c4f5d7</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>TestCaseName</value>
          <variableId>0974633c-cd4f-4eb4-87d0-82966292f7e9</variableId>
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>79903308-9542-48f5-82d3-2e5b6a151671</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/JobMonitoring/JobActions_ForJobStates_NotJobOwner</testCaseId>
-      <testDataLink>
-         <combinationType>ONE</combinationType>
-         <id>f163e10b-4e0e-4ef5-bbc7-6f2bbdd55d08</id>
-         <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
-         </iterationEntity>
-         <testDataId>Data Files/TestDataJMNotJobOwner</testDataId>
-      </testDataLink>
-      <variableLink>
-         <testDataLinkId>f163e10b-4e0e-4ef5-bbc7-6f2bbdd55d08</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>JobState</value>
-         <variableId>d7a2ecc7-ebf5-4783-9b5e-6805b37f0434</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>f163e10b-4e0e-4ef5-bbc7-6f2bbdd55d08</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>JobAction</value>
-         <variableId>12ea1024-c146-40d0-be6d-0bbe4b2960b3</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>f163e10b-4e0e-4ef5-bbc7-6f2bbdd55d08</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>TestCaseName</value>
-         <variableId>524ca636-a06a-4f07-a113-6bb14cbef71a</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>f163e10b-4e0e-4ef5-bbc7-6f2bbdd55d08</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>AllJobsUser</value>
-         <variableId>b15eadb7-f09d-46da-9556-dc419126fbc8</variableId>
-      </variableLink>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>41e6ba10-0069-4329-8847-b716e6ab91e9</guid>
+      <guid>166591db-44a8-4c7f-a7d4-992dd3a35267</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/JobMonitoring/JobActions_ForJobStates</testCaseId>
-      <testDataLink>
-         <combinationType>ONE</combinationType>
-         <id>982cf935-2ca4-4636-b297-84353e74bd70</id>
-         <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
-         </iterationEntity>
-         <testDataId>Data Files/TestDataForJobActions</testDataId>
-      </testDataLink>
-      <variableLink>
-         <testDataLinkId>982cf935-2ca4-4636-b297-84353e74bd70</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>JobState</value>
-         <variableId>fa14e12e-5a6a-419f-8a7f-e37415e0594a</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>982cf935-2ca4-4636-b297-84353e74bd70</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>JobAction</value>
-         <variableId>733a2509-5f57-4bf7-83e2-b170d379821f</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>982cf935-2ca4-4636-b297-84353e74bd70</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>TestCaseName</value>
-         <variableId>deeba42e-d802-4544-b79c-5f155f26e90d</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>51c69940-dfa5-4d99-bd37-77add7158785</variableId>
-      </variableLink>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>b77bf4f1-aaea-4d2c-a647-9bb18169c09d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/JobMonitoring/JobActions_ForJobStates_Topmenu_Icon_NotJobOwner</testCaseId>
-      <testDataLink>
-         <combinationType>ONE</combinationType>
-         <id>fd995bb6-2ddb-4277-8687-17635892f5a1</id>
-         <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
-         </iterationEntity>
-         <testDataId>Data Files/TestDataJobActionsTopMenuNotOwner</testDataId>
-      </testDataLink>
-      <variableLink>
-         <testDataLinkId>fd995bb6-2ddb-4277-8687-17635892f5a1</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>JobState</value>
-         <variableId>eebf0263-f70f-401d-8ede-31b5d0e1c904</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>fd995bb6-2ddb-4277-8687-17635892f5a1</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>JobAction</value>
-         <variableId>3a33fa3e-5fca-4f4e-8849-51fba2ae93af</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>fd995bb6-2ddb-4277-8687-17635892f5a1</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>TestCaseName</value>
-         <variableId>4040756d-7905-420e-9245-19d8969a9a44</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>fd995bb6-2ddb-4277-8687-17635892f5a1</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>AllJobsUser</value>
-         <variableId>13a08161-d189-465b-950e-263fc1cae465</variableId>
-      </variableLink>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d4a42b8e-40e0-4cc3-b5eb-1cf4cbf2706e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
       <testCaseId>Test Cases/JobMonitoring/JobFilters-SaveFilters</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>ca909595-a454-4eb6-a87e-5192131474c8</id>
+         <id>bad3504a-4844-49e1-a36e-cff2f07187f1</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
             <value></value>
          </iterationEntity>
-         <testDataId>Data Files/TestDataJobFiltersSave</testDataId>
+         <testDataId>Data Files/Regression/TestDataJobFiltersSave</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>ca909595-a454-4eb6-a87e-5192131474c8</testDataLinkId>
+         <testDataLinkId>bad3504a-4844-49e1-a36e-cff2f07187f1</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>TestCaseName</value>
          <variableId>cb8b7af0-b33a-4579-bb88-cb75a300f49f</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>ca909595-a454-4eb6-a87e-5192131474c8</testDataLinkId>
+         <testDataLinkId>bad3504a-4844-49e1-a36e-cff2f07187f1</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>FilterCategory</value>
          <variableId>b6437064-d5b7-4b74-b7bf-f2b2707f54df</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>ca909595-a454-4eb6-a87e-5192131474c8</testDataLinkId>
+         <testDataLinkId>bad3504a-4844-49e1-a36e-cff2f07187f1</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>FilterValue</value>
          <variableId>68835494-617e-4570-b656-d448266da96d</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>ca909595-a454-4eb6-a87e-5192131474c8</testDataLinkId>
+         <testDataLinkId>bad3504a-4844-49e1-a36e-cff2f07187f1</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>FilterTitle</value>
          <variableId>bf9c44e2-408c-4f9f-8870-f7f68adfce91</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>ca909595-a454-4eb6-a87e-5192131474c8</testDataLinkId>
+         <testDataLinkId>bad3504a-4844-49e1-a36e-cff2f07187f1</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>dataAttribute</value>
          <variableId>48734636-1105-4bfe-bf68-14111bfc8441</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>ca909595-a454-4eb6-a87e-5192131474c8</testDataLinkId>
+         <testDataLinkId>bad3504a-4844-49e1-a36e-cff2f07187f1</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>AllJobsUser</value>
          <variableId>784c0350-028b-4992-8787-35beba88226b</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>ca909595-a454-4eb6-a87e-5192131474c8</testDataLinkId>
+         <testDataLinkId>bad3504a-4844-49e1-a36e-cff2f07187f1</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>FilterName</value>
          <variableId>7aa31cb2-ccae-42a2-abe1-247e8e2d98bb</variableId>
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>9757570e-8f5b-46df-ba9f-2cf8bd054cb8</guid>
+      <guid>eb9aa337-2c36-4bef-afa1-9f9ed49a5250</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/JobMonitoring/JobSeacrh</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>afeb7723-7576-4e85-ae6f-ba63281eb589</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>cf79c37b-4483-4f58-a5c9-c7a7c7d69ade</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>1d788f12-5808-4ac4-9b57-fe14d66bdc2b</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>d99dbbb6-3b44-4baf-b6f8-2bbfabfdc987</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>569a0920-d0c0-4160-badd-e75abc89aa0f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/JobMonitoring/JobFilters-SaveFilters-MaxCount</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>8fe97f86-abc2-4212-92cd-9dba59c37e44</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e85ec3a7-aa32-45f1-9349-99cee8d1a041</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>d56b7ca3-04cf-4d28-bd31-098ee71abbcc</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c2ff0dd6-55d2-4806-a97c-f47e8385d0eb</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e4825c27-e583-4def-8018-dfd922551744</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>266c33c0-f3d2-4b8e-8eae-571715039ba7</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>02b4f6a9-2244-4eaa-895d-cab9c1667543</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7aa2dfdb-0b6c-4382-a6d3-156e4d81cb5b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/JobMonitoring/JobFilters-SaveFilters-DeleteFilter</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -353,51 +345,168 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>2a5f86f7-cdf5-4325-b2ed-6dd224e9752e</guid>
+      <guid>bac337e5-de6f-4ab4-b827-f19ea2a22854</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/JobMonitoring/JobFilters</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>8f92036e-40e1-4a83-8bba-cdbd4f158bb5</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Regression/TestDataJobFilters</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>8f92036e-40e1-4a83-8bba-cdbd4f158bb5</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>TestCaseName</value>
+         <variableId>ace71100-db45-4bac-9cf7-4e06beb3fcfb</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>8f92036e-40e1-4a83-8bba-cdbd4f158bb5</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>FilterCategory</value>
+         <variableId>da517e3c-6f16-45ad-a631-1f8d0f1e7ad4</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>8f92036e-40e1-4a83-8bba-cdbd4f158bb5</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>FilterValue</value>
+         <variableId>85fe5725-d3b0-47ef-8404-aebd0ef7e59e</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>8f92036e-40e1-4a83-8bba-cdbd4f158bb5</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>FilterTitle</value>
+         <variableId>6cb8d038-a65f-4a85-95f4-15ca8ef3b50e</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>8f92036e-40e1-4a83-8bba-cdbd4f158bb5</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>dataAttribute</value>
+         <variableId>add707ea-162f-4718-9997-8cb889c18040</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>54bc3327-1895-48a0-ab95-3335411c3aba</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f0cf9d21-0d2c-4f4d-9b4c-100f430a6259</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/JobMonitoring/JobFilters-SaveFilters-MaxCount</testCaseId>
+      <testCaseId>Test Cases/JobMonitoring/JobDetailsPage_LayOutVerifications</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>95c8b23f-d82a-4569-8ee4-ecdb8f3c02ce</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Regression/TestDataForJobMonitoringGenericOperations</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>95c8b23f-d82a-4569-8ee4-ecdb8f3c02ce</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>JobState</value>
+         <variableId>b95a9fac-0595-4142-958e-7ec79e23ea6c</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>95c8b23f-d82a-4569-8ee4-ecdb8f3c02ce</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>userChoice</value>
+         <variableId>e355021e-cb77-4652-bf65-137a4779e533</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>95c8b23f-d82a-4569-8ee4-ecdb8f3c02ce</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>TestCaseName</value>
+         <variableId>ee8f4c65-18f4-4728-905c-411aacdb30ac</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d2ba6de4-26a5-49ba-a173-36edc39d2c81</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/JobMonitoring/JobActions_ForJobStates_Array</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>8fe97f86-abc2-4212-92cd-9dba59c37e44</variableId>
+         <variableId>5f21218a-be3d-4f07-8b2a-b8fbe9f8cf7e</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>e85ec3a7-aa32-45f1-9349-99cee8d1a041</variableId>
+         <variableId>836314b2-0634-4fb4-bbb5-5210ed94ce82</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>d56b7ca3-04cf-4d28-bd31-098ee71abbcc</variableId>
+         <variableId>8ec910ce-8052-455d-ae1b-d7028f5068a5</variableId>
       </variableLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
-         <variableId>c2ff0dd6-55d2-4806-a97c-f47e8385d0eb</variableId>
+         <variableId>479c4658-61cf-4d0c-87b5-f5cd34174087</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>63f89bc8-324f-422a-be4d-8cdc4d4111bd</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/JobMonitoring/JobsTable-AddCols</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>87ac8a68-b5a9-4801-95dc-8b8598264f60</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/TestDataForAddingColJobtable</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>87ac8a68-b5a9-4801-95dc-8b8598264f60</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ColCheckBx</value>
+         <variableId>906d93d7-9edf-49da-91fb-d3eb163252e1</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>e4825c27-e583-4def-8018-dfd922551744</variableId>
+         <testDataLinkId>87ac8a68-b5a9-4801-95dc-8b8598264f60</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ColLable</value>
+         <variableId>3696c598-c23c-4fb6-acad-afcb3fbca84d</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>266c33c0-f3d2-4b8e-8eae-571715039ba7</variableId>
+         <testDataLinkId>87ac8a68-b5a9-4801-95dc-8b8598264f60</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>TestCaseName</value>
+         <variableId>fb7b17c6-f07a-44db-95a6-014c8974af45</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>02b4f6a9-2244-4eaa-895d-cab9c1667543</variableId>
+         <testDataLinkId>87ac8a68-b5a9-4801-95dc-8b8598264f60</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ColName</value>
+         <variableId>6167355e-2e2d-4222-a224-47237304a662</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>87ac8a68-b5a9-4801-95dc-8b8598264f60</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>userChoice</value>
+         <variableId>e89d0e5c-b39d-46a1-a7bd-3e35a02dde8c</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>87ac8a68-b5a9-4801-95dc-8b8598264f60</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>dataAttribute</value>
+         <variableId>1e13a056-4455-4e2b-bc18-2e205a4fa439</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

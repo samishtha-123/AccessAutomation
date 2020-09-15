@@ -161,6 +161,18 @@ public class folderOperations {
 					WebUI.delay(2)
 					extentTest.log(LogStatus.PASS, 'Clicked on Save Button')
 					WebUI.click(findTestObject('FilesPage/Icon_Close'))
+					TestObject newFileObj = WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/FolderRowItem_ListView'), 'title', 'equals',
+							Renameto, true)
+					def isElemenetPresent=WebUI.waitForElementVisible(newFileObj, 10,FailureHandling.CONTINUE_ON_FAILURE)
+					if(isElemenetPresent){
+						println ("Folder renamed to "+Renameto + " isElemenetPresent " + isElemenetPresent)
+						result=true
+					}
+					else {
+						println ("Folder not renamed to "+Renameto + " isElemenetPresent " + isElemenetPresent)
+						result=false
+					}
+
 
 				}
 				else{

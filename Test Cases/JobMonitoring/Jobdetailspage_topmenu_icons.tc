@@ -13,17 +13,24 @@
       <name>jobState</name>
    </variable>
    <variable>
-      <defaultValue>'job_detail_download_btn'</defaultValue>
+      <defaultValue>'job_detail_delete_btn'</defaultValue>
       <description></description>
       <id>5aaa9923-e80c-4ae0-961d-4d51951fd51f</id>
       <masked>false</masked>
       <name>jobAction</name>
    </variable>
    <variable>
-      <defaultValue>'Job Action for Completed Job - Resubmit'</defaultValue>
+      <defaultValue>'job_detail_delete_btn'</defaultValue>
       <description></description>
       <id>ca86eeef-baa8-4163-8371-d8cb9e9455af</id>
       <masked>false</masked>
       <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Output'</defaultValue>
+      <description></description>
+      <id>fb69884b-d493-49b8-9b33-2dcf82799a23</id>
+      <masked>false</masked>
+      <name>userChoice</name>
    </variable>
 </TestCaseEntity>

@@ -13,7 +13,7 @@
       <name>jobState</name>
    </variable>
    <variable>
-      <defaultValue>'View Details'</defaultValue>
+      <defaultValue>'Delete'</defaultValue>
       <description></description>
       <id>733a2509-5f57-4bf7-83e2-b170d379821f</id>
       <masked>false</masked>
@@ -27,10 +27,10 @@
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'rohini'</defaultValue>
+      <defaultValue>'ask'</defaultValue>
       <description></description>
-      <id>51c69940-dfa5-4d99-bd37-77add7158785</id>
+      <id>b9a88c01-3e4a-42b5-8a6d-68ece165320d</id>
       <masked>false</masked>
-      <name>AllJobsUser</name>
+      <name>userChoice</name>
    </variable>
 </TestCaseEntity>

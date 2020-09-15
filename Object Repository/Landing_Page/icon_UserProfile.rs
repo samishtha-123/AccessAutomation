@@ -7,10 +7,14 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app_user_menu']/a</value>
+         <value>//span[@class='unity_user']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;app_user_menu&quot;)/a[@class=&quot;dropdown-toggle focus_enable_class theme-receiver avatar&quot;]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

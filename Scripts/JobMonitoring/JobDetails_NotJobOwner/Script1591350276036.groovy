@@ -37,7 +37,7 @@ try {
 
 	println(AllJobsUser)
 
-	if (TestCaseName.contains('AllJobs')) {
+	
 		WebUI.click(findTestObject('Object Repository/JobMonitoringPage/RadioBtn_AllJobs'))
 		WebUI.delay(1)
 		extentTest.log(LogStatus.PASS, 'All Jobs Filter Applied')
@@ -50,7 +50,7 @@ try {
 			WebUI.delay(5)
 			extentTest.log(LogStatus.PASS, 'Waiting for jobs table to load on FireFox')
 		}
-	}
+	
 
 	TestObject newJobFilter = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/label_jobState'), 'text', 'equals',
 			jobState, true)
@@ -64,8 +64,7 @@ try {
 			jobState, true)
 	WebUI.rightClick(newJobRow)
 
-
-	result = CustomKeywords.'operations_JobsModule.executeJobAction.perfromJobAction'(jobAction, TestCaseName, extentTest)
+	WebUI.click(findTestObject('JobMonitoringPage/ViewDetails_Jobs'))
 
 
 	switch (folder) {
@@ -87,16 +86,11 @@ try {
 			break;
 	}
 
-	if (TestCaseName.contains('AllJobs'))
-	{
+
 		msgPass='Verified - Non Job Owners see msg for other’s job'
 		msgFail='Non Job Owners do not see msg for other’s job'
-	}
-	/*else
-	 {
-	 msgPass='Verified - job action '+jobAction+' cannot be performed on jobs in state - '+jobState
-	 msgFail=jobAction+' is available for job state - '+ jobState
-	 }*/
+	
+
 	if (result) {
 		extentTest.log(LogStatus.PASS, msgPass)
 	}

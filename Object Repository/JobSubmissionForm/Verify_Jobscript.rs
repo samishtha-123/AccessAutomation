@@ -11,9 +11,23 @@
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
+         <value>//span[contains(@title, 'JobsModule/InputDeck/bar.fem')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>contains</matchCondition>
+      <name>title</name>
+      <type>Main</type>
+      <value>JobsModule/InputDeck/bar.fem</value>
+   </webElementProperties>
 </WebElementEntity>

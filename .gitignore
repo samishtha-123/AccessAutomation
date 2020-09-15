@@ -1,7 +1,20 @@
-/bin/
-/Libs/
 /.settings/
 /.classpath
 .svn/
 /Reports/
-/Test Cases/WIP/
+/Test Cases/Obsolate-FM
+/Test Cases/Obsolate-JM
+/Test Cases/Obsolate-JS
+/Scripts/Obsolate-FM
+/Scripts/Obsolate-JM
+/Scripts/Obsolate-JS
+/Test Cases/Obsolete-FM
+/Test Cases/Obsolete-JM
+/Test Cases/Obsolete-JS
+/Scripts/Obsolete-FM
+/Scripts/Obsolete-JM
+/Scripts/Obsolete-JS
+/ExtentReports/
+Test Suites/Obsolete
+Test Suites/Obsolate 
+/bin/

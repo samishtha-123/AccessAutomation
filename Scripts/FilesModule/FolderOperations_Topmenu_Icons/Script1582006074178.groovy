@@ -162,17 +162,23 @@ try
 catch (Exception  ex)
 {
 
-	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
+	String screenShotPath='ExtentReports/'+TCName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
+	String p =TCName+GlobalVariable.G_Browser+'.png'
 	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 	KeywordUtil.markFailed('ERROR: '+ e)
 }
 catch (StepErrorException  e)
 {
 
-	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
+	String screenShotPath='ExtentReports/'+TCName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
-	extentTest.log(LogStatus.FAIL,e)
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 	KeywordUtil.markFailed('ERROR: '+ e)
 }
 finally

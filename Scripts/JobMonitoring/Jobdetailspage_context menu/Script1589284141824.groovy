@@ -41,13 +41,18 @@ try
 	WebUI.delay(2)
 	WebUI.click(findTestObject('Object Repository/JobMonitoringPage/a_Reset'))
 
+	
+	WebUI.click(findTestObject('JobMonitoringPage/JM_SearchBox'))
+	//WebUI.setText(findTestObject('JobMonitoringPage/JM_SearchBox'),AllJobsUser)
+	WebUI.sendKeys(findTestObject('JobMonitoringPage/JM_SearchBox'), 'Ops')
+	
 	TestObject newJobFilter = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/label_jobState'), 'text', 'equals',
 			jobState, true)
 
 	WebUI.click(newJobFilter)
 
 	WebUI.delay(2)
-	extentTest.log(LogStatus.INFO, 'Clicked on job with state  - ' + jobState)
+	extentTest.log(LogStatus.PASS, 'Clicked on job with state  - ' + jobState)
 
 	println jobState
 	TestObject newJobRow = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/div_Completed'), 'title', 'equals',	jobState, true)
@@ -57,12 +62,29 @@ try
 	
 	WebUI.click(findTestObject('JobMonitoringPage/ViewDetails_Jobs'))
 	
-    WebUI.waitForElementVisible(findTestObject('JobMonitoringPage/OutputFolder_File'), 5)
-	WebUI.rightClick(findTestObject('JobMonitoringPage/OutputFolder_File'))
 	
-
+	switch(userChoice)
+	{
+		case 'Input':
+		WebUI.click(findTestObject('JobMonitoringPage/InputFolder'))
+		//WebUI.rightClick(findTestObject('JobMonitoringPage/OutputFolder_File'))
 		
-		result=CustomKeywords.'operations_JobsModule.executeJobAction.perfromJobAction'(jobAction,TestCaseName,extentTest)
+		extentTest.log(LogStatus.PASS, 'Click on Input Folder')
+		break;
+		
+		case 'Output':
+		WebUI.waitForElementVisible(findTestObject('JobMonitoringPage/OutputFolder'), 5)
+		//WebUI.rightClick(findTestObject('JobMonitoringPage/OutputFolder_File'))
+		break;
+	
+		case 'Running':
+		WebUI.click(findTestObject('JobMonitoringPage/RunningFolder'))
+		extentTest.log(LogStatus.PASS, 'Click on Running Folder')
+		//WebUI.rightClick(findTestObject('JobMonitoringPage/RunningFolder_File'))
+		
+		break;
+		}
+		result=CustomKeywords.'operations_JobsModule.executeJobAction_JobFiles.perfromJobAction'(jobAction,TestCaseName,extentTest,userChoice)
 
 			
 		if(result)
@@ -75,7 +97,7 @@ try
 		}
 		
 		
-		if (GlobalVariable.G_Browser == 'Edge') {
+		if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 
@@ -86,18 +108,22 @@ catch (Exception  ex)
 
 	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
+	
+	
+	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
 	extentTest.log(LogStatus.FAIL,ex)
-	KeywordUtil.markFailed('ERROR: '+ e)
-
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+	
 }
 catch (StepErrorException  e)
 {
 
 	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
-	extentTest.log(LogStatus.FAIL,e)
-	KeywordUtil.markFailed('ERROR: '+ e)
-
+	
+	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
 }
 finally
 {

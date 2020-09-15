@@ -20,7 +20,10 @@ String ReportFile=GlobalVariable.G_ReportName+".html"
 def extent=CustomKeywords.'generateReports.GenerateReport.create'(ReportFile,GlobalVariable.G_Browser,GlobalVariable.G_BrowserVersion)
 def LogStatus = com.relevantcodes.extentreports.LogStatus;
 
-def extentTest = extent.startTest(TestCaseName)
+def TCName=TestCaseName+' - through top menu icons'
+
+def extentTest = extent.startTest(TCName)
+
 def result 
 WebUI.delay(2)
 try
@@ -44,7 +47,7 @@ try
 		
 		
 
-		result=CustomKeywords.'operations_JobsModule.executeJobAction_Icon.perfromJobAction'(jobAction,TestCaseName,extentTest)
+		result=CustomKeywords.'operations_JobsModule.executeJobAction_Icon.perfromJobAction'(jobAction,TCName,extentTest)
 
 			
 		if(result)
@@ -64,18 +67,26 @@ try
 catch (Exception  ex)
 {
 
-	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
+	String screenShotPath='ExtentReports/'+TCName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
+	String p =TCName+GlobalVariable.G_Browser+'.png'
 	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
+
 	KeywordUtil.markFailed('ERROR: '+ e)
 
 }
 catch (StepErrorException  e)
 {
 
-	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
+	String screenShotPath='ExtentReports/'+TCName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
-	extentTest.log(LogStatus.FAIL,e)
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
+
 	KeywordUtil.markFailed('ERROR: '+ e)
 
 }

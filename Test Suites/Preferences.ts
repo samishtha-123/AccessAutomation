@@ -9,35 +9,36 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>c30d8a4e-ad2f-4d0c-a140-6d4cd7dccbe8</testSuiteGuid>
+   <rerunImmediately>false</rerunImmediately>
+   <testSuiteGuid>49447700-1b81-4192-b665-df4d0d44de91</testSuiteGuid>
    <testCaseLink>
-      <guid>414cabe9-4172-4948-9f28-ee2c418e11cd</guid>
+      <guid>064c3f51-43d2-40dc-831c-da3f7ecbcae1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Preferences/Set_Preferences</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>9924dd32-03b7-488d-a487-157caa9ace80</id>
+         <id>90a91a39-e9a9-4691-9401-5da43ba27bd1</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>RANGE</iterationType>
+            <value>1-12</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForPreferences</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>9924dd32-03b7-488d-a487-157caa9ace80</testDataLinkId>
+         <testDataLinkId>90a91a39-e9a9-4691-9401-5da43ba27bd1</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>TestCaseName</value>
          <variableId>20e66ddf-642f-491a-b46e-0d3dc565bf8c</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>9924dd32-03b7-488d-a487-157caa9ace80</testDataLinkId>
+         <testDataLinkId>90a91a39-e9a9-4691-9401-5da43ba27bd1</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>userChoice</value>
          <variableId>4611fa3d-9817-4318-9699-09323a3d16ae</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>9924dd32-03b7-488d-a487-157caa9ace80</testDataLinkId>
+         <testDataLinkId>90a91a39-e9a9-4691-9401-5da43ba27bd1</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>preference</value>
          <variableId>8c467d1f-9c4c-493c-a375-d9145f840bda</variableId>

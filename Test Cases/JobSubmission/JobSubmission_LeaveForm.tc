@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobSubmission_LeaveForm</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e5a97c62-a11b-4269-bc06-a454f058c288</testCaseGuid>
+   <variable>
+      <defaultValue>'Leave '</defaultValue>
+      <description></description>
+      <id>eafa6e12-0135-42fc-b1ff-a3f118a8a163</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ShellScript'</defaultValue>
+      <description></description>
+      <id>7719920b-c14d-43fe-a629-bcb6b8101040</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Yes'</defaultValue>
+      <description></description>
+      <id>005889aa-cf57-4be6-a956-bb131f6725ca</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+</TestCaseEntity>

@@ -1,6 +1,8 @@
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
+import org.openqa.selenium.Keys
+
 import com.kms.katalon.core.exception.StepErrorException as StepErrorException
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testobject.TestObject as TestObject
@@ -21,21 +23,35 @@ def LogStatus = com.relevantcodes.extentreports.LogStatus;
 
 def extentTest = extent.startTest(TestCaseName)
 
+
+def navLocation =CustomKeywords.'generateFilePath.filePath.execLocation'()
+def location=navLocation
+println('##################################################################')
+println (location)
+println('##################################################################')
+
+
 WebUI.delay(2)
 try
 {
 	'Navigate to Files Tab\r\n'
-	
-	
-	def isElemenetPresent=CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('GenericObjects/TitleLink_Files'),5)
-	
-		if (isElemenetPresent)
-		{
-			WebUI.click(findTestObject('GenericObjects/TitleLink_Files'))
-			extentTest.log(LogStatus.PASS, "Navigated to Files Tab" )
-		}
 
-	
+
+	def isElemenetPresent=CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('GenericObjects/TitleLink_Files'),5)
+
+	if (isElemenetPresent)
+	{
+		WebUI.click(findTestObject('GenericObjects/TitleLink_Files'))
+		extentTest.log(LogStatus.PASS, "Navigated to Files Tab" )
+	}
+
+
+	extentTest.log(LogStatus.PASS, "Navigated to Files Tab " )
+	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
+	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
+	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
+	extentTest.log(LogStatus.PASS, 'Navigated to - '+location)
+
 	WebUI.delay(2)
 	WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 5)
 
@@ -54,7 +70,7 @@ try
 
 
 	WebUI.setText(findTestObject('FilesPage/TextBx_CreateFile'), fileName)
-	
+
 	extentTest.log(LogStatus.PASS, "Enterted File Name to create "+fileName )
 	'Click save\r\n'
 	WebUI.click(findTestObject('FilesPage/btn_Save'))
@@ -81,7 +97,7 @@ try
 
 	if(notification)
 	{
-		
+
 		extentTest.log(LogStatus.PASS, fileName + "- Created file and verified notification")
 
 	}
@@ -95,15 +111,18 @@ try
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 
-	
-	
+
+
 }
 catch (Exception  ex)
 {
 
 	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
+
+	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
 	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
 	KeywordUtil.markFailed('ERROR: '+ e)
 }
 catch (StepErrorException  e)
@@ -111,7 +130,10 @@ catch (StepErrorException  e)
 
 	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
-	extentTest.log(LogStatus.FAIL,e)
+	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 	KeywordUtil.markFailed('ERROR: '+ e)
 }
 finally

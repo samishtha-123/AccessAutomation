@@ -7,21 +7,21 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[@id = 'app_notify_menu' and @title = 'Notifications']</value>
+         <value>//span[@id = 'app_notify_menu' and @title = 'Notifications']</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app_notify_menu']</value>
+         <value>//span[@id='app_notify_menu']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
+      <value>span</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

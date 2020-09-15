@@ -34,31 +34,24 @@ public class fileOperations {
 				TestObject newFileOp=WebUI.modifyObjectProperty(findTestObject('FilesPage/ContextMenu_FileOperation'), 'id', 'equals', Operation, true)
 				WebUI.click(newFileOp)
 				extentTest.log(LogStatus.PASS, 'Clicked on Context Menu Option for - '+Operation)
-				WebUI.click(findTestObject('FilesPage/Icon_Close'))
-
-
+				WebUI.click(findTestObject('FilesPage/Close_Button'))
+				result=true
 				return result
 				break
 
 			case 'Open With':
 			//TestObject newFileOp=WebUI.modifyObjectProperty(findTestObject('FilesPage/ContextMenu_FileOperation'), 'id', 'equals', Operation, true)
 			//WebUI.click(newFileOp)
+				WebUI.mouseOver(findTestObject('FilesPage/ContextMenu_Openwith'))
 				WebUI.click(findTestObject('FilesPage/ContextMenu_Openwith'))
 				extentTest.log(LogStatus.PASS, 'Clicked on Context Menu Option for - '+Operation)
 			//WebUI.click(findTestObject('FilesPage/Icon_Close'))
+				WebUI.mouseOver(findTestObject('FilesPage/span_Text Editor'))
+				WebUI.delay(1)
 				WebUI.click(findTestObject('FilesPage/span_Text Editor'))
+				result=true
 				return result
 				break
-
-			case 'Open With':
-
-				WebUI.click(findTestObject('FilesPage/ContextMenu_Openwith'))
-				extentTest.log(LogStatus.PASS, 'Clicked on Context Menu Option for - '+Operation)
-
-				WebUI.click(findTestObject('FilesPage/span_Other Apps'))
-
-				break
-
 
 			case 'Copy':
 				TestObject newFileOp=WebUI.modifyObjectProperty(findTestObject('FilesPage/ContextMenu_FileOperation'), 'id', 'equals', Operation, true)
@@ -202,8 +195,20 @@ public class fileOperations {
 					WebUI.click(findTestObject('FilesPage/btn_Save'))
 					WebUI.delay(3)
 					extentTest.log(LogStatus.PASS, 'Clicked on Save Button')
+					WebUI.click(findTestObject('FilesPage/Icon_Close'))
+					TestObject newFileObj = WebUI.modifyObjectProperty(findTestObject('FilesPage/RowItem_File_ListView'), 'title', 'equals',
+							Renameto, true)
+					def isElemenetPresent=WebUI.waitForElementVisible(newFileObj, 10,FailureHandling.CONTINUE_ON_FAILURE)
+					if(isElemenetPresent){
+						println ("Filed renamed to "+Renameto + " isElemenetPresent " + isElemenetPresent)
+						result=true
+					}
+					else {
+						println ("Filed not renamed to "+Renameto + " isElemenetPresent " + isElemenetPresent)
+						result=false
+					}
 
-				}
+					}
 				else{
 
 					if(TestCaseName.contains('tile view')) {
@@ -411,7 +416,6 @@ public class fileOperations {
 				WebUI.uploadFile(findTestObject('FilesPage/UploadFileBtn'), newFP )
 				return true
 				break
-
 
 
 

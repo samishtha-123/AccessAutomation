@@ -112,7 +112,7 @@ try {
 	{
 		extentTest.log(LogStatus.FAIL,'File Operation - ' + TestCaseName +' failed')
 	}
-	if (GlobalVariable.G_Browser == 'IE') {
+	if (GlobalVariable.G_Browser == 'Edge') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 
@@ -125,7 +125,9 @@ catch (Exception ex) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, ex)
+	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
@@ -134,7 +136,9 @@ catch (StepErrorException e) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }

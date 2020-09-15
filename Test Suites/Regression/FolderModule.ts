@@ -9,6 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>623fcdb4-7032-469d-8931-a6fafbaa4839</testSuiteGuid>
    <testCaseLink>
       <guid>7d489355-efb5-4a58-b6c7-25c152ea7dfd</guid>
@@ -38,7 +39,7 @@
          <id>5ae74293-6d8b-40d0-b0b2-7b5483170f9d</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
-            <value></value>
+            <value>13-13</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForCreateFolder</testDataId>
       </testDataLink>
@@ -55,10 +56,10 @@
          <variableId>7d839b7d-abd5-48a9-9050-61b7d5242a7c</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>68735d7c-86f3-4498-b607-5bc786ff5da7</variableId>
+         <testDataLinkId>5ae74293-6d8b-40d0-b0b2-7b5483170f9d</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>userChoice</value>
+         <variableId>44855711-d67d-4932-bf58-df854a599660</variableId>
       </variableLink>
    </testCaseLink>
    <testCaseLink>
@@ -71,7 +72,7 @@
          <id>f2327e05-e85b-4e9e-97a7-64a1e130d308</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>1-10</value>
+            <value>1-8</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForFolderOperations</testDataId>
       </testDataLink>
@@ -110,7 +111,7 @@
          <id>2c9be12f-3551-4ebc-9c98-841acb61f1ed</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>1-8</value>
+            <value>1-6</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForFolderOperations</testDataId>
       </testDataLink>

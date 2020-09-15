@@ -16,32 +16,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'pbsworks'</initValue>
-      <name>G_AdminUser</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'pbsworks'</initValue>
-      <name>G_AdminPasswd</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
       <initValue>'3032.blrvm16vm16'</initValue>
       <name>G_JobID</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Chrome'</initValue>
+      <initValue>'IE'</initValue>
       <name>G_Browser</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'ToDelete.txt'</initValue>
-      <name>G_FileToDelete</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'https://172.16.80.92:4443/pbsworks'</initValue>
+      <initValue>'https://172.16.80.49:4443/pbsworks'</initValue>
       <name>G_BaseUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -51,12 +36,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'ToFileWala.txt'</initValue>
-      <name>G_FileToCreate</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
+      <initValue>'123.blrvm9vm2'</initValue>
       <name>G_JobIdFromDetails</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -66,7 +46,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'/katalonDownloads'</initValue>
+      <initValue>'C:\\KatalonDownloads'</initValue>
       <name>G_DownloadFolder</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -98,5 +78,15 @@
       <description></description>
       <initValue>'Linux'</initValue>
       <name>G_Platform</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'pbsworks'</initValue>
+      <name>G_AdminUser</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'pbsworks'</initValue>
+      <name>G_AdminPasswd</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -44,7 +44,7 @@ try {
 
 	WebUI.delay(2)
 
-	extentTest.log(LogStatus.INFO, 'Clicked on job with state  - ' + jobState)
+	extentTest.log(LogStatus.PASS, 'Clicked on job with state  - ' + jobState)
 
 	println(jobState)
 
@@ -53,10 +53,7 @@ try {
 			jobState, true)
 
 	WebUI.rightClick(newJobRow)
-
-
-
-	result = CustomKeywords.'operations_JobsModule.executeJobAction.perfromJobAction'(jobAction, TestCaseName, extentTest)
+	result = CustomKeywords.'operations_JobsModule.executeJobAction.perfromJobAction'(jobAction, TestCaseName,userChoice,extentTest)
 
 	if (result) {
 		extentTest.log(LogStatus.PASS, ((' Verified job action - ' + jobAction) + ' for job state ') + jobState)
@@ -72,7 +69,9 @@ catch (Exception ex) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, ex)
+	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
@@ -81,7 +80,9 @@ catch (StepErrorException e) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+	String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }

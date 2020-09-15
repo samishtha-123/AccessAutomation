@@ -30,8 +30,7 @@ public class fileOperations {
 				WebUI.click(newFileOp)
 				extentTest.log(LogStatus.PASS, 'Clicked on Context Menu Option for - '+Operation)
 				WebUI.click(findTestObject('FilesPage/Icon_Close'))
-
-
+				result=true
 				return result
 				break
 			case 'Copy':

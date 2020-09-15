@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>ec2d949b-b3a6-4df8-967f-eae3f25e2e36</testCaseGuid>
    <variable>
-      <defaultValue>'Shellscript'</defaultValue>
+      <defaultValue>'Shell'</defaultValue>
       <description></description>
       <id>ace71100-db45-4bac-9cf7-4e06beb3fcfb</id>
       <masked>false</masked>

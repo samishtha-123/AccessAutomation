@@ -43,18 +43,66 @@ try
 	WebUI.click(LeftNavAppIdentifier)
 
 	WebUI.delay(2)
-	
+
 	WebUI.rightClick(LeftNavAppIdentifier)
-
+	def deleteOption = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('JobSubmissionForm/SubMenu_Delete'),5)
+	def duplicateOption = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('JobSubmissionForm/SubMenu_Duplicate'),5)
+	def setAsDefaultOption = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('JobSubmissionForm/SubMenu_SetAsDefault'),5)
 	extentTest.log(LogStatus.PASS, 'Right Cicked on Profile -  '+proName )
+	extentTest.log(LogStatus.PASS, 'Profile Action -  '+ myOption)
+	
+
+	switch(myOption)
+	{
+		case 'Delete':
+			if (deleteOption) {
+				extentTest.log(LogStatus.PASS, 'Test to verify delete option exists - Pass ')
+
+				WebUI.mouseOver(findTestObject('JobSubmissionForm/SubMenu_Delete'))
+				WebUI.click(findTestObject('JobSubmissionForm/SubMenu_Delete'))
+				extentTest.log(LogStatus.PASS, 'Clicked on Delete ')
+				WebUI.delay(3)
+				WebUI.click(findTestObject('GenericObjects/btn_Yes'))
+			}
+
+			extentTest.log(LogStatus.PASS, 'Deleted Profile - '+proName )
+
+			break;
 
 
-	WebUI.click(findTestObject('JobSubmissionForm/SubMenu_Delete'))
+		case 'Duplicate':
 
-	extentTest.log(LogStatus.PASS, 'Clicked on Delet ')
-	WebUI.delay(3)
+			extentTest.log(LogStatus.PASS, 'Duplicate Profile Option Case - '+duplicateOption )
+			if (duplicateOption) {
+				extentTest.log(LogStatus.PASS, 'Test to verify duplicate option exists - Pass ')
+				WebUI.click(findTestObject('Object Repository/ProfileOptions/SubMenu_SetAsDefault'))
+				def duplicatePro=proName+'-copy'
+				println(duplicatePro)
+				TestObject LeftNavAppIdentifierProDuplicate = CustomKeywords.'buildTestObj.CreateTestObjJobs.myLeftNavAppIdentifier'(duplicatePro)
+				WebUI.waitForElementPresent(LeftNavAppIdentifierProDuplicate, 5)
 
-	WebUI.click(findTestObject('GenericObjects/btn_Yes'))
+				def isProfilePersentPro1 = WebUI.verifyElementPresent(LeftNavAppIdentifierProDuplicate, 5)
+				if(isProfilePersentPro1)
+				{
+					extentTest.log(LogStatus.PASS, 'duplicate created ')
+				}
+			}
+			break;
+
+		case 'SetAsDefault':
+		extentTest.log(LogStatus.PASS, 'Duplicate Profile Option Case - '+setAsDefaultOption )
+		if (setAsDefaultOption) {
+			extentTest.log(LogStatus.PASS, 'Test to verify set as default option exists - Pass ')
+			WebUI.click(findTestObject('Object Repository/JobSubmissionForm/SubMenu_SetAsDefault'))
+			def not=WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_ProfileAsDefault'), 5)
+			extentTest.log(LogStatus.PASS, 'notification - '+ not)
+			
+		}
+
+			break
+
+
+	}
 
 	extentTest.log(LogStatus.PASS, 'Deleted Profile - '+proName )
 	
@@ -67,16 +115,28 @@ try
 }catch (Exception  ex)
 {
 
-	String screenShotPath='ExtentReports/'+TestCaseName+'.png'
+	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
+	
+	String p =TCName+GlobalVariable.G_Browser+'.png'
 	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
+
+
 }
-catch (StepErrorException  e)
+catch (StepErrorException  ex)
 {
 
-	String screenShotPath='ExtentReports/'+TestCaseName+'.png'
+	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
-	extentTest.log(LogStatus.FAIL,e)
+
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
+
+
 }
 finally
 {

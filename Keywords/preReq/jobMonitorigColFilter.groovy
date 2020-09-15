@@ -1,39 +1,34 @@
 package preReq
 
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testdata.TestData
 import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-
-import internal.GlobalVariable
 
 public class jobMonitorigColFilter {
 
 
 	@Keyword
-	def addColumn(extentTest) {
+	def addColumn() {
 
 
-		String [] ColName = ['Application', 'Queue', 'User', 'Time']
-		String [] ColFilterLabel=['job_col_filter_application', 'job_col_filter_queueName', 'job_col_filter_userName', 'job_col_filter_creationTime']
+		String [] ColName = ['Application', 'Queue', 'User', 'Time','Status']
+		String [] ColFilterLabel=[
+			'job_col_filter_application',
+			'job_col_filter_queueName',
+			'job_col_filter_userName',
+			'job_col_filter_creationTime',
+			'job_col_filter_jobState'
+			
+				]
 		String [] ColFilterCB=[
 			'cb_job_col_filter_application',
 			'cb_job_col_filter_queueName',
 			'cb_job_col_filter_userName',
-			'cb_job_col_filter_creationTime'
+			'cb_job_col_filter_creationTime',
+			'cb_job_col_filter_jobState'
 		]
 
 		WebUI.delay(2)
@@ -50,7 +45,7 @@ public class jobMonitorigColFilter {
 			println('Col Lable - '+ColLable)
 			println ('ColCheckBx - '+ColCheckBx )
 
-		//	WebUI.mouseOver(findTestObject('Object Repository/JobMonitoringPage/JM_column_selector_icon'))
+			//	WebUI.mouseOver(findTestObject('Object Repository/JobMonitoringPage/JM_column_selector_icon'))
 
 			WebUI.click(findTestObject('Object Repository/JobMonitoringPage/JM_column_selector_icon'))
 

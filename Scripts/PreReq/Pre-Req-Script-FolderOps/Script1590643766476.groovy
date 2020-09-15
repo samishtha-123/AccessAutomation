@@ -19,18 +19,14 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.callTestCase(findTestCase('Generic/Login'), [('username') : GlobalVariable.G_userName, ('password') : GlobalVariable.G_Password],
 FailureHandling.STOP_ON_FAILURE)
 
-String ReportFile = GlobalVariable.G_ReportName + '.html'
 
-def extent = CustomKeywords.'generateReports.GenerateReport.create'(ReportFile, GlobalVariable.G_Browser, GlobalVariable.G_BrowserVersion)
-
-def LogStatus = com.relevantcodes.extentreports.LogStatus
-
-String TestCaseNameExtent = TestCaseName
-
-def extentTest = extent.startTest(TestCaseNameExtent)
+def navLocation =CustomKeywords.'generateFilePath.filePath.execLocation'()
+def location=navLocation
+println('##################################################################')
+println (location)
+println('##################################################################')
 
 
-def location = '/stage/'+GlobalVariable.G_userName
 
 try {
 
@@ -54,7 +50,7 @@ try {
 
 	if (viewIconListPresent) {
 		WebUI.click(viewIconList)
-		extentTest.log(LogStatus.PASS, 'Changed View to ListView')
+		//extentTest.log(LogStatus.PASS, 'Changed View to ListView')
 		WebUI.delay(2)
 	}
 	WebUI.delay(2)
@@ -63,18 +59,18 @@ try {
 	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
 	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
 	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
-	extentTest.log(LogStatus.PASS, 'Navigated to -  '+  location)
+	//extentTest.log(LogStatus.PASS, 'Navigated to -  '+  location)
 
 	def filePathFT = (RunConfiguration.getProjectDir() + '/Upload/') + ToUpload
 	def newFPFT=CustomKeywords.'generateFilePath.filePath.getFilePath'(filePathFT)
 	println(newFPFT)
 
 	WebUI.uploadFile(findTestObject('FilesPage/UploadFileBtn'), newFPFT )
-	extentTest.log(LogStatus.PASS, 'Uploading zip file - FilesModule.zip')
+	//extentTest.log(LogStatus.PASS, 'Uploading zip file - FilesModule.zip')
 
 	WebUI.delay(5)
 	WebUI.click(findTestObject('Object Repository/FilesPage/button_Yes'))
-	extentTest.log(LogStatus.PASS, 'Clicked YES on Unzip on Upload confirmation pop-up')
+	//extentTest.log(LogStatus.PASS, 'Clicked YES on Unzip on Upload confirmation pop-up')
 	WebUI.delay(2)
 	//add to check inputdeck folder is listed
 	if (GlobalVariable.G_Browser == 'Edge') {
@@ -86,7 +82,7 @@ catch (Exception ex) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, ex)
+	//extentTest.log(LogStatus.FAIL, ex)
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
@@ -95,14 +91,14 @@ catch (StepErrorException e) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+	//extentTest.log(LogStatus.FAIL, e)
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
 finally {
-	extent.endTest(extentTest)
+	//extent.endTest(extentTest)
 
-	extent.flush()
+	//extent.flush()
 
 
 }

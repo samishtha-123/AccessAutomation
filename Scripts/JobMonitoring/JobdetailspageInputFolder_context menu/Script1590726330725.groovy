@@ -56,9 +56,6 @@ try
 		WebUI.rightClick(newJobRow)
 		
 		
-		
-		
-		
 	
 	WebUI.click(findTestObject('JobMonitoringPage/ViewDetails_Jobs'))
 	extentTest.log(LogStatus.PASS, 'Clicked on job with state  - ' + jobState)

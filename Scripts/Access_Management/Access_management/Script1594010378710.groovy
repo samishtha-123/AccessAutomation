@@ -81,8 +81,13 @@ try
 		WebUI.doubleClick(findTestObject('Access_Management/Username'))
 		rob.keyPress(KeyEvent.VK_BACK_SPACE)
 		rob.keyRelease(KeyEvent.VK_BACK_SPACE)
+		if (GlobalVariable.G_Browser == 'IE') {
+			CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(username, findTestObject('Access_Management/Username'))
+		} else {
+			WebUI.sendKeys(findTestObject('Access_Management/Username'), username)
+		}
 		WebUI.setText(findTestObject('Access_Management/Username'), '')
-		WebUI.setText(findTestObject('Access_Management/Username'), username)
+		//WebUI.setText(findTestObject('Access_Management/Username'), username)
 		extentTest.log(LogStatus.PASS, 'Add username name')
 		
 		WebUI.click(findTestObject('Access_Management/Save'))
@@ -94,6 +99,7 @@ try
 		WebUI.doubleClick(findTestObject('Access_Management/Userinfo'))
 		extentTest.log(LogStatus.PASS, 'Verify new user')
 		
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Access_Management/Add_role'))
 		extentTest.log(LogStatus.PASS, 'Assign role to new user')
 		
@@ -102,7 +108,7 @@ try
 		
 		WebUI.click(findTestObject('Access_Management/Confirm_button'))
 		extentTest.log(LogStatus.PASS, 'Click on confirm button')
-		
+		WebUI.delay(3)
 	    break	
 		
 	case 'Add new user duplicate name':
@@ -125,8 +131,13 @@ try
 	    WebUI.doubleClick(findTestObject('Access_Management/Username'))
 	    rob.keyPress(KeyEvent.VK_BACK_SPACE)
 	    rob.keyRelease(KeyEvent.VK_BACK_SPACE)
+		if (GlobalVariable.G_Browser == 'IE') {
+			CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(username, findTestObject('Access_Management/Username'))
+		} else {
+			WebUI.sendKeys(findTestObject('Access_Management/Username'), username)
+		}
 	    WebUI.setText(findTestObject('Access_Management/Username'), '')
-	    WebUI.setText(findTestObject('Access_Management/Username'), username)
+	    //WebUI.setText(findTestObject('Access_Management/Username'), username)
 	    extentTest.log(LogStatus.PASS, 'Add username name')
 	
 	    WebUI.click(findTestObject('Access_Management/Save'))
@@ -161,15 +172,20 @@ try
 	    WebUI.doubleClick(findTestObject('Access_Management/Username'))
 	    rob.keyPress(KeyEvent.VK_BACK_SPACE)
 	    rob.keyRelease(KeyEvent.VK_BACK_SPACE)
+		if (GlobalVariable.G_Browser == 'IE') {
+			CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(username, findTestObject('Access_Management/Username'))
+		} else {
+			WebUI.sendKeys(findTestObject('Access_Management/Username'), username)
+		}
 	    WebUI.setText(findTestObject('Access_Management/Username'), '')
-	    WebUI.setText(findTestObject('Access_Management/Username'), username)
+	    //WebUI.setText(findTestObject('Access_Management/Username'), username)
 	    extentTest.log(LogStatus.PASS, 'Add username name')
 
 	    WebUI.click(findTestObject('Access_Management/Save'))
 	    extentTest.log(LogStatus.PASS, 'Click on save')
 		
 		WebUI.takeScreenshot(screenShot)
-		
+		WebUI.delay(3)
 		break
 		
 	case'Add new user blank username':
@@ -192,8 +208,13 @@ try
 	    WebUI.doubleClick(findTestObject('Access_Management/Username'))
 	    rob.keyPress(KeyEvent.VK_BACK_SPACE)
 	    rob.keyRelease(KeyEvent.VK_BACK_SPACE)
+		if (GlobalVariable.G_Browser == 'IE') {
+			CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(username, findTestObject('Access_Management/Username'))
+		} else {
+			WebUI.sendKeys(findTestObject('Access_Management/Username'), username)
+		}
 	    WebUI.setText(findTestObject('Access_Management/Username'), '')
-		WebUI.setText(findTestObject('Access_Management/Username'), username)
+		//WebUI.setText(findTestObject('Access_Management/Username'), username)
 	    extentTest.log(LogStatus.PASS, 'Add username name')
 
 	    WebUI.click(findTestObject('Access_Management/Save'))
@@ -201,6 +222,7 @@ try
 		
 		WebUI.takeScreenshot(screenShot)
 		extentTest.log(LogStatus.PASS, 'Verify through screenshot ')
+		WebUI.delay(3)
 	
 	    break
 	   
@@ -225,8 +247,13 @@ try
 	    WebUI.doubleClick(findTestObject('Access_Management/Username'))
 	    rob.keyPress(KeyEvent.VK_BACK_SPACE)
 	    rob.keyRelease(KeyEvent.VK_BACK_SPACE)
+		if (GlobalVariable.G_Browser == 'IE') {
+			CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(username, findTestObject('Access_Management/Username'))
+		} else {
+			WebUI.sendKeys(findTestObject('Access_Management/Username'), username)
+		}
 	    WebUI.setText(findTestObject('Access_Management/Username'), '')
-	    WebUI.setText(findTestObject('Access_Management/Username'), username)
+	    //WebUI.setText(findTestObject('Access_Management/Username'), username)
 	    extentTest.log(LogStatus.PASS, 'Add username name')
 	
 	    WebUI.click(findTestObject('Access_Management/Save'))
@@ -235,6 +262,7 @@ try
 		TestObject user =WebUI.modifyObjectProperty(findTestObject('Access_Management/Userinfo'),'text', 'equals', username, true)
 	    WebUI.click(user)
 	    extentTest.log(LogStatus.PASS, 'Verify new user')
+		WebUI.delay(3)
 		
 		break
 		
@@ -259,6 +287,7 @@ try
 		result = WebUI.verifyElementPresent(findTestObject('Access_Management/Delete_User'),5)
 		
 		extentTest.log(LogStatus.PASS, "Verified user is deleted successfully ")
+		WebUI.delay(3)
 		
 		break
 		
@@ -280,7 +309,7 @@ try
 		
 		WebUI.verifyElementNotPresent(findTestObject('Access_Management/Confirm_button'), 5)
 		extentTest.log(LogStatus.PASS, "Verify save  button is diabled" )
-		
+		WebUI.delay(3)
 	
 		break
 	    
@@ -297,8 +326,13 @@ try
 		WebUI.doubleClick(findTestObject('Access_Management/Edit_roleid'))
 		rob.keyPress(KeyEvent.VK_BACK_SPACE)
 		rob.keyRelease(KeyEvent.VK_BACK_SPACE)
-		WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
-		WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
+		if (GlobalVariable.G_Browser == 'IE') {
+			CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(roleid, findTestObject('Access_Management/Edit_roleid'))
+		} else {
+			WebUI.sendKeys(findTestObject('Access_Management/Edit_roleid'), roleid)
+		}
+		//WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
+		//WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
 		extentTest.log(LogStatus.PASS, 'Add roleid name')
 		
 		WebUI.click(findTestObject('Access_Management/Confirm_button'))
@@ -314,6 +348,7 @@ try
 		
 		WebUI.verifyElementPresent(findTestObject('Access_Management/Verify_roleid'),5)
 		extentTest.log(LogStatus.PASS, 'Verify roleid')
+		WebUI.delay(3)
 		
 		break
 		
@@ -332,8 +367,13 @@ try
 	    WebUI.doubleClick(findTestObject('Access_Management/Edit_roleid'))
 	    rob.keyPress(KeyEvent.VK_BACK_SPACE)
 	    rob.keyRelease(KeyEvent.VK_BACK_SPACE)
+		if (GlobalVariable.G_Browser == 'IE') {
+			CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(roleid, findTestObject('Access_Management/Edit_roleid'))
+		} else {
+			WebUI.sendKeys(findTestObject('Access_Management/Edit_roleid'), roleid)
+		}
 	    WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
-	    WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
+	    //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
 	    extentTest.log(LogStatus.PASS, 'Add roleid name')
 	
 	    WebUI.click(findTestObject('Access_Management/Confirm_button'))
@@ -349,6 +389,7 @@ try
 		WebUI.click(findTestObject('Access_Management/Verify_roleid'))
 		
 		WebUI.verifyElementClickable(findTestObject('Access_Management/Portal_admin_tickmark'))
+		WebUI.delay(3)
 	
 	    break
 		
@@ -364,8 +405,13 @@ try
 	    WebUI.doubleClick(findTestObject('Access_Management/Edit_roleid'))
 	    rob.keyPress(KeyEvent.VK_BACK_SPACE)
 	    rob.keyRelease(KeyEvent.VK_BACK_SPACE)
-	    WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
-	    WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
+		if (GlobalVariable.G_Browser == 'IE') {
+			CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(roleid, findTestObject('Access_Management/Edit_roleid'))
+		} else {
+			WebUI.sendKeys(findTestObject('Access_Management/Edit_roleid'), roleid)
+		}
+	    //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
+	    //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
 	    extentTest.log(LogStatus.PASS, 'Add roleid name')
 	
 	    WebUI.click(findTestObject('Access_Management/Confirm_button'))
@@ -383,6 +429,7 @@ try
 		WebUI.doubleClick(role)
 		
 		WebUI.click(findTestObject('Access_Management/Shellscript_resource'))
+		WebUI.delay(3)
 	
 	    break
 	
@@ -396,8 +443,13 @@ try
 		 WebUI.doubleClick(findTestObject('Access_Management/Edit_roleid'))
 		 rob.keyPress(KeyEvent.VK_BACK_SPACE)
 		 rob.keyRelease(KeyEvent.VK_BACK_SPACE)
-		 WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
-		 WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
+		 if (GlobalVariable.G_Browser == 'IE') {
+			 CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(roleid, findTestObject('Access_Management/Edit_roleid'))
+		 } else {
+			 WebUI.sendKeys(findTestObject('Access_Management/Edit_roleid'), roleid)
+		 }
+		 //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
+		 //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
 		 extentTest.log(LogStatus.PASS, 'Add roleid name')
 	 
 		 WebUI.click(findTestObject('Access_Management/Confirm_button'))
@@ -408,7 +460,7 @@ try
 			 
 				   WebUI.click(findTestObject('Access_Management/Cancel'))
 		   }
-		 
+		 WebUI.delay(3)
 		 break
 		 
 	  case'Add new role blank':
@@ -421,22 +473,27 @@ try
 		  WebUI.doubleClick(findTestObject('Access_Management/Edit_roleid'))
 		  rob.keyPress(KeyEvent.VK_BACK_SPACE)
 		  rob.keyRelease(KeyEvent.VK_BACK_SPACE)
-		  WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
-		  WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
+		  if (GlobalVariable.G_Browser == 'IE') {
+			  CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(roleid, findTestObject('Access_Management/Edit_roleid'))
+		  } else {
+			  WebUI.sendKeys(findTestObject('Access_Management/Edit_roleid'), roleid)
+		  }
+		  //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
+		  //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
 		  extentTest.log(LogStatus.PASS, 'Add roleid name')
 	  
 		  WebUI.click(findTestObject('Access_Management/Confirm_button'))
 		  extentTest.log(LogStatus.PASS, 'Click on save')
 		  
 		  WebUI.takeScreenshot(screenShot)
-		  
+		 
 		  
 		  if (GlobalVariable.G_Browser == 'IE') {
 		
 			  WebUI.click(findTestObject('Access_Management/Cancel'))
 	  }
 		  
-		 
+		  WebUI.delay(3)
 		  
 		  break
 	 
@@ -453,8 +510,13 @@ try
 		 WebUI.doubleClick(findTestObject('Access_Management/Edit_roleid'))
 		 rob.keyPress(KeyEvent.VK_BACK_SPACE)
 		 rob.keyRelease(KeyEvent.VK_BACK_SPACE)
+		 if (GlobalVariable.G_Browser == 'IE') {
+			 CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(roleid, findTestObject('Access_Management/Edit_roleid'))
+		 } else {
+			 WebUI.sendKeys(findTestObject('Access_Management/Edit_roleid'), roleid)
+		 }
 		 WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
-		 WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
+		 //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
 		 extentTest.log(LogStatus.PASS, 'Add roleid name')
 	 
 		 WebUI.click(findTestObject('Access_Management/Confirm_button'))
@@ -467,6 +529,7 @@ try
 			 
 				   WebUI.click(findTestObject('Access_Management/Cancel'))
 		   }
+		 WebUI.delay(3)
 		 
 		 break
 		 
@@ -483,8 +546,13 @@ try
 	 WebUI.doubleClick(findTestObject('Access_Management/Edit_roleid'))
 	 rob.keyPress(KeyEvent.VK_BACK_SPACE)
 	 rob.keyRelease(KeyEvent.VK_BACK_SPACE)
+	 if (GlobalVariable.G_Browser == 'IE') {
+		 CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'(roleid, findTestObject('Access_Management/Edit_roleid'))
+	 } else {
+		 WebUI.sendKeys(findTestObject('Access_Management/Edit_roleid'), roleid)
+	 }
 	 WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
-	 WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
+	 //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), roleid)
 	 extentTest.log(LogStatus.PASS, 'Add roleid name')
  
 	 WebUI.click(findTestObject('Access_Management/Confirm_button'))
@@ -514,6 +582,7 @@ try
 	 
 	 WebUI.verifyElementNotPresent(findTestObject('Access_Management/Shellscript_resource'), 5)
 	 extentTest.log(LogStatus.PASS, 'Verify assigned resource is deleted')
+	 WebUI.delay(3)
  
 	 break
 	     
@@ -532,8 +601,13 @@ try
 			 WebUI.doubleClick(findTestObject('Access_Management/Edit_roleid'))
 			 rob.keyPress(KeyEvent.VK_BACK_SPACE)
 			 rob.keyRelease(KeyEvent.VK_BACK_SPACE)
-			 WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
-			 WebUI.setText(findTestObject('Access_Management/Edit_roleid'), 'newrole')
+			 if (GlobalVariable.G_Browser == 'IE') {
+				 CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'('newrole', findTestObject('Access_Management/Edit_roleid'))
+			 } else {
+				 WebUI.sendKeys(findTestObject('Access_Management/Edit_roleid'), 'newrole')
+			 }
+			 //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
+			 //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), 'newrole')
 			 extentTest.log(LogStatus.PASS, 'Add new roleid name')
 		 
 			 WebUI.click(findTestObject('Access_Management/Confirm_button'))
@@ -545,6 +619,7 @@ try
 			 WebUI.click(findTestObject('Access_Management/Newrole_info'))
 			 extentTest.log(LogStatus.PASS, 'Click on new role')
 			 
+			 WebUI.delay(3)
 			 
 			 break
 			 
@@ -562,8 +637,13 @@ try
 		     WebUI.doubleClick(findTestObject('Access_Management/Edit_roleid'))
 		     rob.keyPress(KeyEvent.VK_BACK_SPACE)
 		     rob.keyRelease(KeyEvent.VK_BACK_SPACE)
-		     WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
-		     WebUI.setText(findTestObject('Access_Management/Edit_roleid'), 'newrole')
+			 if (GlobalVariable.G_Browser == 'IE') {
+				 CustomKeywords.'funtionsForEdge.EdgeFunctions.setTestToField'('newrole', findTestObject('Access_Management/Edit_roleid'))
+			 } else {
+				 WebUI.sendKeys(findTestObject('Access_Management/Edit_roleid'), 'newrole')
+			 }
+		     //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), '')
+		     //WebUI.setText(findTestObject('Access_Management/Edit_roleid'), 'newrole')
 		     extentTest.log(LogStatus.PASS, 'Add new roleid name')
 			 
 			 WebUI.click(findTestObject('Access_Management/Confirm_cancel'))
@@ -571,6 +651,7 @@ try
 			 
 			 WebUI.verifyElementPresent(findTestObject('Access_Management/Role_header'),5)
 			 extentTest.log(LogStatus.PASS, "Verify role header is present" )
+			 WebUI.delay(3)
 			 
 	         break
 		
@@ -589,6 +670,7 @@ try
 	   
 	   WebUI.click(findTestObject('Access_Management/Userinfo'))
 	   extentTest.log(LogStatus.PASS, "Verify user is present" )
+	   WebUI.delay(3)
 	   
 	   break
 	   
@@ -603,6 +685,7 @@ try
 	   
 	   WebUI.takeScreenshot(screenShot)
 	   extentTest.log(LogStatus.PASS, "Verify unable to edit username" )
+	   WebUI.delay(3)
 	   
 	 
 	   break
@@ -624,6 +707,7 @@ try
 	   WebUI.delay(2)
 	   WebUI.verifyElementPresent(findTestObject('Access_Management/Role_Delete'), 5)
 	   extentTest.log(LogStatus.PASS, "Verify role deleted successfully")
+	   WebUI.delay(3)
 	   
 	   break
 	   
@@ -649,6 +733,8 @@ try
 	   
 	   WebUI.verifyElementPresent(findTestObject('Access_Management/Cancel_Role'), 5)
 	   extentTest.log(LogStatus.PASS, "Verify save role button is diabled" )
+	   
+	   WebUI.delay(3)
 	   
 	   break
 	  

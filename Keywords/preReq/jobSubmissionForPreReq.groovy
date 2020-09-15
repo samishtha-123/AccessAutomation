@@ -54,8 +54,8 @@ public class jobSubmissionForPreReq {
 			def p2 = (new generateFilePath.filePath()).getFilePath(f2)
 
 			WebUI.uploadFile(findTestObject('Object Repository/JobSubmissionForm/LocalFileUploadElement'), p2)
-			WebUI.click(findTestObject('WIP/RadioBtn_All Fields'))
-			WebUI.scrollToElement(findTestObject('WIP/label_Queue'), 0)
+			WebUI.click(findTestObject('JobSubmissionForm/RadioBtn_All Fields'))
+			WebUI.scrollToElement(findTestObject('JobSubmissionForm/label_Queue'), 0)
 			WebUI.click(findTestObject('WIP/div_workq'))
 			TestObject newQueueObj = WebUI.modifyObjectProperty(findTestObject('JobSubmissionForm/dropDown_version'), 'text', 'equals',
 					'compute', true)
@@ -78,10 +78,10 @@ public class jobSubmissionForPreReq {
 		def jobFileObjPresent =	(new customWait.WaitForElement()).WaitForelementPresent(jobFileObj, 10)
 
 		for(int i =0;i<4;i++) {
-			def submitBtn=(new customWait.WaitForElement()).WaitForelementPresent (findTestObject('JobSubmissionForm/button_Submit_Job'), 10)
-			if(submitBtn) {
-				WebUI.click(findTestObject('JobSubmissionForm/button_Submit_Job'))
-			}
+				def submitBtn=(new customWait.WaitForElement()).WaitForelementPresent (findTestObject('JobSubmissionForm/button_Submit_Job'), 10)
+				if(submitBtn) {
+					WebUI.click(findTestObject('JobSubmissionForm/button_Submit_Job'))
+				}
 		}
 		WebUI.waitForElementPresent(findTestObject('Notificactions/Notification_JobSubmission'), 5)
 		def jobText = WebUI.getText(findTestObject('Notificactions/Notification_JobSubmission'))

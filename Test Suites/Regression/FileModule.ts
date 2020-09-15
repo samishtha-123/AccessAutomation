@@ -9,6 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>9790dda7-c5bf-4832-9c5b-5d6139d533f2</testSuiteGuid>
    <testCaseLink>
       <guid>35c6e4b8-35af-4402-ae99-76a4db7f4a9b</guid>
@@ -31,7 +32,7 @@
    <testCaseLink>
       <guid>d419ec4d-36d8-4310-b05d-cd3110505979</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/FilesModule/Create_file</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
@@ -58,14 +59,14 @@
    <testCaseLink>
       <guid>2d01540e-c9e5-441b-aa7e-e253bc3caeb5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/FilesModule/FileOperations-Both</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/FilesModule/FileOperations</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>9e1e37a3-a74d-408d-b192-a80d777832d5</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>3-14</value>
+            <value>1-10</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForFileOperations</testDataId>
       </testDataLink>
@@ -91,14 +92,14 @@
    <testCaseLink>
       <guid>2f618e12-9205-4d65-92ed-ab15083087af</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/FilesModule/FileOperations _Topmenu_Icons</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>de36be1e-c9c4-406c-8947-6c16aa26f0ed</id>
          <iterationEntity>
             <iterationType>RANGE</iterationType>
-            <value>3-12</value>
+            <value>1-10</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForFileOperations</testDataId>
       </testDataLink>
@@ -124,7 +125,7 @@
    <testCaseLink>
       <guid>0156fe40-ce53-4813-98d3-932a21dcdfe3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/FilesModule/EditFilePath-FilesTab</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -136,7 +137,7 @@
    <testCaseLink>
       <guid>1d8034ea-c428-4747-9ef6-009290336c00</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/FilesModule/UnzipOnUpload</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -154,8 +155,8 @@
          <combinationType>ONE</combinationType>
          <id>dcaaf56c-7ce0-4392-a3c0-e97fae42fceb</id>
          <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
+            <iterationType>RANGE</iterationType>
+            <value>1-7</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForFileViewer</testDataId>
       </testDataLink>
@@ -182,7 +183,7 @@
       <guid>c224f674-e547-485c-856c-7ecb4248da75</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/FilesModule/FileOperations - Bookmark</testCaseId>
+      <testCaseId>Test Cases/FilesModule/BookMarkOperations</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>374a0951-68ab-4474-8f64-bdcc2a6452d1</id>

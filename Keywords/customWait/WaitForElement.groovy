@@ -16,9 +16,9 @@ public class WaitForElement {
 		while (isElemenetPresent == false && i<timeOut) {
 			WebUI.delay(1)
 			try {
-				//WebUI.verifyElementPresent(to, 1)//, FailureHandling.CONTINUE_ON_FAILURE)
-				isElemenetPresent = WebUI.verifyElementClickable(to)
-				println(i)
+				WebUI.verifyElementPresent(to, 1)
+				isElemenetPresent =WebUI.verifyElementClickable(to)
+				//, FailureHandling.CONTINUE_ON_FAILURE)
 			}
 			catch (Exception  ex) {
 				println("Exception")

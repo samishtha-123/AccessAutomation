@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ContextMenuDeleteFile_listView</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ba5f9b67-b4a4-4f81-ba47-bb32e1b1c990</testCaseGuid>
+   <variable>
+      <defaultValue>'ContextMenuDeleteFile'</defaultValue>
+      <description></description>
+      <id>a2993ae5-de6c-4101-8f8a-15586e140e0c</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ContextMenuDeleteFile'</defaultValue>
+      <description></description>
+      <id>8d18fb89-01d9-4c72-bcf3-855c0105f2fb</id>
+      <masked>false</masked>
+      <name>filenametodelet</name>
+   </variable>
+</TestCaseEntity>

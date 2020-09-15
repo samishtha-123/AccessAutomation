@@ -19,33 +19,35 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.callTestCase(findTestCase('Generic/Login'), [('username') : GlobalVariable.G_userName, ('password') : GlobalVariable.G_Password],
 FailureHandling.STOP_ON_FAILURE)
 
-String ReportFile = GlobalVariable.G_ReportName + '.html'
-
-def extent = CustomKeywords.'generateReports.GenerateReport.create'(ReportFile, GlobalVariable.G_Browser, GlobalVariable.G_BrowserVersion)
-
-def LogStatus = com.relevantcodes.extentreports.LogStatus
-
-String TestCaseNameExtent = TestCaseName
-
-def extentTest = extent.startTest(TestCaseNameExtent)
-
 def navLocation =CustomKeywords.'generateFilePath.filePath.execLocation'()
-
-
 
 try {
 
 
 	WebUI.click(findTestObject('GenericObjects/TitleLink_Files'))
 	WebUI.delay(2)
-
-
-	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
-	def folderPath1='/stage/'+GlobalVariable.G_userName
-	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'),folderPath1)
-	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
-	extentTest.log(LogStatus.PASS, 'Navigated to - '+folderPath1)
 	
+		TestObject viewIconTile = WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/Icon_ViewIcon'), 'title',
+				'equals', 'Tile View', true)
+	
+		TestObject viewIconList = WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/Icon_ViewIcon'), 'title',
+				'equals', 'List View', true)
+	
+		viewIconTilePresent = WebUI.waitForElementPresent(viewIconTile, 3, FailureHandling.CONTINUE_ON_FAILURE)
+	
+		viewIconListPresent = WebUI.waitForElementPresent(viewIconList, 3, FailureHandling.CONTINUE_ON_FAILURE)
+	
+		println('viewIconTilePresent - ' + viewIconTilePresent)
+	
+		println('viewIconListPresent - ' + viewIconListPresent)
+	
+		if (viewIconListPresent) {
+			WebUI.click(viewIconList)
+			////extentTest.log(LogStatus.PASS, 'Changed View to ListView')
+			WebUI.delay(2)
+		}
+		WebUI.delay(2)
+
 	WebUI.waitForElementVisible(findTestObject('FilesPage/btn_NewFileFolder'), 10)
 
 	WebUI.click(findTestObject('FilesPage/btn_NewFileFolder'))
@@ -55,10 +57,10 @@ try {
 	WebUI.waitForElementVisible(findTestObject('FilesPage/TextBxFolder_input'), 5)
 
 	WebUI.setText(findTestObject('FilesPage/TextBxFolder_input'), 'ForProfiles')
-	extentTest.log(LogStatus.PASS, "Entered Folder Name to Create - ForProfiles")
+	////extentTest.log(LogStatus.PASS, "Entered Folder Name to Create - ForProfiles")
 
 	WebUI.click(findTestObject('FilesPage/btn_Save'))
-	extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
+	////extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
 
 
 	WebUI.click(findTestObject('FilesPage/btn_NewFileFolder'))
@@ -68,16 +70,16 @@ try {
 	WebUI.waitForElementVisible(findTestObject('FilesPage/TextBxFolder_input'), 5)
 
 	WebUI.setText(findTestObject('FilesPage/TextBxFolder_input'), 'ProfileFiles')
-	extentTest.log(LogStatus.PASS, "Entered Folder Name to Create - ProfileFiles")
+	////extentTest.log(LogStatus.PASS, "Entered Folder Name to Create - ProfileFiles")
 	WebUI.click(findTestObject('FilesPage/btn_Save'))
-	extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
+	////extentTest.log(LogStatus.PASS, "Clicked on Save Button" )
 
 	WebUI.delay(1)
 	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
 	def folderPath=navLocation+'/ProfileFiles'
 	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'),folderPath)
 	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
-	extentTest.log(LogStatus.PASS, 'Navigated to - '+folderPath)
+	////extentTest.log(LogStatus.PASS, 'Navigated to - '+folderPath)
 
 	def filePathRad = (RunConfiguration.getProjectDir()) + '/Upload/JobFiles/CUBE_0001.rad'
 	def newFPRad = CustomKeywords.'generateFilePath.filePath.getFilePath'(filePathRad)
@@ -88,14 +90,14 @@ try {
 	def folderPath2=navLocation+'/ForProfiles'
 	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'),folderPath2)
 	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
-	extentTest.log(LogStatus.PASS, 'Navigated to - '+folderPath2)
+	////extentTest.log(LogStatus.PASS, 'Navigated to - '+folderPath2)
 
 	def filePathFT = (RunConfiguration.getProjectDir() + '/Upload/') + 'InputDeck.zip'
 	def newFPFT=CustomKeywords.'generateFilePath.filePath.getFilePath'(filePathFT)
 	println(newFPFT)
 
 	WebUI.uploadFile(findTestObject('FilesPage/UploadFileBtn'), newFPFT )
-	extentTest.log(LogStatus.PASS, 'Uploading zip file - ToUpload.zip')
+	//extentTest.log(LogStatus.PASS, 'Uploading zip file - ToUpload.zip')
 
 	WebUI.delay(5)
 	
@@ -117,7 +119,7 @@ catch (Exception ex) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, ex)
+	//extentTest.log(LogStatus.FAIL, ex)
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
@@ -126,14 +128,14 @@ catch (StepErrorException e) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+	//extentTest.log(LogStatus.FAIL, e)
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
 finally {
-	extent.endTest(extentTest)
+	//extent.endTest(//extentTest)
 
-	extent.flush()
+	//extent.flush()
 
 
 }

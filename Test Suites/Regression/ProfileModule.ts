@@ -9,6 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>d030ccd9-281e-4533-a9a6-e3b5fcbe5735</testSuiteGuid>
    <testCaseLink>
       <guid>80338b69-4c16-4283-bc04-489b12c82cfe</guid>
@@ -55,8 +56,8 @@
          <combinationType>ONE</combinationType>
          <id>c034d2bf-5bdc-46c7-ba1e-5868eb464a72</id>
          <iterationEntity>
-            <iterationType>RANGE</iterationType>
-            <value>1-18</value>
+            <iterationType>ALL</iterationType>
+            <value>16-18</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForProfiles</testDataId>
       </testDataLink>
@@ -104,61 +105,61 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>dbcde327-4821-4e34-b666-16690dd92398</guid>
+      <guid>dd46944a-48f1-4fe1-9d63-c50ab685aa1d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/ProfileModule/JobSubmissionThroughProfile</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>22999d50-6791-4d1f-83ff-2ac993125b15</id>
+         <id>589fef70-9582-4f69-a84e-74ed2be98257</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
-            <value>1-3</value>
+            <value></value>
          </iterationEntity>
-         <testDataId>Data Files/TestDataForProfiles</testDataId>
+         <testDataId>Data Files/TestDataForProfileSubmissions</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>c55ce919-eaed-4dcd-b544-70a159a3fc3c</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>22999d50-6791-4d1f-83ff-2ac993125b15</testDataLinkId>
+         <testDataLinkId>589fef70-9582-4f69-a84e-74ed2be98257</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>proName</value>
          <variableId>9d2bae20-a478-4749-8ac6-272295f8a53c</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>22999d50-6791-4d1f-83ff-2ac993125b15</testDataLinkId>
+         <testDataLinkId>589fef70-9582-4f69-a84e-74ed2be98257</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>TestCaseName</value>
+         <variableId>c55ce919-eaed-4dcd-b544-70a159a3fc3c</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>589fef70-9582-4f69-a84e-74ed2be98257</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>AppName</value>
          <variableId>50871651-4438-4afa-a3d1-e015def75e60</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>22999d50-6791-4d1f-83ff-2ac993125b15</testDataLinkId>
+         <testDataLinkId>589fef70-9582-4f69-a84e-74ed2be98257</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>RemoteFile</value>
+         <value>fileName</value>
          <variableId>6242957b-bbbf-4b3a-a242-d30081c79543</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>22999d50-6791-4d1f-83ff-2ac993125b15</testDataLinkId>
+         <testDataLinkId>589fef70-9582-4f69-a84e-74ed2be98257</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>fileArg</value>
+         <value>FileArg</value>
          <variableId>c20ffa81-ef5c-405a-b281-7d065b6fbd73</variableId>
       </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>81f55469-1a49-4b67-99cd-f44ca24be80e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/ProfileModule/JobSubmissionThroughProfileContextMenuAllProfiles</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>2bd1683b-e416-4033-be24-1938f1949bf9</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
-            <value></value>
+            <value>37-40</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForProfileSubmissions</testDataId>
       </testDataLink>
@@ -190,14 +191,14 @@
    <testCaseLink>
       <guid>b87bddd6-5727-428e-9a6f-70dd1c831285</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/ProfileModule/DeleteProfile</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>ab52df86-402c-4014-b91e-44c8e50218fa</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
-            <value>1-3</value>
+            <value>16-18</value>
          </iterationEntity>
          <testDataId>Data Files/TestDataForProfiles</testDataId>
       </testDataLink>
@@ -218,6 +219,12 @@
          <type>DATA_COLUMN</type>
          <value>AppName</value>
          <variableId>d45d70d8-f2f8-48b4-94fb-152c1a5ecfc0</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>ae853c82-471f-4e86-b068-78805a469f17</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

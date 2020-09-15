@@ -71,7 +71,7 @@ try {
 	println(TestCaseName)
 
 	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
-	def location='/stage/LotOfFiles/'
+	def location='/stage/'+GlobalVariable.G_userName+'/LotOfFiles/'
 
 	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
 
@@ -81,7 +81,7 @@ try {
 
 	if (TestCaseName.contains('Page Navigation')){
 
-		WebUI.verifyElementPresent(findTestObject('FilesPage/FilesPageNavigation'), FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyElementPresent(findTestObject('FilesPage/FilesPageNavigation'),3,FailureHandling.STOP_ON_FAILURE)
 		WebUI.click(findTestObject('FilesPage/FilesPageNavigation'), FailureHandling.STOP_ON_FAILURE)
 		extentTest.log(LogStatus.PASS, 'Click on Files page navigation')
 

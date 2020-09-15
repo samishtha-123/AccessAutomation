@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>9145d55c-cad3-44eb-b4c9-b7e3ba9f3123</testCaseGuid>
    <variable>
-      <defaultValue>'demo'</defaultValue>
+      <defaultValue>'B1'</defaultValue>
       <description></description>
       <id>4d935674-32e0-4d9c-a5a2-02a91f2765ff</id>
       <masked>false</masked>
@@ -20,14 +20,14 @@
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'create'</defaultValue>
+      <defaultValue>'remove'</defaultValue>
       <description></description>
       <id>20621fd8-78a3-4263-9aec-8e5f976aee20</id>
       <masked>false</masked>
       <name>option</name>
    </variable>
    <variable>
-      <defaultValue>'/stage/rohini/BS'</defaultValue>
+      <defaultValue>'/stage/B2'</defaultValue>
       <description></description>
       <id>555f7fb9-d8cc-4ef2-9bfe-3a93d5c9060a</id>
       <masked>false</masked>

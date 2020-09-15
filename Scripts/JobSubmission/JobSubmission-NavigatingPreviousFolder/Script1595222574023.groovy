@@ -73,34 +73,34 @@ try {
 
 	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
 	extentTest.log(LogStatus.PASS, 'Navigated to '+location)
-	
+
 	WebUI.click(findTestObject('2020.1/Stage_folder'))
 	extentTest.log(LogStatus.PASS, 'Navigated to previous folder')
-	
+
 	println(fileName)
-	
-			WebUI.setText(findTestObject('FilesPage/FilesSearch_filter'), fileName)
-			extentTest.log(LogStatus.PASS, 'Looking for file to perfrom operation - ' +Operation)
-			
-			WebUI.sendKeys(findTestObject('JobDetailsPage/TextBx_DetailsFilter'), Keys.chord(Keys.ENTER))
-	
-			extentTest.log(LogStatus.PASS, 'Clicked on File  - ' + fileName)
-	
-	
-			def fileItem = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(newFileObj, 5)
-	
-			println(fileItem)
-	
-			if (fileItem) {
-	
-				WebUI.waitForElementPresent(newFileObj, 3)
-	
-				WebUI.click(newFileObj)
-	
-				
-			}
-	
-	
+
+	WebUI.setText(findTestObject('FilesPage/FilesSearch_filter'), fileName)
+	extentTest.log(LogStatus.PASS, 'Looking for file to perfrom operation - ' +Operation)
+
+	WebUI.sendKeys(findTestObject('JobDetailsPage/TextBx_DetailsFilter'), Keys.chord(Keys.ENTER))
+
+	extentTest.log(LogStatus.PASS, 'Clicked on File  - ' + fileName)
+
+
+	def fileItem = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(newFileObj, 5)
+
+	println(fileItem)
+
+	if (fileItem) {
+
+		WebUI.waitForElementPresent(newFileObj, 3)
+
+		WebUI.click(newFileObj)
+
+
+	}
+
+
 	if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}

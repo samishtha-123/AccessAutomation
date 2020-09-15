@@ -1,25 +1,14 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling as FailureHandling
-import com.kms.katalon.core.testcase.TestCase as TestCase
-import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testobject.TestObject as TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.Capabilities
-import org.openqa.selenium.remote.RemoteWebDriver
+
 import com.kms.katalon.core.exception.StepErrorException as StepErrorException
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.relevantcodes.extentreports.LogStatus
+
+import internal.GlobalVariable as GlobalVariable
 
 'Login into PAW '
 WebUI.callTestCase(findTestCase('Generic/Login'), [('username') : GlobalVariable.G_userName, ('password') : GlobalVariable.G_Password],
@@ -47,7 +36,7 @@ try
 	WebUI.click(newJobFilter)
 
 	WebUI.delay(2)
-	extentTest.log(LogStatus.INFO, 'Clicked on job with state  - ' + jobState)
+	extentTest.log(LogStatus.PASS, 'Clicked on job with state  - ' + jobState)
 
 	println jobState
 	TestObject newJobRow = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/div_Completed'), 'title', 'equals',	jobState, true)
@@ -57,25 +46,25 @@ try
 
 	WebUI.click(findTestObject('JobMonitoringPage/ViewDetails_Jobs'))
 
-	//WebUI.waitForElementVisible(findTestObject('JobMonitoringPage/OutputFolder_File'), 5)
-	//WebUI.rightClick(findTestObject('JobMonitoringPage/OutputFolder_File'))
-	if (TestCaseName.contains('Input Folder'))
+	
+	switch(userChoice)
 	{
+		case 'Input':
 		WebUI.click(findTestObject('JobMonitoringPage/InputFolder'))
 		extentTest.log(LogStatus.PASS, 'Click on Input Folder')
-		//result=CustomKeywords.'operations_JobsModule.executeJobAction_topmenu.perfromJobAction'(jobAction,TestCaseName,extentTest)
-	}
-	else if(TestCaseName.contains('Running Folder'))
-	{
+		break;
+		
+		case 'Output':
+		WebUI.waitForElementVisible(findTestObject('JobMonitoringPage/OutputFolder'), 5)
+		break;
+	
+		case 'Running':
 		WebUI.click(findTestObject('JobMonitoringPage/RunningFolder'))
 		extentTest.log(LogStatus.PASS, 'Click on Running Folder')
-	}
-	else if(TestCaseName.conatins('Output Folder'))
-	{
-		WebUI.click(findTestObject('JobMonitoringPage/OutputFolder'))
-		extentTest.log(LogStatus.PASS, 'Click on Input Folder')
-	}
-	result=CustomKeywords.'operations_JobsModule.executeJobAction_topmenu.perfromJobAction'(jobAction,TestCaseName,extentTest)
+		break;
+		}
+	
+	result=CustomKeywords.'operations_JobsModule.executeJobAction_JobDetails_Topmenu.perfromJobAction'(jobAction,TestCaseName,extentTest)
 
 
 	if(result)
@@ -88,7 +77,7 @@ try
 	}
 
 
-	if (GlobalVariable.G_Browser == 'Edge') {
+	if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 

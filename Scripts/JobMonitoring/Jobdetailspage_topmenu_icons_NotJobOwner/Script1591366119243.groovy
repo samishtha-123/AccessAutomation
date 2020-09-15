@@ -41,8 +41,7 @@ try
 	WebUI.delay(2)
 	WebUI.click(findTestObject('Object Repository/JobMonitoringPage/a_Reset'))
 
-	if (TestCaseName.contains('AllJobs')) {
-		WebUI.click(findTestObject('Object Repository/JobMonitoringPage/RadioBtn_AllJobs'))
+	WebUI.click(findTestObject('Object Repository/JobMonitoringPage/RadioBtn_AllJobs'))
 		WebUI.delay(1)
 		extentTest.log(LogStatus.PASS, 'All Jobs Filter Applied')
 		WebUI.click(findTestObject('JobMonitoringPage/JM_SearchBox'))
@@ -54,7 +53,7 @@ try
 			WebUI.delay(5)
 			extentTest.log(LogStatus.PASS, 'Waiting for jobs table to load on FireFox')
 		}
-	}
+	
 	
 	TestObject newJobFilter = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/label_jobState'), 'text', 'equals',
 			jobState, true)
@@ -73,10 +72,11 @@ try
 	else
 	{
 		WebUI.rightClick(newJobRow)
+		WebUI.click(findTestObject('JobMonitoringPage/ViewDetails_Jobs'))
+		
 	}
 	
 			
-	WebUI.click(findTestObject('JobMonitoringPage/ViewDetails_Jobs'))
 	
 switch (folder) {
 
@@ -102,7 +102,7 @@ switch (folder) {
 	TestObject newJobAction=WebUI.modifyObjectProperty(findTestObject('Object Repository/JobMonitoringPage/Icon_JObAction'), 'id', 'equals', jobAction, true)
 	result=WebUI.verifyElementClickable(newJobAction, FailureHandling.CONTINUE_ON_FAILURE)
 
-		result=CustomKeywords.'operations_JobsModule.executeJobAction_topmenu.perfromJobAction'(jobAction,TestCaseName,extentTest)
+		result=CustomKeywords.'operations_JobsModule.executeJobAction_JobDetails_Topmenu.perfromJobAction'(jobAction,TestCaseName,extentTest)
 	
 			
 		if(result)

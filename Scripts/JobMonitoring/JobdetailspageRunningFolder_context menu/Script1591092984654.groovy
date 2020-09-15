@@ -62,10 +62,7 @@ try
 
    //WebUI.waitForElementVisible(findTestObject('JobMonitoringPage/OutputFolder_File'), 5)
 	//WebUI.click(findTestObject('JobMonitoringPage/OutputFolder_File'))
-	WebUI.click(findTestObject('JobMonitoringPage/RunningFolder'))
-	extentTest.log(LogStatus.PASS, 'Click on Input Folder')
-	WebUI.rightClick(findTestObject('JobMonitoringPage/RunningFolder_File'))
-	
+
 
 		
 		result=CustomKeywords.'operations_JobsModule.executeJobAction.perfromJobAction'(jobAction,TestCaseName,extentTest)

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>FileOperations - Bookmark - Copy (1)</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5fb7d969-8d4e-4160-ac2b-f45b425fc461</testCaseGuid>
+   <variable>
+      <defaultValue>'B4'</defaultValue>
+      <description></description>
+      <id>09a2d99f-306d-4ae8-8657-02ce379d6898</id>
+      <masked>false</masked>
+      <name>bookMarkName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test case to Delete BookMark'</defaultValue>
+      <description></description>
+      <id>e38b1b3a-3af6-4058-88a2-8b0c59d8dbed</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'remove'</defaultValue>
+      <description></description>
+      <id>823d9a9d-7bf5-44c9-9bcf-d60ab4bcd3b4</id>
+      <masked>false</masked>
+      <name>option</name>
+   </variable>
+   <variable>
+      <defaultValue>'/stage/B4'</defaultValue>
+      <description></description>
+      <id>4a2ce445-1421-4c41-a227-c408c48f526c</id>
+      <masked>false</masked>
+      <name>location</name>
+   </variable>
+</TestCaseEntity>

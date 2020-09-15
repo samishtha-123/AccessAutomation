@@ -40,7 +40,7 @@ try
 
 	println jobState
 	TestObject newJobRow = WebUI.modifyObjectProperty(findTestObject('JobMonitoringPage/div_Completed'), 'title', 'equals',	jobState, true)
-	if(TestCaseName.contains('DoubleClick'))
+	if(userChoice.equals('DoubleClick'))
 	{
 		WebUI.doubleClick(newJobRow)
 		extentTest.log(LogStatus.PASS, 'Double Clicked on Job row to navigate to Details Page')
@@ -63,7 +63,7 @@ try
 		extentTest.log(LogStatus.PASS, 'Navigated to Job Monitoring Page ')
 	}
 
-	if (GlobalVariable.G_Browser == 'Edge') {
+	if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 
@@ -74,8 +74,11 @@ catch (Exception  ex)
 
 	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
+		String p =TestCaseName+GlobalVariable.G_Browser+'.png'
 	extentTest.log(LogStatus.FAIL,ex)
-	KeywordUtil.markFailed('ERROR: '+ e)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
+KeywordUtil.markFailed('ERROR: '+ e)
 
 }
 catch (StepErrorException  e)
@@ -83,8 +86,11 @@ catch (StepErrorException  e)
 
 	String screenShotPath='ExtentReports/'+TestCaseName+GlobalVariable.G_Browser+'.png'
 	WebUI.takeScreenshot(screenShotPath)
-	extentTest.log(LogStatus.FAIL,e)
-	KeywordUtil.markFailed('ERROR: '+ e)
+		String p =TestCaseName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
+KeywordUtil.markFailed('ERROR: '+ e)
 
 }
 finally

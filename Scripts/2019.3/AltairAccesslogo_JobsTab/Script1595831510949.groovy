@@ -46,18 +46,18 @@ def extentTest = extent.startTest(TestCaseName)
 WebUI.delay(4)
 try
 {
+	extentTest.log(LogStatus.PASS,"User is navigated to jobs page")
 	
 	WebUI.click(findTestObject('2019.3/Application_name'))
 	
 	WebUI.verifyElementPresent(findTestObject('2019.3/ShellScript'), 5)
+	extentTest.log(LogStatus.PASS,"Verified app def is present")
 	
 	
-	
-	if (GlobalVariable.G_Browser == 'IE') {
+		if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 
-	
 	
 }
 catch (Exception  ex)

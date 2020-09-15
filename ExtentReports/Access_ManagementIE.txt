@@ -1,4 +1,4 @@
 Module=Access_Management
-csvfile=C:/katalon/AccessWeb/Reports/20200724_230118/Access_Management/20200724_230118/20200724_230118.csv
+csvfile=C:/katalon/AccessWeb 18.08.20/Reports/20200911_115017/Regression/Access_Management/20200911_115017/20200911_115017.csv
 browser=IE
-reportName=Access_Management_IE_24072020_230122.html
+reportName=Access_Management_IE_11092020_115021.html

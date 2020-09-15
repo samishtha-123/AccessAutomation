@@ -113,6 +113,7 @@ try {
 	TestObject newProObj = WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/ContextMn_Item_Optistruct-NewPro'),
 			'text', 'contains', proElement, true)
 
+	WebUI.mouseOver(findTestObject('FilesPage/ContextMn_Process With'))
 	WebUI.click(findTestObject('FilesPage/ContextMn_Process With'))
 
 	WebUI.delay(2)
@@ -128,21 +129,24 @@ try {
 	def isElemenetPresent = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('Object Repository/AllProfiles/span_All Profiles'),
 			5)
 
-	//	println("sub menu present - "+ isElemenetPresent)
+	println("sub menu present - "+ isElemenetPresent)
 	if (isElemenetPresent) {
+		WebUI.mouseOver(findTestObject('Object Repository/AllProfiles/span_All Profiles'))
 		WebUI.click(findTestObject('Object Repository/AllProfiles/span_All Profiles'))
 		WebUI.click(findTestObject('Object Repository/AllProfiles/SelectProfile_pop-up-SearchBox'))
 		WebUI.sendKeys(findTestObject('Object Repository/AllProfiles/SelectProfile_pop-up-SearchBox'), proName)
 		TestObject newProLabel = CustomKeywords.'buildTestObj.CreateTestObjFiles.ProLabelIdentifier'(proName,AppName)
 		WebUI.click(newProLabel)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/AllProfiles/button_Select'))
-
+		WebUI.delay(2)
+		
 		extentTest.log(LogStatus.PASS, 'Clicked on - ' + proElement)
 	} else {
 		extentTest.log(LogStatus.PASS, 'Profile Conetext-menu item not found - ' + proElement)
 	}
 
-	if (TestCaseName.contains('Incompelete')) {
+	if (TestCaseName.contains('Incomplete')) {
 		WebUI.delay(2)
 
 		WebUI.click(findTestObject('JobSubmissionForm/List_NCPUS'))
@@ -185,25 +189,34 @@ try {
 
 	extentTest.log(LogStatus.PASS, 'Job ID  - ' + toget)
 
-	if (GlobalVariable.G_Browser == 'Edge') {
+	if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 }
 catch (Exception ex) {
-	String screenShotPath = ('ExtentReports/' + TCName) + '.png'
+	String screenShotPath = 'ExtentReports/' + TCName +GlobalVariable.G_Browser+ '.png'
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, ex)
+
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
+
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
 catch (StepErrorException e) {
-	String screenShotPath = ('ExtentReports/' + TCName) + '.png'
+	String screenShotPath = 'ExtentReports/' + TCName +GlobalVariable.G_Browser+ '.png'
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,e)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }

@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>aa1d459a-e534-45bb-b7da-6afe7041568c</testCaseGuid>
    <variable>
-      <defaultValue>'Queued'</defaultValue>
+      <defaultValue>'Running'</defaultValue>
       <description></description>
       <id>199c3045-c7fc-450e-974a-df474d42b903</id>
       <masked>false</masked>
@@ -20,7 +20,7 @@
       <name>jobAction</name>
    </variable>
    <variable>
-      <defaultValue>'Job Action for Completed Job - View Details'</defaultValue>
+      <defaultValue>'Running terminate_icon'</defaultValue>
       <description></description>
       <id>0974633c-cd4f-4eb4-87d0-82966292f7e9</id>
       <masked>false</masked>

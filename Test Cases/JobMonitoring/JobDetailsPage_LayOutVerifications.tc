@@ -17,7 +17,7 @@
       <description></description>
       <id>e355021e-cb77-4652-bf65-137a4779e533</id>
       <masked>false</masked>
-      <name>jobAction</name>
+      <name>userChoice</name>
    </variable>
    <variable>
       <defaultValue>'Job Action for Completed Job - Resubmit'</defaultValue>

@@ -24,17 +24,6 @@ import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 WebUI.callTestCase(findTestCase('Generic/Login'), [('username') : GlobalVariable.G_userName, ('password') : GlobalVariable.G_Password],
 FailureHandling.STOP_ON_FAILURE)
 
-//WebUI.callTestCase(findTestCase('Generic/Login'), [('username') : 'pbsadmin', ('password') : 'pbsadmin'],FailureHandling.STOP_ON_FAILURE)
-String ReportFile = GlobalVariable.G_ReportName + '.html'
-
-def extent = CustomKeywords.'generateReports.GenerateReport.create'(ReportFile, GlobalVariable.G_Browser, GlobalVariable.G_BrowserVersion)
-
-def LogStatus = com.relevantcodes.extentreports.LogStatus
-
-String TestCaseNameExtent = TestCaseName
-
-def extentTest = extent.startTest(TestCaseNameExtent)
-
 def filePathShellRun = RunConfiguration.getProjectDir() + '/Upload/JobFiles/Running.sh'
 
 def newFPSHR = CustomKeywords.'generateFilePath.filePath.getFilePath'(filePathShellRun)
@@ -59,7 +48,7 @@ try {
 		WebUI.click(findTestObject('GenericObjects/TitleLink_Jobs'))
 	}
 
-	extentTest.log(LogStatus.PASS, 'Navigated Job Tab')
+	//extentTest.log(LogStatus.PASS, 'Navigated Job Tab')
 
 	WebUI.delay(2)
 
@@ -68,7 +57,7 @@ try {
 
 	WebUI.click(newAppObj)
 
-	extentTest.log(LogStatus.PASS, 'Navigated to Job Submission For for - ' + AppName)
+	//extentTest.log(LogStatus.PASS, 'Navigated to Job Submission For for - ' + AppName)
 
 	//	WebUI.doubleClick(newAppObj)
 
@@ -130,11 +119,11 @@ try {
 
 	println('********************************************')
 
-	extentTest.log(LogStatus.PASS, 'hostname  - ' + GlobalVariable.G_PBSHostName)
+	//extentTest.log(LogStatus.PASS, 'hostname  - ' + GlobalVariable.G_PBSHostName)
 
 	WebUI.click(findTestObject('GenericObjects/TitleLink_Jobs'))
 
-	CustomKeywords.'preReq.jobMonitorigColFilter.addColumn'(extentTest)
+	CustomKeywords.'preReq.jobMonitorigColFilter.addColumn'()
 
 	if (GlobalVariable.G_Browser == 'Edge') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -145,7 +134,7 @@ catch (Exception ex) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, ex)
+	//extentTest.log(LogStatus.FAIL, ex)
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
@@ -154,12 +143,12 @@ catch (StepErrorException e) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+	//extentTest.log(LogStatus.FAIL, e)
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
 finally {
-	extent.endTest(extentTest)
+	//extent.endTest(//extentTest)
 
-	extent.flush()
+	//extent.flush()
 }

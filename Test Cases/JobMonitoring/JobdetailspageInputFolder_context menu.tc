@@ -13,14 +13,14 @@
       <name>jobState</name>
    </variable>
    <variable>
-      <defaultValue>'Open'</defaultValue>
+      <defaultValue>'Download'</defaultValue>
       <description></description>
       <id>f1fc4da4-cd9f-4fec-b0a7-409d3e3dbe9c</id>
       <masked>false</masked>
       <name>jobAction</name>
    </variable>
    <variable>
-      <defaultValue>'Job Action for Completed Job Input Folder'</defaultValue>
+      <defaultValue>'Job Action for Completed Job - Resubmit'</defaultValue>
       <description></description>
       <id>1b366b53-77a1-46bf-81b3-b687ee062a2d</id>
       <masked>false</masked>

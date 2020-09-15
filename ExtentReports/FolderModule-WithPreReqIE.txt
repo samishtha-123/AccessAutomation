@@ -1,4 +1,4 @@
 Module=FolderModule-WithPreReq
-csvfile=C:/katalon/AccessWeb/Reports/20200725_094730/FolderModule-WithPreReq/20200725_094730/20200725_094730.csv
+csvfile=C:/katalon/AccessWeb 18.08.20/Reports/20200819_190705/Sanity/FolderModule-WithPreReq/20200819_190706/20200819_190706.csv
 browser=IE
-reportName=FolderModule-WithPreReq_IE_25072020_094734.html
+reportName=FolderModule-WithPreReq_IE_19082020_194724.html

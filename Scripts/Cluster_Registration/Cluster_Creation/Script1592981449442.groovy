@@ -98,6 +98,7 @@ try
         
 		WebUI.mouseOver(findTestObject('Cluster_Registration/Manageservice'))
 		WebUI.click(findTestObject('Cluster_Registration/Manageservice'))
+		WebUI.delay(3)
 		extentTest.log(LogStatus.PASS, 'Click on Manage Service')
 
         
@@ -149,6 +150,7 @@ try
 		
 		WebUI.mouseOver(findTestObject('Cluster_Registration/Manageservice'))
 		WebUI.click(findTestObject('Cluster_Registration/Manageservice'))
+		WebUI.delay(3)
 		extentTest.log(LogStatus.PASS, 'Click on Manage Service')
 
 		
@@ -172,7 +174,8 @@ try
 	}
 	
 		if (GlobalVariable.G_Browser == 'IE') {
-		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
+		
+			WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 
 }

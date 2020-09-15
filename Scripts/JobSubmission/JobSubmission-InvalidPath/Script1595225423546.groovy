@@ -25,7 +25,7 @@ def LogStatus = com.relevantcodes.extentreports.LogStatus
 String TestCaseNameExtent = TestCaseName
 
 def extentTest = extent.startTest(TestCaseNameExtent)
-
+def isNotificationPresent
 
 try {
 
@@ -74,8 +74,11 @@ try {
 	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
 	extentTest.log(LogStatus.PASS, 'Navigated to '+location)
 	
-	WebUI.verifyElementPresent(findTestObject('2020.1/Popup'), 2)
-	
+	isNotificationPresent=WebUI.verifyElementPresent(findTestObject('2020.1/Popup'), 2)
+	if(isNotificationPresent)
+	{
+		extentTest.log(LogStatus.PASS, 'Invalid Path Notifiaction Verified')
+	}
 	
 	
 	if (GlobalVariable.G_Browser == 'IE') {

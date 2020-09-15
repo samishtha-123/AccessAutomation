@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>JobActions_DeleteMultipleJobs</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c7c2d772-b9c1-490c-bb80-474849a68f7b</testCaseGuid>
+   <variable>
+      <defaultValue>'Failed'</defaultValue>
+      <description></description>
+      <id>24f6b50a-a60c-495e-add9-a024b051ca98</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'Delete'</defaultValue>
+      <description></description>
+      <id>385600a3-d041-42d8-8ba5-93aa6c4a58d3</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Action for Completed Job - Resubmit - AllJobs - Not Job Owner'</defaultValue>
+      <description></description>
+      <id>1b069f70-685d-4fba-9b22-f45d8d005f98</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'ask'</defaultValue>
+      <description></description>
+      <id>0f952418-4373-460e-a303-5dc87c2db2e2</id>
+      <masked>false</masked>
+      <name>userChoice</name>
+   </variable>
+</TestCaseEntity>

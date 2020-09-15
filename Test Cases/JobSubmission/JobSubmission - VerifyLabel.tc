@@ -13,14 +13,14 @@
       <name>AppName</name>
    </variable>
    <variable>
-      <defaultValue>'Verify Output Folder'</defaultValue>
+      <defaultValue>'Verify lable - all '</defaultValue>
       <description></description>
       <id>599df223-1449-4c1b-9b52-6bcc122ef427</id>
       <masked>false</masked>
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'Required Field'</defaultValue>
+      <defaultValue>'All'</defaultValue>
       <description></description>
       <id>ac8b30c6-a5ee-4ad6-bea9-46a99d790ec3</id>
       <masked>false</masked>

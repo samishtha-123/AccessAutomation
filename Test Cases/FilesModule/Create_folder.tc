@@ -6,23 +6,23 @@
    <comment></comment>
    <testCaseGuid>2150d03e-3e0b-471b-9fbb-0f011c169c21</testCaseGuid>
    <variable>
-      <defaultValue>'    MyFolderDemo'</defaultValue>
+      <defaultValue>'MyFolder99\\1'</defaultValue>
       <description></description>
       <id>ee5dd06b-fe53-4cd7-b0ae-9d5aa0e1949d</id>
       <masked>false</masked>
       <name>FolderName</name>
    </variable>
    <variable>
-      <defaultValue>'Create folder with valid name tile view'</defaultValue>
+      <defaultValue>' tile view'</defaultValue>
       <description></description>
       <id>7d839b7d-abd5-48a9-9050-61b7d5242a7c</id>
       <masked>false</masked>
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'Positive flow'</defaultValue>
+      <defaultValue>'Negative flow'</defaultValue>
       <description></description>
-      <id>68735d7c-86f3-4498-b607-5bc786ff5da7</id>
+      <id>44855711-d67d-4932-bf58-df854a599660</id>
       <masked>false</masked>
       <name>userChoice</name>
    </variable>

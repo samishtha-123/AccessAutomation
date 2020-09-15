@@ -58,35 +58,66 @@ try {
 
 	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
 
-		def location='/stage/'+GlobalVariable.G_userName
-		
-			WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
-		
-			WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
-			extentTest.log(LogStatus.PASS, 'Navigated to /stage/JSUploads in RFB ')
-
-			WebUI.click(findTestObject('FilesPage/FilesSearch_filter'))
-			
-					WebUI.waitForElementVisible(findTestObject('FilesPage/FilesSearch_filter'), 2)
-					
-			
-					println(fileName)
-			
-					WebUI.setText(findTestObject('FilesPage/FilesSearch_filter'), fileName)
-					extentTest.log(LogStatus.PASS, 'Looking for file to perfrom operation - ' +Operation)
-					
-					WebUI.sendKeys(findTestObject('JobDetailsPage/TextBx_DetailsFilter'), Keys.chord(Keys.ENTER))
-			
-					extentTest.log(LogStatus.PASS, 'Clicked on File  - ' + fileName)
-			
-			
-					
-			
-			
-	
 
 
-	
+
+	def navLocation =CustomKeywords.'generateFilePath.filePath.execLocation'()
+	def location=navLocation+'/JobsModule/JobsModuleFileOps'
+	println('##################################################################')
+	println (location)
+	println('##################################################################')
+
+
+
+	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
+
+	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
+	extentTest.log(LogStatus.PASS, 'Navigated to '+location)
+
+	WebUI.click(findTestObject('FilesPage/FilesSearch_filter'))
+
+	WebUI.waitForElementVisible(findTestObject('FilesPage/FilesSearch_filter'), 2)
+
+
+	println(InputFile)
+
+	WebUI.setText(findTestObject('FilesPage/FilesSearch_filter'), InputFile)
+	extentTest.log(LogStatus.PASS, 'Looking for file to perfrom operation - ' +Operation)
+
+	WebUI.sendKeys(findTestObject('JobDetailsPage/TextBx_DetailsFilter'), Keys.chord(Keys.ENTER))
+
+	extentTest.log(LogStatus.PASS, 'Clicked on File  - ' + InputFile)
+
+	newFileObj = WebUI.modifyObjectProperty(findTestObject('FilesPage/RowItem_File'), 'title', 'equals',
+			InputFile, true) //	WebUI.click(newFileObj)
+
+	def fileItem = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(newFileObj, 5)
+
+	println(fileItem)
+
+	if (fileItem) {
+
+		WebUI.waitForElementPresent(newFileObj, 3)
+
+		WebUI.click(newFileObj)
+
+		WebUI.rightClick(newFileObj)
+	}
+
+
+
+	WebUI.delay(2)
+	println "after is else "+Operation
+	def result=CustomKeywords.'operations_FileModule.fileOperations.executeFileOperations'(Operation, TestCaseName , extentTest)
+
+	if(result)
+	{
+		extentTest.log(LogStatus.PASS, 'File Operation - ' + TestCaseName +' Performed Sucessfully')
+	}
+	else
+	{
+		extentTest.log(LogStatus.FAIL,'File Operation - ' + TestCaseName +' failed')
+	}
 	if (GlobalVariable.G_Browser == 'IE') {
 		WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
@@ -100,7 +131,9 @@ catch (Exception ex) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, ex)
+	String p =TestCaseNameExtent+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
@@ -108,6 +141,10 @@ catch (StepErrorException e) {
 	String screenShotPath = (('ExtentReports/' + TestCaseNameExtent) + GlobalVariable.G_Browser) + '.png'
 
 	WebUI.takeScreenshot(screenShotPath)
+	String p =TestCaseNameExtent+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
 	extentTest.log(LogStatus.FAIL, e)
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>sort-wala</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>72d2f1c7-68e7-454a-abc2-a0dbd979b27a</testCaseGuid>
+   <variable>
+      <defaultValue>'ToRename_TileView.txt'</defaultValue>
+      <description></description>
+      <id>c1e8cb11-6405-4acd-91ba-72d89c4411f9</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RenameFile.txt'</defaultValue>
+      <description></description>
+      <id>b7f583ee-9b3f-4c6b-aa4e-f74fe37012fd</id>
+      <masked>false</masked>
+      <name>renameFileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Sort tile view'</defaultValue>
+      <description></description>
+      <id>bb11be63-1242-4211-bf4a-2fa49a3d6c5b</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

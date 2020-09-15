@@ -13,7 +13,7 @@
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'n'</defaultValue>
+      <defaultValue>'ShellPro'</defaultValue>
       <description></description>
       <id>a351aa0e-0046-484d-9538-a9879262f15f</id>
       <masked>false</masked>

@@ -10,6 +10,7 @@ import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.relevantcodes.extentreports.LogStatus
 
+
 import internal.GlobalVariable as GlobalVariable
 
 'Login into PAW '
@@ -33,6 +34,13 @@ def viewIconListPresent
 TestObject newFileObj
 
 WebUI.delay(2)
+
+def navLocation =CustomKeywords.'generateFilePath.filePath.execLocation'()
+def location=navLocation+'/FilesModule/FileOps/'
+println('##################################################################')
+println (location)
+println('##################################################################')
+
 
 try {
 	WebUI.click(findTestObject('GenericObjects/TitleLink_Files'))
@@ -73,7 +81,7 @@ try {
 	{
 		if (TestCaseName.contains('tile view')) {
 			println("in tile wala if")
-			WebUI.click(viewIconTile)		
+			WebUI.click(viewIconTile)
 			extentTest.log(LogStatus.PASS, 'Changed View to Tile View - test case - ' +TestCaseName)
 
 			WebUI.delay(2)
@@ -86,23 +94,22 @@ try {
 					'equals', fileName, true)
 		}
 		WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
-		def location='/stage/'+GlobalVariable.G_userName+'/FilesModule'+'/FileOps/'
-		
-			WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
-		
-			WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
-			extentTest.log(LogStatus.PASS, 'Navigated to /stage/JSUploads in RFB ')
+
+		WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
+
+		WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
+		extentTest.log(LogStatus.PASS, 'Navigated to /stage/JSUploads in RFB ')
 
 		WebUI.click(findTestObject('FilesPage/FilesSearch_filter'))
 
 		WebUI.waitForElementVisible(findTestObject('FilesPage/FilesSearch_filter'), 2)
-		
+
 
 		println(fileName)
 
 		WebUI.setText(findTestObject('FilesPage/FilesSearch_filter'), fileName)
 		extentTest.log(LogStatus.PASS, 'Looking for file to perfrom operation - ' +Operation)
-		
+
 		WebUI.sendKeys(findTestObject('JobDetailsPage/TextBx_DetailsFilter'), Keys.chord(Keys.ENTER))
 
 		extentTest.log(LogStatus.PASS, 'Clicked on File  - ' + fileName)
@@ -144,7 +151,10 @@ catch (Exception ex) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, ex)
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }
@@ -153,7 +163,10 @@ catch (StepErrorException e) {
 
 	WebUI.takeScreenshot(screenShotPath)
 
-	extentTest.log(LogStatus.FAIL, e)
+	String p =TCName+GlobalVariable.G_Browser+'.png'
+	extentTest.log(LogStatus.FAIL,ex)
+	extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(p))
+
 
 	KeywordUtil.markFailed('ERROR: ' + e)
 }

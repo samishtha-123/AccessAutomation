@@ -63,7 +63,7 @@ public class JobSubmissions {
 				break
 
 			case 'OUTFOLDER':
-				WebUI.click(findTestObject('WIP/RadioBtn_All Fields'))
+				WebUI.click(findTestObject('JobSubmissionForm/RadioBtn_All Fields'))
 				WebUI.scrollToElement(findTestObject('Object Repository/JobSubmissionForm/TextBx_OutPut_Folder'),2)
 				WebUI.click(findTestObject('Object Repository/JobSubmissionForm/TextBx_OutPut_Folder'))
 				WebUI.setText(findTestObject('Object Repository/JobSubmissionForm/TextBx_OutPut_Folder'), stageOut)
@@ -101,9 +101,9 @@ public class JobSubmissions {
 				WebUI.rightClick(newFolderObj)
 				extentTest.log(LogStatus.PASS, 'Right Clicked on Input file ' + stageOut)
 				WebUI.delay(2)
-				String idForCntxtMn = 'Add as Output Directory'
+				String idForCntxtMn = 'Add as Output'
 				TestObject newRFBContextMnOption = WebUI.modifyObjectProperty(findTestObject('Object Repository/NewJobPage/ContextMenu_RFB_FilePicker'),
-						'id', 'equals', idForCntxtMn, true)
+						'id', 'contains', idForCntxtMn, true)
 				WebUI.delay(2)
 				WebUI.click(newRFBContextMnOption)
 				extentTest.log(LogStatus.PASS, 'Clicked on context menu - ' + idForCntxtMn)
@@ -128,7 +128,7 @@ public class JobSubmissions {
 			shortCutFileLocation = 'C:/stage/ShortCutFiles'
 		}
 		else {
-			shortCutFileLocation = '/stage/ShortCutFiles'
+			shortCutFileLocation = '/stage/'+GlobalVariable.G_userName+'/ShortCutFiles'
 		}
 		def folderLocation=GlobalVariable.G_userName+'-ToSetOutPutDir'
 
@@ -260,6 +260,7 @@ public class JobSubmissions {
 				return newFileObj
 				break;
 		}
+
 	}
 
 
@@ -276,7 +277,6 @@ public class JobSubmissions {
 			WebUI.delay(5)
 			extentTest.log(LogStatus.PASS, 'Waiting for jobs table to load on FireFox')
 		}
-		WebUI.delay(5)
 
 		String myXpath="//div[@col-id='jobState']"
 		List<WebElement> listElement = katalonWebDriver.findElements(By.xpath(myXpath))

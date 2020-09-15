@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Jobdetailspage-VerifyDetailsPage</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a0b7f163-a3f3-4f08-858a-0ec7c4796517</testCaseGuid>
+   <variable>
+      <defaultValue>'Failed'</defaultValue>
+      <description></description>
+      <id>e3b12f2d-1f98-4be4-aea8-3a8eb2fc61dc</id>
+      <masked>false</masked>
+      <name>jobState</name>
+   </variable>
+   <variable>
+      <defaultValue>'New File'</defaultValue>
+      <description></description>
+      <id>c40ad59c-3ea0-4f49-a641-bfdfa408d75d</id>
+      <masked>false</masked>
+      <name>jobAction</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Action for Completed Job - Resubmit'</defaultValue>
+      <description></description>
+      <id>c595e562-a2ee-4c2e-8b7f-ab92a46c9701</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>
