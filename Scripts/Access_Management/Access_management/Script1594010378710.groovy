@@ -417,6 +417,9 @@ try
 	    WebUI.click(findTestObject('Access_Management/Confirm_button'))
 	    extentTest.log(LogStatus.PASS, 'Click on save')
 		
+		TestObject role =WebUI.modifyObjectProperty(findTestObject('Access_Management/Roleinfo'),'text', 'equals', roleid, true)
+		WebUI.doubleClick(role)
+		
 		WebUI.click(findTestObject('Access_Management/Add_resources'))
 		
 		WebUI.click(findTestObject('Access_Management/Shellscript_resource'))
@@ -665,6 +668,7 @@ try
 	   WebUI.doubleClick(user)
 	   extentTest.log(LogStatus.PASS, "Click on user" )
 	   
+	   WebUI.delay(3)
 	   WebUI.click(findTestObject('Access_Management/Cancel_button'))
 	   extentTest.log(LogStatus.PASS, "Click on cancel button" )
 	   

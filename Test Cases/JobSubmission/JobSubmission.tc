@@ -6,7 +6,7 @@
    <comment></comment>
    <testCaseGuid>42b245ee-d329-41b2-a88a-406105ff5f4c</testCaseGuid>
    <variable>
-      <defaultValue>'SleepJobArray'</defaultValue>
+      <defaultValue>'Optistruct'</defaultValue>
       <description></description>
       <id>26fbd4fc-965f-401e-a5c4-6fb431cd201b</id>
       <masked>false</masked>

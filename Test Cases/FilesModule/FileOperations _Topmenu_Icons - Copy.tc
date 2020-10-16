@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Pagination-FilesTab</name>
+   <name>FileOperations _Topmenu_Icons - Copy</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>492adeb3-33b1-4eb6-a333-c9a0949b6a80</testCaseGuid>
+   <testCaseGuid>ce7f03c3-1826-4e25-818a-017398206253</testCaseGuid>
    <variable>
-      <defaultValue>'ToDownload.txt'</defaultValue>
+      <defaultValue>'ToCompress_LV.txt'</defaultValue>
       <description></description>
-      <id>4a01fec8-ead4-4f57-92f3-03c7b5eafee2</id>
+      <id>ccfbd5cb-783b-4ee2-94fc-e2e88beb8b75</id>
       <masked>false</masked>
       <name>fileName</name>
    </variable>
    <variable>
-      <defaultValue>'jump '</defaultValue>
+      <defaultValue>'copy file '</defaultValue>
       <description></description>
-      <id>0897d5a5-0b32-4d65-8610-6e93cd02a6ed</id>
+      <id>4b331e3e-2aa0-4522-876b-16efd2a7f60c</id>
       <masked>false</masked>
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'Copy'</defaultValue>
+      <defaultValue>'Compress'</defaultValue>
       <description></description>
-      <id>f7cb60b7-967b-4fe9-a0d4-ecb89c50d80e</id>
+      <id>6027f479-8ad6-49fe-ab91-ced8018aae43</id>
       <masked>false</masked>
       <name>Operation</name>
    </variable>

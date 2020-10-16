@@ -34,14 +34,14 @@
       <name>lastname</name>
    </variable>
    <variable>
-      <defaultValue>'Add new role blank'</defaultValue>
+      <defaultValue>'Add new role verify assigned resources'</defaultValue>
       <description></description>
       <id>eebf5735-c5bc-4d89-a41b-13abf7812f2c</id>
       <masked>false</masked>
       <name>userChoice</name>
    </variable>
    <variable>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'demo4'</defaultValue>
       <description></description>
       <id>6a6999c4-2652-4212-bee1-ea6d888e1150</id>
       <masked>false</masked>

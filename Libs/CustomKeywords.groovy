@@ -546,19 +546,10 @@ def static "operations_JobsModule.executeJobAction_JobDetails_Topmenu.perfromJob
 }
 
 
-def static "com.kms.katalon.keyword.draganddrop.DragAndDropKeywords.dragAndDrop"(
+def static "com.kms.katalon.keyword.draganddrop.DragAndDropKeywords.dragAndDropHtml5"(
     	TestObject sourceObject	
      , 	TestObject destinationObject	) {
-    (new com.kms.katalon.keyword.draganddrop.DragAndDropKeywords()).dragAndDrop(
-        	sourceObject
-         , 	destinationObject)
-}
-
-
-def static "com.kms.katalon.keyword.draganddrop.DragAndDropKeywords.dragAndDropJquery"(
-    	TestObject sourceObject	
-     , 	TestObject destinationObject	) {
-    (new com.kms.katalon.keyword.draganddrop.DragAndDropKeywords()).dragAndDropJquery(
+    (new com.kms.katalon.keyword.draganddrop.DragAndDropKeywords()).dragAndDropHtml5(
         	sourceObject
          , 	destinationObject)
 }
@@ -577,10 +568,19 @@ def static "com.kms.katalon.keyword.draganddrop.DragAndDropKeywords.dragAndDropB
 }
 
 
-def static "com.kms.katalon.keyword.draganddrop.DragAndDropKeywords.dragAndDropHtml5"(
+def static "com.kms.katalon.keyword.draganddrop.DragAndDropKeywords.dragAndDrop"(
     	TestObject sourceObject	
      , 	TestObject destinationObject	) {
-    (new com.kms.katalon.keyword.draganddrop.DragAndDropKeywords()).dragAndDropHtml5(
+    (new com.kms.katalon.keyword.draganddrop.DragAndDropKeywords()).dragAndDrop(
+        	sourceObject
+         , 	destinationObject)
+}
+
+
+def static "com.kms.katalon.keyword.draganddrop.DragAndDropKeywords.dragAndDropJquery"(
+    	TestObject sourceObject	
+     , 	TestObject destinationObject	) {
+    (new com.kms.katalon.keyword.draganddrop.DragAndDropKeywords()).dragAndDropJquery(
         	sourceObject
          , 	destinationObject)
 }

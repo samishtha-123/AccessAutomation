@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Pagination-FilesTab</name>
+   <name>MultiFileOperations</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>492adeb3-33b1-4eb6-a333-c9a0949b6a80</testCaseGuid>
+   <testCaseGuid>ab990790-a1f6-4f37-b011-8351f93bb015</testCaseGuid>
    <variable>
-      <defaultValue>'ToDownload.txt'</defaultValue>
+      <defaultValue>'ToOpen_LV.log'</defaultValue>
       <description></description>
-      <id>4a01fec8-ead4-4f57-92f3-03c7b5eafee2</id>
+      <id>6422f61a-59e5-4498-a9c7-aed432c255a5</id>
       <masked>false</masked>
       <name>fileName</name>
    </variable>
    <variable>
-      <defaultValue>'jump '</defaultValue>
+      <defaultValue>'ToOpen_LV.log'</defaultValue>
       <description></description>
-      <id>0897d5a5-0b32-4d65-8610-6e93cd02a6ed</id>
+      <id>fbd214bf-d998-46fb-956c-96b9951450fa</id>
       <masked>false</masked>
       <name>TestCaseName</name>
    </variable>
    <variable>
-      <defaultValue>'Copy'</defaultValue>
+      <defaultValue>'Delete'</defaultValue>
       <description></description>
-      <id>f7cb60b7-967b-4fe9-a0d4-ecb89c50d80e</id>
+      <id>3c621b68-f5ca-4437-875c-7b8b34a301f4</id>
       <masked>false</masked>
       <name>Operation</name>
    </variable>

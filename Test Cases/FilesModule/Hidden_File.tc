@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Hidden_File</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b9f372d3-0354-404d-9fd4-fe55f5793b40</testCaseGuid>
+   <variable>
+      <defaultValue>'Job submission'</defaultValue>
+      <description></description>
+      <id>30efb265-d029-4088-ab87-45521dc9468f</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'RunJob.sh'</defaultValue>
+      <description></description>
+      <id>4719b134-0b1f-4a47-8430-28e71fffddb4</id>
+      <masked>false</masked>
+      <name>InputFile</name>
+   </variable>
+   <variable>
+      <defaultValue>'Job Script'</defaultValue>
+      <description></description>
+      <id>42ebe5c7-8ac1-4b00-b1b5-111976eae4a8</id>
+      <masked>false</masked>
+      <name>FileArg</name>
+   </variable>
+   <variable>
+      <defaultValue>'Remote'</defaultValue>
+      <description></description>
+      <id>4dca698f-96c0-483f-9341-b107c5775b69</id>
+      <masked>false</masked>
+      <name>ExecMode</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>63ad6fc0-4ddd-4b80-af58-bcb1927e3e24</id>
+      <masked>false</masked>
+      <name>AppName</name>
+   </variable>
+</TestCaseEntity>

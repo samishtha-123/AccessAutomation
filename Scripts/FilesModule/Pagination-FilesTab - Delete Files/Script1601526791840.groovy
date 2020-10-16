@@ -11,6 +11,8 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
+
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
@@ -41,31 +43,67 @@ TestObject newFileObj
 WebUI.delay(2)
 
 try {
+	
+	WebUI.click(findTestObject('Preferences/Profiletab'))
+	extentTest.log(LogStatus.PASS, 'Click on profile tab')
+	
+	WebUI.click(findTestObject('FilesPage/Preferences'))
+	extentTest.log(LogStatus.PASS, 'Click on profile tab')
+
+	WebUI.click(findTestObject('Preferences/Pagination'))
+	extentTest.log(LogStatus.PASS, 'Click on preference')
+	
+	WebUI.click(findTestObject('FilesPage/drop_down'))
+	
+	WebUI.click(findTestObject('FilesPage/50 pages'))
+	
+	WebUI.click(findTestObject('Preferences/Back'))
+	
 	WebUI.click(findTestObject('GenericObjects/TitleLink_Files'))
 	extentTest.log(LogStatus.PASS, 'Navigated to Files Tab')
 	WebUI.delay(2)
-
 	TestObject viewIconTile = WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/Icon_ViewIcon'), 'title',
-			'equals', 'Tile View', true)
+		'equals', 'Tile View', true)
 
-	TestObject viewIconList = WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/Icon_ViewIcon'), 'title',
-			'equals', 'List View', true)
+TestObject viewIconList = WebUI.modifyObjectProperty(findTestObject('Object Repository/FilesPage/Icon_ViewIcon'), 'title',
+		'equals', 'List View', true)
 
-	viewIconTilePresent = WebUI.waitForElementPresent(viewIconTile, 3, FailureHandling.CONTINUE_ON_FAILURE)
+viewIconTilePresent = WebUI.waitForElementPresent(viewIconTile, 3, FailureHandling.CONTINUE_ON_FAILURE)
 
-	viewIconListPresent = WebUI.waitForElementPresent(viewIconList, 3, FailureHandling.CONTINUE_ON_FAILURE)
+viewIconListPresent = WebUI.waitForElementPresent(viewIconList, 3, FailureHandling.CONTINUE_ON_FAILURE)
 
-	println('viewIconTilePresent - ' + viewIconTilePresent)
+println('viewIconTilePresent - ' + viewIconTilePresent)
 
-	println('viewIconListPresent - ' + viewIconListPresent)
+println('viewIconListPresent - ' + viewIconListPresent)
+	
 
+if (viewIconListPresent) {
+	WebUI.click(viewIconList)
+	extentTest.log(LogStatus.PASS, 'Changed View to ListView')
+	WebUI.delay(2)
+}
 
-	if (viewIconListPresent) {
-		WebUI.click(viewIconList)
-		extentTest.log(LogStatus.PASS, 'Changed View to ListView')
-		WebUI.delay(2)
-	}
+WebUI.delay(2)
 
+println(TestCaseName)
+
+	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
+	def location='/stage/'+GlobalVariable.G_userName+'/LotOfFiles/'
+	
+		WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
+	
+		WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
+		extentTest.log(LogStatus.PASS, 'Navigated to /stage/JSUploads in RFB ')
+		
+	WebUI.click(findTestObject('FilesPage/SelectallFiles'))
+	WebUI.click(findTestObject('FilesPage/Delete_icon'))
+	TestObject newFolderObj
+	newFolderObj=new TestObject('objectName')
+	newFolderObj.addProperty('xpath', ConditionType.EQUALS, "//span[contains(text(),'Are you sure you want to delete 50 items?')]")
+	WebUI.verifyElementPresent(newFolderObj,5)
+	
+	
+	/*
 	WebUI.delay(2)
 
 	println(TestCaseName)
@@ -77,7 +115,7 @@ try {
 
 	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
 	extentTest.log(LogStatus.PASS, 'Navigated to /stage/JSUploads in RFB ')
-	/*
+	
 	WebUI.click(findTestObject('JobMonitoringPage/Jumpto'))
 	
 	def number= '2'
@@ -85,9 +123,9 @@ try {
 	WebUI.clearText(findTestObject('JobMonitoringPage/Jumpto'))
 	WebUI.setText(findTestObject('JobMonitoringPage/Jumpto'),number)
 	WebUI.sendKeys(findTestObject('JobMonitoringPage/Jumpto'), '2')
-    
-    */
-    if (TestCaseName.contains('Page Navigation')){
+
+	/*
+	if (TestCaseName.contains('Page Navigation')){
 
 		WebUI.verifyElementPresent(findTestObject('FilesPage/FilesPageNavigation'), FailureHandling.STOP_ON_FAILURE)
 		WebUI.click(findTestObject('FilesPage/FilesPageNavigation'), FailureHandling.STOP_ON_FAILURE)
@@ -109,6 +147,9 @@ try {
 	println"value of page holder - "+ data
 
 	extentTest.log(LogStatus.PASS, 'Test case for pagination passed')
+	
+	*/
+	
 }
 
 catch (Exception ex) {

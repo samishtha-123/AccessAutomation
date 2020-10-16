@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create_file - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>13b0feb8-f3b9-418b-98cd-875a5111559e</testCaseGuid>
+   <variable>
+      <defaultValue>'Demofilename.txt'</defaultValue>
+      <description></description>
+      <id>92d8e9b9-e246-41a7-858c-a6c56f4827a6</id>
+      <masked>false</masked>
+      <name>fileName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Create File - Valid'</defaultValue>
+      <description></description>
+      <id>f4200cc6-6436-433d-9c07-02262ef277ae</id>
+      <masked>false</masked>
+      <name>TestCaseName</name>
+   </variable>
+</TestCaseEntity>

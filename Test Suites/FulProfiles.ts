@@ -16,46 +16,55 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/ProfileModule/CreateProfile</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>6a74f623-8f59-42f5-b920-939cc5643bc0</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Regression/TestDataForProfiles</testDataId>
+      </testDataLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>6a74f623-8f59-42f5-b920-939cc5643bc0</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>proName</value>
          <variableId>9d2bae20-a478-4749-8ac6-272295f8a53c</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>6a74f623-8f59-42f5-b920-939cc5643bc0</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>AppName</value>
          <variableId>50871651-4438-4afa-a3d1-e015def75e60</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>6a74f623-8f59-42f5-b920-939cc5643bc0</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>TestCaseName</value>
          <variableId>449134c1-4ff3-4836-9e8f-ac89476b1ec7</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>6a74f623-8f59-42f5-b920-939cc5643bc0</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>InputFile</value>
          <variableId>796b0670-b2f1-427e-a522-2cb840506286</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>6a74f623-8f59-42f5-b920-939cc5643bc0</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>RemoteFile</value>
          <variableId>3e8a665b-3dc0-4e3d-8db8-1309dd903104</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>6a74f623-8f59-42f5-b920-939cc5643bc0</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>fileArg</value>
          <variableId>e06a756c-3750-4d42-9a5b-69da9cc7d2bd</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>6a74f623-8f59-42f5-b920-939cc5643bc0</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>ProfileType</value>
          <variableId>b4c0253a-b76c-4b00-b4c9-d3db25c231c4</variableId>
       </variableLink>
    </testCaseLink>
@@ -100,28 +109,37 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/ProfileModule/JobSubmissionThroughProfileContextMenuAllProfiles</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>c4b344d9-7a53-4871-a5b9-3730b8eb159f</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/TestDataForProfileSubmissions</testDataId>
+      </testDataLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>c4b344d9-7a53-4871-a5b9-3730b8eb159f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>TestCaseName</value>
          <variableId>afcc287f-4303-437c-84a7-54c5f609e3a4</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>c4b344d9-7a53-4871-a5b9-3730b8eb159f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>proName</value>
          <variableId>a351aa0e-0046-484d-9538-a9879262f15f</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>c4b344d9-7a53-4871-a5b9-3730b8eb159f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>AppName</value>
          <variableId>d233c01a-dff0-4e91-b5de-c116b3c8b088</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>c4b344d9-7a53-4871-a5b9-3730b8eb159f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>fileName</value>
          <variableId>b896bcd9-8f58-4e35-bd91-3ba246a3c920</variableId>
       </variableLink>
    </testCaseLink>

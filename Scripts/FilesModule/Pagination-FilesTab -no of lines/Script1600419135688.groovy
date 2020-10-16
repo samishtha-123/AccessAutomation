@@ -20,7 +20,18 @@ import org.openqa.selenium.Capabilities as Capabilities
 import org.openqa.selenium.remote.RemoteWebDriver as RemoteWebDriver
 import com.kms.katalon.core.exception.StepErrorException as StepErrorException
 
+
 'Login into PAW '
+
+WebDriver driver = DriverFactory.getWebDriver()
+
+EventFiringWebDriver eventFiring = ((DriverFactory.getWebDriver()) as EventFiringWebDriver)
+
+// Get the driver wrapped inside
+WebDriver wrappedWebDriver = eventFiring.getWrappedDriver()
+
+// Cast the wrapped driver into RemoteWebDriver
+RemoteWebDriver katalonWebDriver = ((wrappedWebDriver) as RemoteWebDriver)
 WebUI.callTestCase(findTestCase('Generic/Login'), [('username') : GlobalVariable.G_userName, ('password') : GlobalVariable.G_Password],
 FailureHandling.STOP_ON_FAILURE)
 
@@ -58,7 +69,7 @@ try {
 	println('viewIconTilePresent - ' + viewIconTilePresent)
 
 	println('viewIconListPresent - ' + viewIconListPresent)
-
+		
 
 	if (viewIconListPresent) {
 		WebUI.click(viewIconList)
@@ -69,46 +80,60 @@ try {
 	WebUI.delay(2)
 
 	println(TestCaseName)
-
-	WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
-	def location='/stage/rohini/LotOfFiles/'
-
-	WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
-
-	WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
-	extentTest.log(LogStatus.PASS, 'Navigated to /stage/JSUploads in RFB ')
-	/*
-	WebUI.click(findTestObject('JobMonitoringPage/Jumpto'))
+ 
+		WebUI.click(findTestObject('Object Repository/FilesPage/Icon_EditFilePath'))
+		def location='/stage/'+GlobalVariable.G_userName+'/LotOfFiles/'
+		
+			WebUI.setText(findTestObject('Object Repository/FilesPage/textBx_FilePath'), location)
+		
+			WebUI.sendKeys(findTestObject('Object Repository/FilesPage/textBx_FilePath'), Keys.chord(Keys.ENTER))
+			extentTest.log(LogStatus.PASS, 'Navigated to /stage/JSUploads in RFB ')
+			
+			
+			WebUI.click(findTestObject('FilesPage/FileViewer_Edit'))
+			List<WebElement> listElement = katalonWebDriver.findElements(By.xpath("//div[contains(@class, 'ace_line_group')]"))
+			//List listElement = driver.findElements(By.xpath("//div[contains(@id, '_row')]"))
+			//List listElement = ((RemoteWebDriver) (((EventFiringWebDriver) driver).findElements(By.xpath("//div[contains(@id, '_row')]"))))
 	
-	def number= '2'
+			println listElement.size()
+			
+			/*
+	
+		if (TestCaseName.contains('Page Navigation')){
+			
+			WebUI.verifyElementPresent(findTestObject('FilesPage/FilesPageNavigation'), FailureHandling.STOP_ON_FAILURE)
+			WebUI.click(findTestObject('FilesPage/FilesPageNavigation'), FailureHandling.STOP_ON_FAILURE)
+			
+		} else {
+		
+		    //WebUI.verifyElementPresent(findTestObject('FilesPage/Arrow Navigation'), FailureHandling.STOP_ON_FAILURE)
+			WebUI.click(findTestObject('FilesPage/Arrow Navigation'), FailureHandling.STOP_ON_FAILURE)
+		}
+		
+			
+		//WebUI.verifyElementPresent(findTestObject('FilesPage/PageHolder'), FailureHandling.STOP_ON_FAILURE)	
+		//TestObject pageholdervalue = new TestObject('objectName')
+		//pageholdervalue.addProperty('xpath', ConditionType.EQUALS, xpath_compressedfileXpath)
+		String data=WebUI.getAttribute(findTestObject('FilesPage/PageHolder'), "value")
+		println"value of page holder - "+ data
+			
+      */  
 
-	WebUI.clearText(findTestObject('JobMonitoringPage/Jumpto'))
-	WebUI.setText(findTestObject('JobMonitoringPage/Jumpto'),number)
-	WebUI.sendKeys(findTestObject('JobMonitoringPage/Jumpto'), '2')
-    
-    */
-    if (TestCaseName.contains('Page Navigation')){
+WebUI.delay(2)
+println "after is else "+Operation
+def result = CustomKeywords.'buildTestObj.CreateObjArray.lines'(katalonWebDriver, extentTest)
 
-		WebUI.verifyElementPresent(findTestObject('FilesPage/FilesPageNavigation'), FailureHandling.STOP_ON_FAILURE)
-		WebUI.click(findTestObject('FilesPage/FilesPageNavigation'), FailureHandling.STOP_ON_FAILURE)
-		extentTest.log(LogStatus.PASS, 'Click on Files page navigation')
-
-	} else {
-
-		//WebUI.verifyElementPresent(findTestObject('FilesPage/Arrow Navigation'), FailureHandling.STOP_ON_FAILURE)
-		WebUI.click(findTestObject('FilesPage/Arrow Navigation'), FailureHandling.STOP_ON_FAILURE)
-		WebUI.getText(findTestObject('JobMonitoringPage/Jumpto'))
-		extentTest.log(LogStatus.PASS, 'Click on Arrow navigation')
-	}
-    
-     
-	//WebUI.verifyElementPresent(findTestObject('FilesPage/PageHolder'), FailureHandling.STOP_ON_FAILURE)
-	//TestObject pageholdervalue = new TestObject('objectName')
-	//pageholdervalue.addProperty('xpath', ConditionType.EQUALS, xpath_compressedfileXpath)
-	String data=WebUI.getAttribute(findTestObject('FilesPage/PageHolder'), "value")
-	println"value of page holder - "+ data
-
-	extentTest.log(LogStatus.PASS, 'Test case for pagination passed')
+if(result)
+{
+	extentTest.log(LogStatus.PASS, 'File Operation - ' + TestCaseName +' Performed Sucessfully')
+}
+else
+{
+	extentTest.log(LogStatus.FAIL,'File Operation - ' + TestCaseName +' failed')
+}
+if (GlobalVariable.G_Browser == 'Edge') {
+	WebUI.callTestCase(findTestCase('Generic/Logout'), [:], FailureHandling.STOP_ON_FAILURE)
+}
 }
 
 catch (Exception ex) {

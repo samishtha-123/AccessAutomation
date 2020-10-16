@@ -80,7 +80,7 @@ try
 		extentTest.log(LogStatus.PASS, 'Click on add server')
 		
 		def submitBtn = CustomKeywords.'customWait.WaitForElement.WaitForelementPresent'(findTestObject('Cluster_Registration/Add_Server'), 
-        30)
+        30, extentTest, 'add server')
 
     if (submitBtn) {
         

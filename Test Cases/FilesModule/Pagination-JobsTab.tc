@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Pagination-JobsTab</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>66e720d2-5689-4068-8170-fc958a348a6e</testCaseGuid>
+   <variable>
+      <defaultValue>'greator arrows'</defaultValue>
+      <description></description>
+      <id>0d321884-e854-47d0-9934-10d209cb9854</id>
+      <masked>true</masked>
+      <name>TestCaseName</name>
+   </variable>
+   <variable>
+      <defaultValue>'invalid'</defaultValue>
+      <description></description>
+      <id>ef053702-b0cd-454c-8c53-8f2f8930ff8d</id>
+      <masked>true</masked>
+      <name>userChoice</name>
+   </variable>
+</TestCaseEntity>
